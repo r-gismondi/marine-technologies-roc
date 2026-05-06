@@ -23,19 +23,7 @@ Internal documentation for **Marine Technologies** UROC: strategy, org design, p
 
 ## GitHub setup (first push)
 
-If this folder is not yet connected to GitHub:
-
-1. Create an empty **private** repository on GitHub named e.g. `marine-technologies-uroc` (no README/license if you already have commits here).
-2. Add the remote and push:
-
-```powershell
-cd c:\Repo\marine-technologies-uroc
-git remote add origin https://github.com/YOUR_ORG/marine-technologies-uroc.git
-git branch -M main
-git push -u origin main
-```
-
-Replace `YOUR_ORG` and repo URL with your account or organization.
+See **[docs/FIRST_PUSH.md](docs/FIRST_PUSH.md)** for step-by-step options (browser + Git, or GitHub CLI after `gh auth login`).
 
 ## Working from another machine
 
