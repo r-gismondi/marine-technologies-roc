@@ -4,6 +4,7 @@ Internal documentation for **Marine Technologies** UROC: strategy, org design, p
 
 ## How to use this repository
 
+- **New Cursor agent?** Read **[docs/FOR_NEXT_AGENT.md](docs/FOR_NEXT_AGENT.md)** first so you inherit goals, boundaries, and repo layout without prior chat history.
 - **Author** in Markdown with Cursor (or any editor). Keep the repo as the **single source of truth** for text; export slides/PDFs when needed.
 - **Collaborate** via branches and pull requests when multiple people edit.
 - **Do not** store customer names, vessel identifiers, credentials, or operational incident details here—use tickets, CMDB, or approved secure stores.
