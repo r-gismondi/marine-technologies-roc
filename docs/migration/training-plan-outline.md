@@ -1,12 +1,12 @@
 # Training plan outline (draft)
 
-Tailor per person based on **stream** assignment: Customer support | IT | Monitoring | Remote ops support | Data/shore pipeline.
+Tailor per person based on **stream** assignment: Customer support | Information Technology (IT) | Monitoring | Remote operations support | Data/shore pipeline.
 
 ## Universal onboarding (all Agents)
 
 - UROC charter and principles ([charter.md](../strategy/charter.md))
 - Security and data-handling rules (link internal security training)
-- Ticketing and escalation basics (link SOP when ready)
+- Ticketing and escalation basics (link Standard Operating Procedure (SOP) when ready)
 - Shift handover expectations
 
 ## Stream-specific modules
@@ -14,9 +14,9 @@ Tailor per person based on **stream** assignment: Customer support | IT | Monito
 | Module | Outcomes |
 |--------|----------|
 | Customer support | Case ownership, tone, escalation criteria |
-| IT touchpoints | Access workflows, change discipline, no shadow IT |
-| Monitoring | Alarm philosophy, runbooks, fatique controls |
-| Remote ops support | Authorization boundaries, engineering liaison |
+| Information Technology (IT) touchpoints | Access workflows, change discipline, no shadow Information Technology |
+| Monitoring | Alarm philosophy, runbooks, fatigue controls |
+| Remote operations support | Authorization boundaries, engineering liaison |
 | Data / shore pipeline | Retention, export approval, audit trail |
 
 ## Competency sign-off

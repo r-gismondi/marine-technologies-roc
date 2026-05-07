@@ -1,4 +1,4 @@
-# RACI — [Initiative or process name]
+# Responsible, Accountable, Consulted, Informed (RACI) matrix — [Initiative or process name]
 
 ## Activity list
 
@@ -11,8 +11,8 @@
 
 | Activity | Role A | Role B | Role C |
 |----------|--------|--------|--------|
-| | R/A/C/I | | |
+| | Responsible (R) / Accountable (A) / Consulted (C) / Informed (I) | | |
 
 ## Notes
 
-- Exactly one **A** per activity where decisions must be auditable.
+- Exactly one **Accountable (A)** entry per activity where decisions must be auditable.

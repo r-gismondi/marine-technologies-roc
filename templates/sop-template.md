@@ -1,10 +1,10 @@
-# SOP-UROC-NNN — [Title]
+# Standard Operating Procedure (SOP)-UROC-NNN — [Title]
 
 | Field | Value |
 |-------|-------|
 | Version | 0.1 |
 | Owner | UROC Supervisor |
-| Last reviewed | YYYY-MM-DD |
+| Last reviewed | Year-Month-Day (YYYY-MM-DD) |
 | Status | Draft / Approved / Retired |
 
 ## Purpose

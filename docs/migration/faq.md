@@ -1,24 +1,24 @@
-# Migration FAQ
+# Migration Frequently Asked Questions (FAQ)
 
 _Add questions and approved answers as they come up._
 
 ## General
 
 **Q: Who do I report to day to day?**  
-A: _[To complete: UROC Supervisor name/process]._
+A: You report to the **UROC Supervisor** for assignments, shift patterns, coaching, and operational decisions within published policy. The UROC Supervisor reports to the **General Manager**—see the [UROC charter](../strategy/charter.md) and [org chart](../org/org-chart.md). Use your team’s normal cadence (for example shift handover and Supervisor touchpoints) for day-to-day direction; **formal Human Resources (HR) reporting** stays whatever Human Resources confirms for your role.
 
 **Q: How do I escalate an urgent safety or operational issue?**  
-A: _[To complete: channel, phone tree, ticket priority—link SOP when published]._
+A: Treat **safety risk, regulatory exposure, or customer-impacting outage** as urgent: open or update a ticket at the **highest appropriate severity** your process defines, state impact and what you need next, and use the **duty / on-call path** the UROC Supervisor publishes for your site (roster, bridge, or equivalent). If someone is in **immediate danger**, follow **local emergency procedures first**, then notify UROC through that duty path. Full steps are drafted in [Standard Operating Procedure (SOP) `SOP-UROC-001`](../procedures/SOP-UROC-001-incident-management-and-escalation.md) (incident management and escalation); use your Supervisor’s interim instructions until the SOP is approved.
 
 **Q: Will my job title change?**  
-A: _[To complete: HR-aligned wording about Agent levels and streams]._
+A: **Payroll and Human Resources Information System (HRIS) titles** are whatever **Human Resources (HR)** confirms for your transition. Operationally, UROC uses the **Agent** role family with **levels** (Junior → Intermediate → Senior, optional Lead) and **stream** assignments (support, Information Technology (IT) touchpoints, monitoring, remote operations support, data/shore pipeline). Streams route work—they are **not** separate reporting lines at startup. See [roles and levels](../org/roles-and-levels.md). Any title or grade change should come from Human Resources (HR) in writing.
 
 ## Tools and access
 
 **Q: Which systems are the source of truth for tickets and monitoring?**  
-A: _[To complete]._
+A: **Work records:** The **company-approved ticketing system** (and linked boards or queues, if your stream uses them) is the source of truth for case ownership, decisions, escalations, and handoffs—reference **ticket or Configuration Management Database (CMDB) identifiers (IDs)** instead of pasting sensitive details into informal channels (see [README](../../README.md)). **Situational awareness:** Use the **authorized monitoring consoles and alarm tools** assigned to your stream; for a given scenario, the **runbook, product owner, or contract** defines which signals are authoritative. If sources conflict, **pause**, document what you see, and escalate via the duty path above. Personal chats and ad hoc files are **not** systems of record.
 
 ## Career
 
 **Q: How do I progress from Junior to Senior Agent?**  
-A: See [../org/roles-and-levels.md](../org/roles-and-levels.md); formal criteria to be set with HR.
+A: Expectations by level and stream are in [roles and levels](../org/roles-and-levels.md) (scope, decision rights, escalation, competencies). **Formal promotion criteria, cycles, and Human Resources (HR) steps** are set with **Human Resources** and the UROC Supervisor; ask your Supervisor how to prepare evidence (quality, coaching, incident leadership) for the next review cycle.

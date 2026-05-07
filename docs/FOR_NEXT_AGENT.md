@@ -5,14 +5,14 @@ This file is the **onboarding brief** for continuing UROC documentation work. Th
 ## What this repository is
 
 - **UROC** = **Unified Remote Operations Center** at **Marine Technologies** (marine / remote operations company).
-- **Purpose (department):** One shore-side organization combining customer support, IT touchpoints for remote services, vessel remote monitoring, vessel remote operations support, and governance of data from vessels to shore.
+- **Purpose (department):** One shore-side organization combining customer support, Information Technology (IT) touchpoints for remote services, vessel remote monitoring, vessel remote operations support, and governance of data from vessels to shore.
 - **Human’s role:** Supervisor of UROC; leading **department implementation** (goals, procedures, marketing drafts, employee migration messaging, presentations).
 - **Audience for docs:** Internal first; external/marketing pieces need Legal/Commercial review before release.
 
 ## Critical workspace rule
 
-- **All UROC work lives in this repo only:** `marine-technologies-uroc` (local path is often `C:\Repo\marine-technologies-uroc`).
-- **Do not** treat **`C:\Repo\DP`** as part of this project — that is a **large separate product/engineering codebase**. Ignore pending reviews or git state in DP unless the human explicitly asks about DP.
+- **All UROC work lives in this repository only:** `marine-technologies-uroc` (local path is often `C:\Repo\marine-technologies-uroc`).
+- **Do not** treat **`C:\Repo\DP`** as part of this project — that is a **large separate product/engineering codebase**. Ignore pending reviews or git state in that separate repository unless the human explicitly asks about it.
 
 ## Git and GitHub
 
@@ -25,16 +25,16 @@ This file is the **onboarding brief** for continuing UROC documentation work. Th
 
 - **General Manager** → **UROC Supervisor** → **Agents** (generic role name).
 - **Agent levels:** Junior → Intermediate → Senior → optional **Lead** (add Lead when scale justifies it; promote **up** before multiplying parallel hierarchies).
-- **Streams** (how work is assigned, not separate reporting lines at start): Support, IT, remote monitoring, remote operations support, data/shore pipeline — see matrix in [org/org-chart.md](org/org-chart.md) and detail in [org/roles-and-levels.md](org/roles-and-levels.md).
+- **Streams** (how work is assigned, not separate reporting lines at start): Support, Information Technology (IT), remote monitoring, remote operations support, data/shore pipeline — see matrix in [org/org-chart.md](org/org-chart.md) and detail in [org/roles-and-levels.md](org/roles-and-levels.md).
 
 ## What exists vs placeholders
 
 | Area | Status |
 |------|--------|
-| Charter, RACI template, org chart, Agent levels | Draft content in place — fill names, metrics, approvals |
+| Charter, Responsible, Accountable, Consulted, Informed (RACI) template, org chart, Agent levels | Draft content in place — fill names, metrics, approvals |
 | Year-one goals | [goals/year-one-goals.md](goals/year-one-goals.md) — metrics/targets are placeholders |
-| Migration pack + internal deck outline | [migration/](migration/) + [../presentations/internal-migration.md](../presentations/internal-migration.md) — FAQ/training need real answers |
-| SOP index | [procedures/README.md](procedures/README.md) — SOP bodies mostly “planned”; use [../templates/sop-template.md](../templates/sop-template.md) |
+| Migration pack + internal deck outline | [migration/](migration/) + [../presentations/internal-migration.md](../presentations/internal-migration.md) — Frequently Asked Questions (FAQ) and training need real answers |
+| Standard Operating Procedure (SOP) index | [procedures/README.md](procedures/README.md) — Standard Operating Procedure bodies mostly “planned”; use [../templates/sop-template.md](../templates/sop-template.md) |
 | Marketing drafts | [marketing/](marketing/) — explicitly draft; use [marketing/review-checklist.md](marketing/review-checklist.md) before external use |
 | `CODEOWNERS` | Commented placeholder at repo root — uncomment with real GitHub handle/team after policy is clear |
 
@@ -44,19 +44,19 @@ This file is the **onboarding brief** for continuing UROC documentation work. Th
 2. [README.md](../README.md)
 3. [strategy/charter.md](strategy/charter.md)
 4. [org/roles-and-levels.md](org/roles-and-levels.md)
-5. Whatever the human asks for next (goals, migration, SOP, marketing, etc.).
+5. Whatever the human asks for next (goals, migration, Standard Operating Procedures, marketing, etc.).
 
 ## Likely next tasks (pick with human)
 
 - Replace placeholders in [migration/faq.md](migration/faq.md) and [goals/year-one-goals.md](goals/year-one-goals.md).
-- Draft first real SOP (e.g. incident/escalation) from template.
-- Expand RACI in [strategy/raci.md](strategy/raci.md) with real names/roles.
+- Draft first real Standard Operating Procedure (SOP) (e.g. incident/escalation) from template.
+- Expand Responsible, Accountable, Consulted, Informed (RACI) matrix in [strategy/raci.md](strategy/raci.md) with real names/roles.
 - Turn [presentations/internal-migration.md](../presentations/internal-migration.md) into slides or Marp if desired.
 - Align `README.md` clone URL if org moves from placeholder `YOUR_ORG` anywhere.
 
 ## Security reminder (non-negotiable)
 
-Do not put **customer names, vessel identifiers, credentials, or detailed incident narratives** in this repo — reference ticket/CMDB IDs instead. Stated again in [README.md](../README.md).
+Do not put **customer names, vessel identifiers, credentials, or detailed incident narratives** in this repository — reference ticket or Configuration Management Database (CMDB) identifiers (IDs) instead. Stated again in [README.md](../README.md).
 
 ---
 

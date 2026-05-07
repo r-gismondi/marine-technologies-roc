@@ -17,7 +17,7 @@
 
 -
 
-## FAQ seeds
+## Frequently Asked Questions (FAQ) seeds
 
 **Q:**  
 **A:**
