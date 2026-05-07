@@ -11,7 +11,7 @@ Prioritize authoring these first; link each row when the Standard Operating Proc
 | [SOP-UROC-003](SOP-UROC-003-remote-intervention-assisted-operations-authorization.md) | Remote intervention / assisted operations authorization | Draft |
 | SOP-UROC-004 | Customer inquiry routing and ownership | Planned |
 | SOP-UROC-005 | Data export, retention, and access requests (shore pipeline) | Planned |
-| SOP-UROC-006 | Major incident communications (internal) | Planned |
+| [SOP-UROC-006](SOP-UROC-006-major-incident-communications-internal.md) | Major incident communications (internal) | Draft |
 
 ## Numbering
 

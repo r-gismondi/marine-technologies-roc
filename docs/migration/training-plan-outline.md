@@ -8,6 +8,7 @@ Tailor per person based on **stream** assignment: Customer support | Information
 - Security and data-handling rules (link internal security training)
 - Ticketing and escalation basics ([SOP-UROC-001](../procedures/SOP-UROC-001-incident-management-and-escalation.md))
 - Office-hours handoff and on-call continuity expectations ([SOP-UROC-002](../procedures/SOP-UROC-002-office-hours-handoff-and-on-call-continuity.md))
+- Major incident communications basics ([SOP-UROC-006](../procedures/SOP-UROC-006-major-incident-communications-internal.md))
 
 ## Stream-specific modules
 
