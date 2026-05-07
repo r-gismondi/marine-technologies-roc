@@ -1,6 +1,6 @@
 # Training plan outline (draft)
 
-Tailor per person based on **stream** assignment: Customer support | Information Technology (IT) | Monitoring | Remote operations support | Data/shore pipeline.
+Tailor per person based on **stream** assignment under the UROC Supervisor: Customer support | Information Technology (IT) | Monitoring | Remote operations support | Data/shore pipeline.
 
 ## Universal onboarding (all Agents)
 
@@ -15,7 +15,7 @@ Tailor per person based on **stream** assignment: Customer support | Information
 | Module | Outcomes |
 |--------|----------|
 | Customer support | Case ownership, tone, escalation criteria ([SOP-UROC-004](../procedures/SOP-UROC-004-customer-inquiry-routing-and-ownership.md)) |
-| Information Technology (IT) touchpoints | Access workflows, change discipline, no shadow Information Technology |
+| Information Technology (IT) stream | Access workflows, tooling administration, platform support discipline, no unmanaged tooling outside UROC governance |
 | Monitoring | Alarm philosophy, runbooks, fatigue controls |
 | Remote operations support | Authorization boundaries, engineering liaison ([SOP-UROC-003](../procedures/SOP-UROC-003-remote-intervention-assisted-operations-authorization.md)) |
 | Data / shore pipeline | Retention, export approval, audit trail ([SOP-UROC-005](../procedures/SOP-UROC-005-data-export-retention-access-requests.md)) |

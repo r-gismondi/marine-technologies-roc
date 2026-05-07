@@ -25,7 +25,7 @@ This file is the **onboarding brief** for continuing UROC documentation work. Th
 
 - **General Manager** → **UROC Supervisor** → **Agents** (generic role name).
 - **Agent levels:** Junior → Intermediate → Senior → optional **Lead** (add Lead when scale justifies it; promote **up** before multiplying parallel hierarchies).
-- **Streams** (how work is assigned, not separate reporting lines at start): Support, Information Technology (IT), remote monitoring, remote operations support, data/shore pipeline — see matrix in [org/org-chart.md](org/org-chart.md) and detail in [org/roles-and-levels.md](org/roles-and-levels.md).
+- **Streams** (how work is assigned under the UROC Supervisor, not separate reporting lines): Support, Information Technology (IT), remote monitoring, remote operations support, data/shore pipeline — see matrix in [org/org-chart.md](org/org-chart.md) and detail in [org/roles-and-levels.md](org/roles-and-levels.md).
 
 ## What exists vs placeholders
 

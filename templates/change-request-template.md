@@ -19,7 +19,7 @@
 | Role | Name | Date |
 |------|------|------|
 | UROC Supervisor | | |
-| Information Technology (IT) / platform owner (if applicable) | | |
+| UROC Information Technology (IT) stream / platform owner (if applicable) | | |
 
 ## Implementation window
 

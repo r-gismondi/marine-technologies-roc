@@ -11,7 +11,7 @@
 
 Define how UROC receives, routes, documents, and tracks requests involving data export, data retention, and access to shore-side operational data.
 
-This procedure supports data discipline, auditability, and minimum necessary access. UROC may coordinate and document requests, but approval authority remains with the applicable Information Technology (IT), platform, data owner, Commercial, Legal, or General Manager stakeholder.
+This procedure supports data discipline, auditability, and minimum necessary access. UROC coordinates and documents requests through its streams, including the Information Technology (IT) stream. Approval authority remains with the UROC Supervisor unless a data owner, Commercial, Legal, General Manager, or other controlled company process is explicitly accountable.
 
 ## Scope
 
@@ -34,7 +34,7 @@ Do not record customer names, vessel identifiers, credentials, raw exports, or d
 | Agent | Opens or updates the official request record, classifies the request, verifies required facts, avoids uncontrolled data movement, and routes to the accountable owner. |
 | Senior Agent / Lead (if assigned) | Reviews complex or cross-stream requests, validates documentation quality, supports prioritization, and identifies data-handling gaps. |
 | UROC Supervisor | Owns UROC routing discipline, resolves ownership conflicts, approves UROC procedure deviations within policy, and escalates policy gaps to the General Manager or specialist stakeholders. |
-| Information Technology (IT) / platform owner | Owns access control, platform permissions, export tooling, secure transfer methods, and technical enforcement. |
+| UROC Information Technology (IT) stream / platform owner | Owns access control, platform permissions, export tooling, secure transfer methods, and technical enforcement under UROC Supervisor direction. |
 | Data owner / system owner | Owns data classification, allowed use, retention posture, and approval for release or movement where assigned. |
 | Commercial / Legal | Owns contract interpretation, customer entitlement, legal hold, disclosure, claim, and regulatory guidance. |
 | Requester | Provides business purpose, recipient, timing, intended use, and any required approval evidence. |
@@ -43,10 +43,10 @@ Do not record customer names, vessel identifiers, credentials, raw exports, or d
 
 | Category | Examples | Required routing |
 |----------|----------|------------------|
-| Access request | New user access, permission change, tool access, role adjustment. | Information Technology (IT) / platform owner and data/system owner as applicable. |
+| Access request | New user access, permission change, tool access, role adjustment. | UROC Information Technology (IT) stream and data/system owner as applicable. |
 | Data export | Report, file, extract, customer-facing package, vendor transfer. | Data/system owner; Commercial / Legal if external, contractual, or sensitive. |
 | Retention / deletion | Retention period, deletion request, archive question, preservation concern. | Data/system owner; Commercial / Legal for legal hold, contract, or regulatory questions. |
-| Data quality / pipeline issue | Missing data, delayed ingest, inconsistent record, export failure. | Data/shore stream owner and Information Technology (IT) / platform owner; incident handling if urgent. |
+| Data quality / pipeline issue | Missing data, delayed ingest, inconsistent record, export failure. | Data/shore stream owner and UROC Information Technology (IT) stream; incident handling if urgent. |
 | Unclear or unusual request | Sensitive data, new use case, unusual recipient, informal workaround. | UROC Supervisor before action. |
 
 ## Procedure
@@ -55,7 +55,7 @@ Do not record customer names, vessel identifiers, credentials, raw exports, or d
 2. **Classify the request.** Use the categories above to determine whether this is access, export, retention/deletion, data quality, or unclear/unusual.
 3. **Check minimum required facts.** Confirm business purpose, accountable owner, data/system category, recipient type, requested timeframe, and whether the request is internal, customer-facing, vendor-facing, or regulatory/legal.
 4. **Do not move data informally.** Do not use personal drives, unmanaged spreadsheets, personal accounts, chat uploads, or email attachments unless explicitly approved by company policy and the accountable owner.
-5. **Route for approval.** Send the request to the Information Technology (IT) / platform owner, data/system owner, Commercial / Legal, or UROC Supervisor as required. UROC does not approve access or exports by default.
+5. **Route for approval.** Send the request to the UROC Information Technology (IT) stream, data/system owner, Commercial / Legal, or UROC Supervisor as required. UROC IT stream actions remain under UROC Supervisor governance.
 6. **Track approval and fulfillment.** Record approval source, controlled reference, fulfillment owner, method used, and completion status in the official request record.
 7. **Escalate blocked or risky requests.** Escalate if ownership is unclear, the request is urgent, data classification is uncertain, or the proposed handling conflicts with policy.
 8. **Close with audit trail.** Close only when the request is fulfilled, denied, withdrawn, or transferred to another accountable owner, and the record includes the decision and follow-up tasks.
@@ -70,7 +70,7 @@ Escalate to the UROC Supervisor when:
 - A request could affect Service Level Agreement (SLA) commitments, customer expectations, or audit posture.
 - The appropriate data owner, platform owner, or approval path is unclear.
 
-Escalate to Information Technology (IT) / platform owners for access control, tooling, infrastructure, secure transfer, or platform availability.
+Route access control, tooling, infrastructure, secure transfer, or platform availability issues to the UROC Information Technology (IT) stream under the UROC Supervisor.
 
 Escalate to Commercial / Legal for customer entitlement, contract interpretation, data disclosure, legal hold, regulatory questions, or external commitments.
 
