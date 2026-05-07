@@ -17,6 +17,7 @@ Internal documentation for **Marine Technologies** UROC: strategy, org design, p
 | [docs/goals/](docs/goals/) | Annual objectives and Key Performance Indicators (KPIs) |
 | [docs/org/](docs/org/) | Org chart, roles, Agent levels |
 | [docs/procedures/](docs/procedures/) | Standard Operating Procedure (SOP) index and procedures |
+| [docs/quality/](docs/quality/) | ISO 9001 / Quality Management System (QMS) alignment and records mapping |
 | [docs/migration/](docs/migration/) | Employee migration scope, Frequently Asked Questions (FAQ), training |
 | [docs/marketing/](docs/marketing/) | External-facing drafts (review before release) |
 | [presentations/](presentations/) | Slide outlines (e.g. internal migration deck) |
