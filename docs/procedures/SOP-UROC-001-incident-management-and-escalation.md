@@ -78,6 +78,7 @@ Company-specific phone numbers, bridges, rosters, ticket priorities, and channel
 ## References
 
 - [Standard Operating Procedures index](README.md)
+- [SOP-UROC-006 — Major Incident Communications (Internal)](SOP-UROC-006-major-incident-communications-internal.md)
 - [Incident report template](../../templates/incident-report-template.md)
 - [UROC charter](../strategy/charter.md)
 - [Roles and levels](../org/roles-and-levels.md)
