@@ -1,13 +1,13 @@
 # Roles and levels — UROC Agents
 
-**Agent** is the umbrella role. Levels describe **scope**, **decision rights**, **tools**, **escalation**, and **competencies**. Streams (support, IT, monitoring, remote ops, data) are assignments—not separate titles at startup.
+**Agent** is the umbrella role. Levels describe **scope**, **decision rights**, **tools**, **escalation**, and **competencies**. Streams (support, Information Technology (IT), monitoring, remote operations, data) are assignments—not separate titles at startup.
 
 ## UROC Supervisor
 
 | Dimension | Expectation |
 |-----------|-------------|
-| Scope | Owns UROC day-to-day priorities, shift/overlap patterns, quality, and stakeholder alignment with GM. |
-| Decision rights | Approves procedure deviations within policy; escalates policy/budget/legal outside band to GM and specialists. |
+| Scope | Owns UROC day-to-day priorities, shift/overlap patterns, quality, and stakeholder alignment with the General Manager (GM). |
+| Decision rights | Approves procedure deviations within policy; escalates policy/budget/legal outside band to the General Manager (GM) and specialists. |
 | Escalation path | Reports to **General Manager**. |
 | Competencies | Operational leadership, incident judgment, stakeholder communication, coaching Agents. |
 
@@ -18,7 +18,7 @@
 | Dimension | Expectation |
 |-----------|-------------|
 | Scope | Executes documented procedures; handles routine cases with supervision available. |
-| Decision rights | No autonomous deviation from SOP; escalates ambiguous or high-impact situations. |
+| Decision rights | No autonomous deviation from Standard Operating Procedures (SOPs); escalates ambiguous or high-impact situations. |
 | Tools | Core ticketing/monitoring/tools as assigned—read-only or limited write per policy. |
 | Escalation path | To **Intermediate/Senior** or **Supervisor** per escalation matrix. |
 | Competency checklist | Product/service fundamentals; written communication; follows checklists accurately. |
@@ -30,7 +30,7 @@
 | Dimension | Expectation |
 |-----------|-------------|
 | Scope | Owns end-to-end handling for standard scenarios in assigned stream(s). |
-| Decision rights | Minor procedural judgment within SOP; documents exceptions. |
+| Decision rights | Minor procedural judgment within Standard Operating Procedures (SOPs); documents exceptions. |
 | Tools | Standard operator access for assigned systems; no elevated break-glass without approval process. |
 | Escalation path | Complex technical, safety, or customer-risk cases to **Senior** or **Supervisor**. |
 | Competency checklist | Root-cause triage; coaching juniors; shift handover quality. |
@@ -42,7 +42,7 @@
 | Dimension | Expectation |
 |-----------|-------------|
 | Scope | Handles complex and cross-stream incidents; improves runbooks and onboarding. |
-| Decision rights | Structured authority within published limits (define in SOPs); flags policy gaps. |
+| Decision rights | Structured authority within published limits (define in Standard Operating Procedures); flags policy gaps. |
 | Tools | Elevated access only where justified by role and approvals; least privilege. |
 | Escalation path | Commercial/legal/safety boundaries to **Supervisor** and specialist stakeholders. |
 | Competency checklist | Mentorship; incident leadership; metrics contribution; calm communication under pressure. |
@@ -56,7 +56,7 @@ Introduce when team size justifies a **technical/coaching lead** without creatin
 | Dimension | Expectation |
 |-----------|-------------|
 | Scope | Coordinates daily workload across Agents; represents UROC in operational forums when delegated by Supervisor. |
-| Decision rights | Defined by GM/Supervisor charter—typically scheduling, quality checks, not HR discipline unless delegated. |
+| Decision rights | Defined by General Manager (GM) / Supervisor charter—typically scheduling, quality checks, not Human Resources (HR) discipline unless delegated. |
 | Escalation path | To **Supervisor** for conflicts, policy, and resource asks. |
 
 ---

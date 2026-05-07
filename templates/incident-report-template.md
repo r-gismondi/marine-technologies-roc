@@ -1,6 +1,6 @@
 # Incident report — UROC
 
-**Date / time (UTC):**  
+**Date / time (Coordinated Universal Time (UTC)):**  
 **Reporter:**  
 **Severity:** [ ] Sev1 [ ] Sev2 [ ] Sev3 [ ] Sev4  
 
@@ -10,7 +10,7 @@
 
 ## Timeline
 
-| Time (UTC) | Event |
+| Time (Coordinated Universal Time (UTC)) | Event |
 |------------|-------|
 | | |
 
@@ -20,8 +20,8 @@
 
 ## Follow-ups
 
-- [ ] SOP update
-- [ ] Training / comms
+- [ ] Standard Operating Procedure (SOP) update
+- [ ] Training / communications
 - [ ] Tooling fix
 
-**Do not** include customer-identifying or vessel-identifying details if this report might leave controlled systems—link to ticket ID instead.
+**Do not** include customer-identifying or vessel-identifying details if this report might leave controlled systems—link to the ticket identifier (ID) instead.

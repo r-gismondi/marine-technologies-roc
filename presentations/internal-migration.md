@@ -25,7 +25,7 @@ _Speaker notes: Set tone—clarity, respect for existing expertise, purpose._
 ## Slide 3 — What UROC covers
 
 - Customer support (operational)
-- IT touchpoints for remote services
+- Information Technology (IT) touchpoints for remote services
 - Vessel remote monitoring
 - Vessel remote operations **support** (within authorized boundaries)
 - Governance of **data** sent from vessels to shore
@@ -54,7 +54,7 @@ _See org diagram in [org-chart.md](../docs/org/org-chart.md)._
 
 Generic **Agent** role; assignments in:
 
-- Support | IT | Monitoring | Remote ops support | Data/shore pipeline
+- Support | Information Technology (IT) | Monitoring | Remote operations support | Data/shore pipeline
 
 You may wear **one primary stream** or combine—defined by roster and training.
 
@@ -87,8 +87,8 @@ _Detail: [roles-and-levels.md](../docs/org/roles-and-levels.md)._
 ## Slide 10 — Next steps
 
 - Training plan: [training-plan-outline.md](../docs/migration/training-plan-outline.md)
-- FAQ: [faq.md](../docs/migration/faq.md)
-- Your questions—capture for FAQ
+- Frequently Asked Questions (FAQ): [faq.md](../docs/migration/faq.md)
+- Your questions—capture for the Frequently Asked Questions (FAQ)
 
 ---
 

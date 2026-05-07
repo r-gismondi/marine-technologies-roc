@@ -2,7 +2,7 @@
 
 ## Why UROC exists
 
-Marine Technologies is consolidating remote-facing operations into **one coherent center**—customer support, IT touchpoints for remote services, vessel monitoring, remote operations support, and stewardship of vessel-to-shore data—so customers get consistent responses and the company runs measurable, auditable operations.
+Marine Technologies is consolidating remote-facing operations into **one coherent center**—customer support, Information Technology (IT) touchpoints for remote services, vessel monitoring, remote operations support, and stewardship of vessel-to-shore data—so customers get consistent responses and the company runs measurable, auditable operations.
 
 ## What may change for you
 
@@ -18,7 +18,7 @@ Marine Technologies is consolidating remote-facing operations into **one coheren
 
 ## Expectations
 
-- Follow approved **SOPs**; propose improvements when reality does not match the runbook.
+- Follow approved **Standard Operating Procedures (SOPs)**; propose improvements when reality does not match the runbook.
 - Use official systems for **customer and operational records**—not personal accounts or uncontrolled storage.
 - **Escalate** early when risk, ambiguity, or contractual doubt appears.
 
