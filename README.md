@@ -30,7 +30,7 @@ See **[docs/FIRST_PUSH.md](docs/FIRST_PUSH.md)** for step-by-step options (brows
 ## Working from another machine
 
 ```powershell
-git clone https://github.com/YOUR_ORG/marine-technologies-uroc.git
+git clone https://github.com/r-gismondi/marine-technologies-uroc.git
 cd marine-technologies-uroc
 ```
 
@@ -42,7 +42,7 @@ If [GitHub Command Line Interface (CLI)](https://cli.github.com/) (`gh`) is inst
 
 ```powershell
 gh auth login
-gh repo create YOUR_ORG/marine-technologies-uroc --private --source=. --remote=origin --push
+gh repo create r-gismondi/marine-technologies-uroc --private --source=. --remote=origin --push
 ```
 
 See [docs/github-branch-protection.md](docs/github-branch-protection.md) for optional branch protection on `main`.
