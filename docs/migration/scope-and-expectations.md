@@ -14,7 +14,7 @@ Marine Technologies is consolidating remote-facing operations into **one coheren
 ## What should stay familiar
 
 - Your **subject matter expertise** remains valuable; UROC organizes how it is applied.
-- **Safety and product rules** still govern what can be done remotely—UROC does not replace engineering sign-off where required.
+- **Safety and product rules** still govern what can be done remotely—UROC does not replace engineering sign-off where required. Remote intervention or assisted operations support must follow [SOP-UROC-003](../procedures/SOP-UROC-003-remote-intervention-assisted-operations-authorization.md).
 
 ## Expectations
 
