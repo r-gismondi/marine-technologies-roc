@@ -20,5 +20,13 @@ Use prefix **SOP-UROC-###** for departmental Standard Operating Procedures. If M
 ## How to add a Standard Operating Procedure
 
 1. Copy [sop-template.md](../../templates/sop-template.md) to `docs/procedures/SOP-UROC-NNN-title.md`.
-2. Fill sections; obtain **Supervisor** review before marking Approved.
-3. Update the index table above.
+2. Fill all required fields, including owner, approver, effective date, review cycle, records/evidence, training/acknowledgment, and revision history.
+3. Map any records created by the procedure in the [UROC records matrix](../quality/records-matrix.md).
+4. Obtain **Supervisor** review and follow Marine Technologies Document Control / Quality Management System (QMS) approval before marking Approved.
+5. Update the index table above.
+
+## ISO 9001 / Quality Management System alignment
+
+UROC procedures must support Marine Technologies' certified Quality Management System (QMS). Use [ISO 9001 / QMS alignment](../quality/iso-9001-alignment.md) when drafting or revising procedures.
+
+Repository copies are working documents unless Marine Technologies Document Control confirms them as controlled approved documents.
