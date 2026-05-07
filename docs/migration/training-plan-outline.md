@@ -18,7 +18,7 @@ Tailor per person based on **stream** assignment: Customer support | Information
 | Information Technology (IT) touchpoints | Access workflows, change discipline, no shadow Information Technology |
 | Monitoring | Alarm philosophy, runbooks, fatigue controls |
 | Remote operations support | Authorization boundaries, engineering liaison ([SOP-UROC-003](../procedures/SOP-UROC-003-remote-intervention-assisted-operations-authorization.md)) |
-| Data / shore pipeline | Retention, export approval, audit trail |
+| Data / shore pipeline | Retention, export approval, audit trail ([SOP-UROC-005](../procedures/SOP-UROC-005-data-export-retention-access-requests.md)) |
 
 ## Competency sign-off
 
