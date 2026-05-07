@@ -6,7 +6,7 @@
 
 | Dimension | Expectation |
 |-----------|-------------|
-| Scope | Owns UROC day-to-day priorities, shift/overlap patterns, quality, and stakeholder alignment with the General Manager (GM). |
+| Scope | Owns UROC day-to-day priorities, office-hours coverage expectations, quality, and stakeholder alignment with the General Manager (GM). |
 | Decision rights | Approves procedure deviations within policy; escalates policy/budget/legal outside band to the General Manager (GM) and specialists. |
 | Escalation path | Reports to **General Manager**. |
 | Competencies | Operational leadership, incident judgment, stakeholder communication, coaching Agents. |
@@ -33,7 +33,7 @@
 | Decision rights | Minor procedural judgment within Standard Operating Procedures (SOPs); documents exceptions. |
 | Tools | Standard operator access for assigned systems; no elevated break-glass without approval process. |
 | Escalation path | Complex technical, safety, or customer-risk cases to **Senior** or **Supervisor**. |
-| Competency checklist | Root-cause triage; coaching juniors; shift handover quality. |
+| Competency checklist | Root-cause triage; coaching juniors; office-hours handoff quality. |
 
 ---
 

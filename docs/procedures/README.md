@@ -7,7 +7,7 @@ Prioritize authoring these first; link each row when the Standard Operating Proc
 | Identifier (ID) | Title | Status |
 |----|-------|--------|
 | [SOP-UROC-001](SOP-UROC-001-incident-management-and-escalation.md) | Incident management and escalation | Draft |
-| SOP-UROC-002 | Shift handover | Planned |
+| [SOP-UROC-002](SOP-UROC-002-office-hours-handoff-and-on-call-continuity.md) | Office-hours handoff and on-call continuity | Draft |
 | SOP-UROC-003 | Remote intervention / assisted operations authorization | Planned |
 | SOP-UROC-004 | Customer inquiry routing and ownership | Planned |
 | SOP-UROC-005 | Data export, retention, and access requests (shore pipeline) | Planned |
