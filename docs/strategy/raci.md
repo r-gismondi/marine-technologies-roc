@@ -15,8 +15,8 @@ Use this as a **living** matrix. Names and codes replace placeholders when confi
 
 Fill **Accountable** with one named role each before approval. Multiple **Responsible** entries are allowed.
 
-| Activity | General Manager (GM) | UROC Supervisor | UROC Agents, including Information Technology (IT) stream | Product / Engineering | Commercial / Legal | Quality / Document Control | Customer / requester |
-|----------|:--:|:---------------:|:-------------------------------------------------------:|:---------------------:|:-------------------:|:--------------------------:|:--------------------:|
+| Activity | General Manager (GM) | UROC Supervisor | UROC Agents / streams | Product / Engineering | Commercial / Legal | Quality / Document Control | Customer / requester |
+|----------|:--:|:---------------:|:---------------------:|:---------------------:|:-------------------:|:--------------------------:|:--------------------:|
 | UROC annual objectives and review cadence | A | R | C | C | C | I | I |
 | Procedure ownership and review planning | I | A/R | C | C | C | C | I |
 | Standard Operating Procedure (SOP) approval / controlled release | I | R | I | C | C | A | I |
@@ -36,7 +36,7 @@ Fill **Accountable** with one named role each before approval. Multiple **Respon
 ## Notes
 
 - **Accountable** must be unambiguous for audit and escalation paths.
-- Information Technology (IT) is a UROC stream under the UROC Supervisor, not a separate department in this model.
+- Department-specific streams are represented within UROC Agents under the UROC Supervisor.
 - When **Commercial / Legal**, **Product / Engineering**, or **Quality / Document Control** is Accountable, UROC remains **Responsible** for coordination and execution only after written guidance or approval.
 - This matrix is role-based until Marine Technologies confirms named owners or official function names.
 - Update this file when RACI workshops complete, when SOP scope changes, or when Marine Technologies Quality / Document Control requirements change.
