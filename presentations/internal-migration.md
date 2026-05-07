@@ -25,7 +25,7 @@ _Speaker notes: Set tone—clarity, respect for existing expertise, purpose._
 ## Slide 3 — What UROC covers
 
 - Customer support (operational)
-- Information Technology (IT) touchpoints for remote services
+- Information Technology (IT) stream for remote services
 - Vessel remote monitoring
 - Vessel remote operations **support** (within authorized boundaries)
 - Governance of **data** sent from vessels to shore
@@ -55,6 +55,8 @@ _See org diagram in [org-chart.md](../docs/org/org-chart.md)._
 Generic **Agent** role; assignments in:
 
 - Support | Information Technology (IT) | Monitoring | Remote operations support | Data/shore pipeline
+
+All streams sit under the UROC Supervisor; Information Technology is not a separate reporting line in the UROC startup model.
 
 You may wear **one primary stream** or combine—defined by roster and training.
 

@@ -1,6 +1,6 @@
 # Roles and levels — UROC Agents
 
-**Agent** is the umbrella role. Levels describe **scope**, **decision rights**, **tools**, **escalation**, and **competencies**. Streams (support, Information Technology (IT), monitoring, remote operations, data) are assignments—not separate titles at startup.
+**Agent** is the umbrella role. Levels describe **scope**, **decision rights**, **tools**, **escalation**, and **competencies**. Streams (support, Information Technology (IT), monitoring, remote operations, data) are assignments under the UROC Supervisor—not separate departments or titles at startup.
 
 ## UROC Supervisor
 

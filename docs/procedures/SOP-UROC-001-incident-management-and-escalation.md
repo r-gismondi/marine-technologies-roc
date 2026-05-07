@@ -35,7 +35,7 @@ Do not record customer names, vessel identifiers, credentials, or detailed incid
 | UROC Supervisor | Owns escalation decisions, approves procedure deviations within policy, confirms severity changes for high-impact cases, and coordinates with the General Manager or specialist stakeholders. |
 | General Manager | Provides business direction for resource, policy, or customer-impact decisions outside the Supervisor’s authority. |
 | Product / Engineering | Provides product authority, technical assessment, and safety-critical sign-off where required. |
-| Information Technology (IT) / platform owner | Supports tooling, access, infrastructure, and remote-service availability issues. |
+| UROC Information Technology (IT) stream / platform owner | Supports tooling, access, infrastructure, and remote-service availability issues under UROC Supervisor direction. |
 | Commercial / Legal | Owns contractual interpretation, customer commitments, legal guidance, and external statements where required. |
 
 ## Severity classes
@@ -71,7 +71,7 @@ Escalate immediately to the UROC Supervisor when:
 - The responsible team or owner is unclear.
 - The incident is worsening, repeating, or blocked beyond the severity timebox.
 
-Escalate to Product / Engineering for product behavior, safety-critical control, technical diagnosis, or authorization decisions. Escalate to Information Technology (IT) / platform owners for tooling, access, infrastructure, or remote-service availability issues. Escalate to Commercial / Legal for contractual interpretation, external commitments, claims, or legally sensitive communications.
+Escalate to Product / Engineering for product behavior, safety-critical control, technical diagnosis, or authorization decisions. Route tooling, access, infrastructure, or remote-service availability issues to the UROC Information Technology (IT) stream under the UROC Supervisor. Escalate to Commercial / Legal for contractual interpretation, external commitments, claims, or legally sensitive communications.
 
 Company-specific phone numbers, bridges, rosters, ticket priorities, and channels must be maintained in controlled internal systems, not in this repository.
 

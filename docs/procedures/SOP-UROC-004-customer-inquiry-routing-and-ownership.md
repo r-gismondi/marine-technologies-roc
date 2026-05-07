@@ -11,7 +11,7 @@
 
 Define how UROC receives, records, owns, routes, and closes customer or internal inquiries so the organization provides one coherent front door without creating conflicting answers, informal commitments, or undocumented handoffs.
 
-This procedure supports customer-facing consistency while preserving Product / Engineering, Information Technology (IT), Commercial, Legal, and General Manager authority for decisions outside UROC scope.
+This procedure supports customer-facing consistency while preserving Product / Engineering, Commercial, Legal, and General Manager authority for decisions outside UROC scope. Information Technology (IT) work is handled as a UROC stream under the UROC Supervisor.
 
 ## Scope
 
@@ -20,7 +20,7 @@ Use this procedure for inquiries received through UROC channels, including:
 - Customer operational support questions.
 - Internal requests for routing, status, triage, or ownership.
 - Monitoring, remote operations support, or data/shore-pipeline questions that do not yet meet incident criteria.
-- Requests that may require Product / Engineering, Information Technology (IT), Commercial, Legal, or General Manager input before a response.
+- Requests that may require Product / Engineering, UROC Information Technology (IT) stream, Commercial, Legal, or General Manager input before a response.
 - Recurring questions that should be added to approved Frequently Asked Questions (FAQ), runbooks, or Standard Operating Procedures.
 
 If the inquiry involves active safety risk, outage, material service degradation, or urgent ambiguity, follow [SOP-UROC-001](SOP-UROC-001-incident-management-and-escalation.md). If it involves remote action or assisted operations authorization, follow [SOP-UROC-003](SOP-UROC-003-remote-intervention-assisted-operations-authorization.md).
@@ -35,7 +35,7 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 | Senior Agent / Lead (if assigned) | Supports triage for complex or recurring inquiries, validates response quality, coordinates cross-stream handoffs, and identifies runbook or FAQ gaps. |
 | UROC Supervisor | Owns routing standards, resolves ownership conflicts, approves response deviations within policy, and escalates to the General Manager or specialist stakeholders when needed. |
 | Product / Engineering | Owns product behavior, technical interpretation, product limitations, and safety-critical response content. |
-| Information Technology (IT) / platform owner | Owns access, tooling, infrastructure, and platform support responses. |
+| UROC Information Technology (IT) stream / platform owner | Owns access, tooling, infrastructure, and platform support responses under UROC Supervisor direction. |
 | Commercial / Legal | Owns contractual interpretation, customer commitments, claims, legal guidance, and externally binding statements. |
 
 ## Inquiry categories
@@ -45,7 +45,7 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 | Routine support | Status request, basic triage, routing question, known procedure question. | UROC Agent |
 | Monitoring / remote operations support | Alarm context, remote support status, assisted operations question without immediate risk. | UROC Agent with stream owner or Senior Agent support |
 | Data / shore pipeline | Ingest status, retention question, export/access routing. | UROC Agent with data/shore stream owner |
-| Access / tooling | Account, remote-service access, tooling availability, platform issue. | Information Technology (IT) / platform owner with UROC tracking |
+| Access / tooling | Account, remote-service access, tooling availability, platform issue. | UROC Information Technology (IT) stream with UROC tracking |
 | Product / technical authority | Product behavior, safety boundary, technical diagnosis, operating envelope. | Product / Engineering |
 | Commercial / Legal | Contract interpretation, customer promise, claim, liability, legal wording. | Commercial / Legal |
 | Potential incident | Safety risk, outage, material degradation, urgent ambiguity. | UROC Supervisor via [SOP-UROC-001](SOP-UROC-001-incident-management-and-escalation.md) |
@@ -69,12 +69,12 @@ Escalate to the UROC Supervisor when:
 - Ownership is unclear or disputed.
 - The inquiry may miss a Service Level Agreement (SLA), committed response time, or customer expectation.
 - The response would create a new commitment, exception, or policy interpretation.
-- The inquiry crosses Product / Engineering, Information Technology (IT), Commercial, Legal, or General Manager boundaries.
+- The inquiry crosses Product / Engineering, UROC Information Technology (IT) stream, Commercial, Legal, or General Manager boundaries.
 - The inquiry repeats often enough to suggest a documentation or process gap.
 
 Escalate to Product / Engineering for product behavior, technical diagnosis, safety-critical boundaries, or operating-envelope questions.
 
-Escalate to Information Technology (IT) / platform owners for access, tooling, infrastructure, and remote-service platform issues.
+Route access, tooling, infrastructure, and remote-service platform issues to the UROC Information Technology (IT) stream under the UROC Supervisor.
 
 Escalate to Commercial / Legal for contract interpretation, commitments, claims, legal language, or externally binding statements.
 

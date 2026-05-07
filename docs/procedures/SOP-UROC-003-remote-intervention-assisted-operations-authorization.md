@@ -35,7 +35,7 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 | Senior Agent / Lead (if assigned) | Reviews complex or cross-stream requests, confirms procedure fit, supports Agents with runbook interpretation, and escalates gaps or ambiguity. |
 | UROC Supervisor | Owns UROC authorization discipline, approves UROC procedure deviations within policy, resolves priority conflicts, and escalates to the General Manager or specialist stakeholders when authority is outside UROC. |
 | Product / Engineering | Owns product behavior, technical authority, safety-critical control decisions, and product/runbook approval. |
-| Information Technology (IT) / platform owner | Owns access, tooling, infrastructure, and platform changes needed for remote-service support. |
+| UROC Information Technology (IT) stream / platform owner | Owns access, tooling, infrastructure, and platform changes needed for remote-service support under UROC Supervisor direction. |
 | Commercial / Legal | Owns contract interpretation, customer commitments, legal guidance, and externally binding statements. |
 | On-vessel / customer-authorized party | Provides vessel-side or customer-side authorization where contract, product rules, or local procedure require it. |
 
@@ -43,7 +43,7 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 
 Remote intervention or assisted operations support may proceed only when all of the following are true:
 
-1. **Authority is clear.** The request is within UROC scope, and any required Product / Engineering, customer, vessel-side, Information Technology (IT), Commercial, or Legal approval is documented in the official system of record.
+1. **Authority is clear.** The request is within UROC scope, and any required Product / Engineering, customer, vessel-side, UROC Information Technology (IT) stream, Commercial, or Legal approval is documented in the official system of record.
 2. **The action is defined.** The intended action, expected outcome, rollback or stop condition, and accountable owner are captured in the ticket or approved runbook.
 3. **Safety and compliance are protected.** No action conflicts with product safety rules, regulatory obligations, contract boundaries, or on-vessel command.
 4. **Access is appropriate.** Personnel use approved accounts, approved tools, and least-privilege access. Credentials must never be shared in tickets, chats, or documentation.
@@ -74,7 +74,7 @@ Escalate to the UROC Supervisor before proceeding when:
 
 Escalate to Product / Engineering when the request involves product behavior, technical diagnosis, safety-critical control, approved operating envelopes, or changes to product/runbook instructions.
 
-Escalate to Information Technology (IT) / platform owners when the request involves access, tooling, infrastructure, platform availability, or remote-service enablement.
+Route access, tooling, infrastructure, platform availability, or remote-service enablement issues to the UROC Information Technology (IT) stream under the UROC Supervisor.
 
 Escalate to Commercial / Legal when the request involves contractual interpretation, customer commitments, claims, legal exposure, or externally binding statements.
 

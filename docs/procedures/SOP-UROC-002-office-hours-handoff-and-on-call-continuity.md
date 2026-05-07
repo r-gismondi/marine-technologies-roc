@@ -35,7 +35,7 @@ Do not record customer names, vessel identifiers, credentials, or detailed incid
 | UROC Supervisor | Owns office-hours continuity expectations, assigns coverage for planned absences, resolves priority conflicts, and confirms when an item must enter the company on-call path. |
 | Company on-call owner | Receives after-hours, holiday, and weekend escalations according to the company on-call schedule and owns response within that process. |
 | Product / Engineering | Supports product behavior, technical diagnosis, and authorization questions that cannot wait for the next business day. |
-| Information Technology (IT) / platform owner | Supports tooling, access, infrastructure, and remote-service availability issues that affect continuity. |
+| UROC Information Technology (IT) stream / platform owner | Supports tooling, access, infrastructure, and remote-service availability issues that affect continuity under UROC Supervisor direction. |
 
 ## Handoff record requirements
 

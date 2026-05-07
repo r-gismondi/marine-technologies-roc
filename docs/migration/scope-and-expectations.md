@@ -2,7 +2,7 @@
 
 ## Why UROC exists
 
-Marine Technologies is consolidating remote-facing operations into **one coherent center**—customer support, Information Technology (IT) touchpoints for remote services, vessel monitoring, remote operations support, and stewardship of vessel-to-shore data—so customers get consistent responses and the company runs measurable, auditable operations.
+Marine Technologies is consolidating remote-facing operations into **one coherent center** under the UROC Supervisor—customer support, Information Technology (IT) for remote services, vessel monitoring, remote operations support, and stewardship of vessel-to-shore data—so customers get consistent responses and the company runs measurable, auditable operations.
 
 ## What may change for you
 

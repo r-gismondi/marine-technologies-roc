@@ -20,7 +20,7 @@ Use this procedure when an incident or urgent operational issue requires interna
 - Severity Level 1 (Sev1) or Severity Level 2 (Sev2) incidents under [SOP-UROC-001](SOP-UROC-001-incident-management-and-escalation.md).
 - Customer-impacting outage, material service degradation, or repeated monitoring concern.
 - Safety, regulatory, legal, commercial, or product-authorization ambiguity.
-- Cross-stream incidents involving UROC, Product / Engineering, Information Technology (IT), Commercial, Legal, or General Manager attention.
+- Cross-stream incidents involving UROC streams, Product / Engineering, Commercial, Legal, or General Manager attention.
 - Issues likely to generate repeated stakeholder questions before the incident is resolved.
 
 This procedure covers **internal communications only**. External customer, press, partner, regulator, or public communications require the authorized Commercial, Legal, or company communications process.
@@ -36,7 +36,7 @@ Do not record customer names, vessel identifiers, credentials, detailed incident
 | UROC Supervisor | Owns UROC internal incident communications, approves UROC updates, confirms audience and cadence, and escalates approval needs outside UROC authority. |
 | General Manager | Provides business direction for high-impact, cross-functional, or resource-sensitive communications. |
 | Product / Engineering | Approves product behavior, technical status, root-cause, safety-critical, and restoration-readiness statements. |
-| Information Technology (IT) / platform owner | Approves tooling, access, infrastructure, platform status, and restoration statements within their scope. |
+| UROC Information Technology (IT) stream / platform owner | Supports tooling, access, infrastructure, platform status, and restoration statements under UROC Supervisor direction. |
 | Commercial / Legal | Approves contractual, customer commitment, claims, legal, regulatory, or externally sensitive wording. |
 
 ## Communication principles
@@ -56,7 +56,7 @@ Internal major incident communications must be:
 3. **Confirm audience.** Define the internal audience by role or controlled distribution list. Use the smallest audience that still supports response, leadership awareness, and stakeholder alignment.
 4. **Collect approved facts.** Pull facts from the official incident record. Confirm severity, current impact, owner, actions underway, known blockers, and next decision point.
 5. **Draft the update.** Use the [communications brief template](../../templates/comms-brief-template.md) for structured updates when the incident is complex or recurring.
-6. **Check approval boundaries.** Obtain Product / Engineering approval for technical or safety-critical statements, Information Technology (IT) / platform owner approval for platform statements, and Commercial / Legal approval for contractual, customer commitment, legal, or external-sensitivity statements.
+6. **Check approval boundaries.** Obtain Product / Engineering approval for technical or safety-critical statements, UROC Supervisor approval for platform statements prepared by the UROC Information Technology (IT) stream, and Commercial / Legal approval for contractual, customer commitment, legal, or external-sensitivity statements.
 7. **Send through approved internal channel.** Use controlled company channels only. Do not add recipients or channels ad hoc if the information is sensitive.
 8. **Record the communication.** Link or summarize the approved internal update in the official incident record, including time sent, audience, approver, and next update time.
 9. **Repeat until closed.** Continue updates at the approved cadence until the incident is resolved, transferred, or downgraded. Send a final closure summary when appropriate.
