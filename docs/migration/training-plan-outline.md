@@ -13,7 +13,7 @@ Tailor per person based on **stream** assignment: Customer support | Information
 
 | Module | Outcomes |
 |--------|----------|
-| Customer support | Case ownership, tone, escalation criteria |
+| Customer support | Case ownership, tone, escalation criteria ([SOP-UROC-004](../procedures/SOP-UROC-004-customer-inquiry-routing-and-ownership.md)) |
 | Information Technology (IT) touchpoints | Access workflows, change discipline, no shadow Information Technology |
 | Monitoring | Alarm philosophy, runbooks, fatigue controls |
 | Remote operations support | Authorization boundaries, engineering liaison ([SOP-UROC-003](../procedures/SOP-UROC-003-remote-intervention-assisted-operations-authorization.md)) |
