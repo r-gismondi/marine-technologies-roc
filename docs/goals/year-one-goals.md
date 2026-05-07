@@ -18,8 +18,8 @@ Targets below are **planning defaults** for year one; confirm numeric floors and
 
 ## 3. Data governance readiness
 
-- **Metric**: (a) Standard Operating Procedure (SOP) `SOP-UROC-005` (data export, retention, access) published and listed in [procedures README](../procedures/README.md); (b) **quarterly data-handling checklist** completion rate for UROC Agents with data/shore or customer-data touchpoints.
-- **Target**: Standard Operating Procedure (SOP) `SOP-UROC-005` **approved and indexed by end of the second quarter (Q2)** of year one; checklist **100%** completed each quarter for in-scope roles (exceptions only with Supervisor approval).
+- **Metric**: (a) Draft Standard Operating Procedure (SOP) [`SOP-UROC-005`](../procedures/SOP-UROC-005-data-export-retention-access-requests.md) (data export, retention, access) published and listed in [procedures README](../procedures/README.md); (b) **quarterly data-handling checklist** completion rate for UROC Agents with data/shore or customer-data touchpoints.
+- **Target**: Standard Operating Procedure (SOP) [`SOP-UROC-005`](../procedures/SOP-UROC-005-data-export-retention-access-requests.md) **approved and indexed by end of the second quarter (Q2)** of year one; checklist **100%** completed each quarter for in-scope roles (exceptions only with Supervisor approval).
 - **Owner**: UROC Supervisor + Information Technology (IT) (as applicable)
 - **Cadence**: Quarterly review
 

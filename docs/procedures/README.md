@@ -10,7 +10,7 @@ Prioritize authoring these first; link each row when the Standard Operating Proc
 | [SOP-UROC-002](SOP-UROC-002-office-hours-handoff-and-on-call-continuity.md) | Office-hours handoff and on-call continuity | Draft |
 | [SOP-UROC-003](SOP-UROC-003-remote-intervention-assisted-operations-authorization.md) | Remote intervention / assisted operations authorization | Draft |
 | SOP-UROC-004 | Customer inquiry routing and ownership | Planned |
-| SOP-UROC-005 | Data export, retention, and access requests (shore pipeline) | Planned |
+| [SOP-UROC-005](SOP-UROC-005-data-export-retention-access-requests.md) | Data export, retention, and access requests (shore pipeline) | Draft |
 | SOP-UROC-006 | Major incident communications (internal) | Planned |
 
 ## Numbering
