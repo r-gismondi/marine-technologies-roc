@@ -11,7 +11,7 @@ UROC concentrates shore-side capabilities that connect our fleet and customers t
 - Unified coordination of **customer-facing** and **internal** remote operations touchpoints (routing, escalation, handoffs).
 - **Monitoring and situational awareness** for remotely supervised systems, consistent with product and contractual obligations.
 - **Data path stewardship**: ingestion, classification, retention posture, and access aligned with company policy and agreements—not ad hoc spreadsheets or personal drives.
-- **Runbooks and procedures** for repeatable responses (incidents, shifts, escalations).
+- **Runbooks and procedures** for repeatable responses (incidents, office-hours continuity, escalations).
 
 ## Out of scope (unless explicitly assigned)
 
