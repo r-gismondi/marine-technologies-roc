@@ -11,7 +11,7 @@ Targets below are **planning defaults** for year one; confirm numeric floors and
 
 ## 2. Response and escalation consistency
 
-- **Metric**: Percentage of **incidents** (as defined in Standard Operating Procedure (SOP) `SOP-UROC-001` when published) where the **first documented escalation** to Supervisor or Senior occurs **within the published timebox** for that severity class.
+- **Metric**: Percentage of **incidents** (as defined in draft Standard Operating Procedure (SOP) [`SOP-UROC-001`](../procedures/SOP-UROC-001-incident-management-and-escalation.md)) where the **first documented escalation** to Supervisor or Senior occurs **within the published timebox** for that severity class.
 - **Target**: **≥ 95%** compliance with published timeboxes for severities that have them; if timeboxes are not yet published, measure “time to first documented escalation” monthly and set a floor by end of the **second quarter (Q2)** of year one.
 - **Owner**: UROC Supervisor
 - **Cadence**: Monthly review
