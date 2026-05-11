@@ -64,32 +64,9 @@ body {
   letter-spacing: 0.12em;
 }
 
-.sidebar-heading span,
-.search-label {
+.sidebar-heading span {
   color: var(--nav-muted);
   font-size: 0.64rem;
-}
-
-.search-label {
-  display: block;
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-#document-search {
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  padding: 7px 6px;
-  margin-bottom: 12px;
-  color: #ffffff;
-  font-size: 0.68rem;
-  background: rgba(255, 255, 255, 0.08);
-  outline: none;
-}
-
-#document-search::placeholder {
-  color: rgba(255, 255, 255, 0.62);
 }
 
 .section {
@@ -204,6 +181,7 @@ body {
 
 .content-shell {
   min-width: 0;
+  width: 100%;
   padding: 28px 32px 32px;
 }
 
@@ -280,7 +258,7 @@ h1 {
 }
 
 .document-content {
-  max-width: 1120px;
+  width: 100%;
   min-height: 65vh;
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -308,6 +286,7 @@ h1 {
 
 .document-content table {
   width: 100%;
+  min-width: 100%;
   border-collapse: collapse;
   margin: 18px 0;
   display: block;

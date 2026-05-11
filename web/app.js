@@ -18,7 +18,6 @@ documentSections.forEach((section) => {
 });
 
 const sectionNav = document.querySelector("#section-nav");
-const searchInput = document.querySelector("#document-search");
 const content = document.querySelector("#document-content");
 const documentTitle = document.querySelector("#document-title");
 const themeToggle = document.querySelector("#theme-toggle");
@@ -310,13 +309,6 @@ function loadInitialDocument() {
   loadDocument(findDocument(hashPath) ? hashPath : state.documents[0].path, false);
 }
 
-function configureSearch() {
-  searchInput.addEventListener("input", () => {
-    state.searchText = searchInput.value.trim();
-    renderNavigation();
-  });
-}
-
 function configureTheme() {
   const storedTheme = localStorage.getItem("urocPortalTheme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -344,7 +336,6 @@ if (!state.documents.length) {
 } else {
   wireNavigationLinks();
   renderNavigation();
-  configureSearch();
   configureTheme();
   loadInitialDocument();
 }
