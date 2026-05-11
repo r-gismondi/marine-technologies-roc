@@ -10,14 +10,14 @@
 
 ```mermaid
 flowchart TB
-  GM[General_Manager]
-  SUP[UROC_Supervisor]
+  GM[General Manager]
+  SUP[UROC Supervisor]
   GM --> SUP
-  subgraph agents [Agent_pool_generic_levels]
-    AJ[Agent_Junior]
-    AI[Agent_Intermediate]
-    AS[Agent_Senior]
-    AL[Agent_Lead_optional]
+  subgraph agents [Agent pool: generic levels]
+    AJ[Agent Junior]
+    AI[Agent Intermediate]
+    AS[Agent Senior]
+    AL[Agent Lead optional]
   end
   SUP --> agents
 ```

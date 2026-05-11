@@ -22,6 +22,7 @@ Internal documentation for **Marine Technologies** UROC: strategy, org design, p
 | [docs/marketing/](docs/marketing/) | External-facing drafts (review before release) |
 | [presentations/](presentations/) | Slide outlines (e.g. internal migration deck) |
 | [templates/](templates/) | Blank Standard Operating Procedure (SOP), Responsible, Accountable, Consulted, Informed (RACI) matrix, incident report, etc. |
+| [web/](web/) | Local employee document portal for browsing repository documents |
 
 ## GitHub setup (first push)
 
@@ -46,3 +47,21 @@ gh repo create r-gismondi/marine-technologies-uroc --private --source=. --remote
 ```
 
 See [docs/github-branch-protection.md](docs/github-branch-protection.md) for optional branch protection on `main`.
+
+## Local employee document portal
+
+Run the local web server from the repository root:
+
+```powershell
+.\web\start-portal.ps1
+```
+
+Then open `http://localhost:8000/web/`.
+
+If PowerShell blocks scripts, run this command instead from the repository root:
+
+```powershell
+py -m http.server 8000
+```
+
+Run the command in PowerShell, not inside the Python `>>>` prompt.
