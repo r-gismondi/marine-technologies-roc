@@ -204,6 +204,7 @@ body {
 
 .content-shell {
   min-width: 0;
+  width: 100%;
   padding: 28px 32px 32px;
 }
 
@@ -280,7 +281,7 @@ h1 {
 }
 
 .document-content {
-  max-width: 1120px;
+  width: 100%;
   min-height: 65vh;
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -308,6 +309,7 @@ h1 {
 
 .document-content table {
   width: 100%;
+  min-width: 100%;
   border-collapse: collapse;
   margin: 18px 0;
   display: block;
