@@ -44,6 +44,7 @@ const DOCUMENT_SECTIONS = [
       { title: "Customer Inquiry Routing and Ownership", path: "docs/procedures/SOP-UROC-004-customer-inquiry-routing-and-ownership.md", audience: "all" },
       { title: "Data Export, Retention, and Access Requests", path: "docs/procedures/SOP-UROC-005-data-export-retention-access-requests.md", audience: "all" },
       { title: "Major Incident Communications", path: "docs/procedures/SOP-UROC-006-major-incident-communications-internal.md", audience: "all" },
+      { title: "Engineering and Maintenance Handoff", path: "docs/procedures/SOP-UROC-007-engineering-and-maintenance-handoff.md", audience: "all" },
     ],
   },
   {

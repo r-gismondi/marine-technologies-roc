@@ -98,6 +98,7 @@ Every remote intervention or assisted operations authorization record must inclu
 - [Standard Operating Procedures index](README.md)
 - [SOP-UROC-001 — Incident Management and Escalation](SOP-UROC-001-incident-management-and-escalation.md)
 - [SOP-UROC-002 — Office-Hours Handoff and On-Call Continuity](SOP-UROC-002-office-hours-handoff-and-on-call-continuity.md)
+- [SOP-UROC-007 — Engineering and Maintenance Handoff (Onsite / Non-Remote Work)](SOP-UROC-007-engineering-and-maintenance-handoff.md)
 - [UROC charter](../strategy/charter.md)
 - [Roles and levels](../org/roles-and-levels.md)
 - [Training plan outline](../migration/training-plan-outline.md)
@@ -107,3 +108,4 @@ Every remote intervention or assisted operations authorization record must inclu
 | Date | Author | Change |
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
+| 2026-05-14 | Cursor agent draft | Linked onsite / Engineering handoff reference to SOP-UROC-007. |

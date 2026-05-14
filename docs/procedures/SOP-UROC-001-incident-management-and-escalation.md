@@ -73,12 +73,15 @@ Escalate immediately to the UROC Supervisor when:
 
 Escalate to Product / Engineering for product behavior, safety-critical control, technical diagnosis, or authorization decisions. Route tooling, access, infrastructure, or remote-service availability issues to the UROC Information Technology (IT) stream under the UROC Supervisor. Escalate to Commercial / Legal for contractual interpretation, external commitments, claims, or legally sensitive communications.
 
+When remote resolution is exhausted or not permitted and the next step requires **customer Maintenance attendance**, **Marine Technologies Engineering** (including vessel visit, project, Factory Acceptance Testing (FAT), or commissioning), use [SOP-UROC-007 — Engineering and Maintenance Handoff](SOP-UROC-007-engineering-and-maintenance-handoff.md) for documented ownership transfer.
+
 Company-specific phone numbers, bridges, rosters, ticket priorities, and channels must be maintained in controlled internal systems, not in this repository.
 
 ## References
 
 - [Standard Operating Procedures index](README.md)
 - [SOP-UROC-006 — Major Incident Communications (Internal)](SOP-UROC-006-major-incident-communications-internal.md)
+- [SOP-UROC-007 — Engineering and Maintenance Handoff (Onsite / Non-Remote Work)](SOP-UROC-007-engineering-and-maintenance-handoff.md)
 - [Incident report template](../../templates/incident-report-template.md)
 - [UROC charter](../strategy/charter.md)
 - [Roles and levels](../org/roles-and-levels.md)
@@ -89,3 +92,4 @@ Company-specific phone numbers, bridges, rosters, ticket priorities, and channel
 | Date | Author | Change |
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
+| 2026-05-14 | Cursor agent draft | Linked Engineering / Maintenance onsite handoff to SOP-UROC-007. |

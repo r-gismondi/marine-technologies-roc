@@ -12,6 +12,7 @@ Prioritize authoring these first; link each row when the Standard Operating Proc
 | [SOP-UROC-004](SOP-UROC-004-customer-inquiry-routing-and-ownership.md) | Customer inquiry routing and ownership | Draft |
 | [SOP-UROC-005](SOP-UROC-005-data-export-retention-access-requests.md) | Data export, retention, and access requests (shore pipeline) | Draft |
 | [SOP-UROC-006](SOP-UROC-006-major-incident-communications-internal.md) | Major incident communications (internal) | Draft |
+| [SOP-UROC-007](SOP-UROC-007-engineering-and-maintenance-handoff.md) | Engineering and Maintenance handoff (onsite / non-remote work) | Draft |
 
 ## Numbering
 
