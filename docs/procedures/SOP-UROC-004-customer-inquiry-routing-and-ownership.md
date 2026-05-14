@@ -23,7 +23,7 @@ Use this procedure for inquiries received through UROC channels, including:
 - Requests that may require Product / Engineering, UROC Information Technology (IT) stream, Commercial, Legal, or General Manager input before a response.
 - Recurring questions that should be added to approved Frequently Asked Questions (FAQ), runbooks, or Standard Operating Procedures.
 
-If the inquiry involves active safety risk, outage, material service degradation, or urgent ambiguity, follow [SOP-UROC-001](SOP-UROC-001-incident-management-and-escalation.md). If it involves remote action or assisted operations authorization, follow [SOP-UROC-003](SOP-UROC-003-remote-intervention-assisted-operations-authorization.md).
+If the inquiry involves active safety risk, outage, material service degradation, or urgent ambiguity, follow [SOP-UROC-001](SOP-UROC-001-incident-management-and-escalation.md). If it involves remote action or assisted operations authorization, follow [SOP-UROC-003](SOP-UROC-003-remote-intervention-assisted-operations-authorization.md). If remote resolution is exhausted or not permitted and the next step requires customer Maintenance or Marine Technologies Engineering onsite or project execution (including vessel visit, Factory Acceptance Testing (FAT), or commissioning), follow [SOP-UROC-007](SOP-UROC-007-engineering-and-maintenance-handoff.md).
 
 Do not record customer names, vessel identifiers, credentials, or detailed operational narratives in this documentation repository. Use official ticket identifiers, Configuration Management Database (CMDB) identifiers, approved customer records, or controlled systems instead.
 
@@ -47,6 +47,7 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 | Data / shore pipeline | Ingest status, retention question, export/access routing. | UROC Agent with data/shore stream owner |
 | Access / tooling | Account, remote-service access, tooling availability, platform issue. | UROC Information Technology (IT) stream with UROC tracking |
 | Product / technical authority | Product behavior, safety boundary, technical diagnosis, operating envelope. | Product / Engineering |
+| Engineering / onsite handoff | Remote path exhausted or not permitted; vessel visit, customer Maintenance execution, Factory Acceptance Testing (FAT), commissioning, or Engineering-led project follow-up required. | UROC coordinates; receiving owner is **customer Maintenance** or **Marine Technologies Engineering** per [SOP-UROC-007](SOP-UROC-007-engineering-and-maintenance-handoff.md) |
 | Commercial / Legal | Contract interpretation, customer promise, claim, liability, legal wording. | Commercial / Legal |
 | Potential incident | Safety risk, outage, material degradation, urgent ambiguity. | UROC Supervisor via [SOP-UROC-001](SOP-UROC-001-incident-management-and-escalation.md) |
 
@@ -80,6 +81,8 @@ Escalate to Commercial / Legal for contract interpretation, commitments, claims,
 
 Use [SOP-UROC-002](SOP-UROC-002-office-hours-handoff-and-on-call-continuity.md) for carryover, planned absence, after-hours, holiday, or weekend continuity.
 
+Use [SOP-UROC-007](SOP-UROC-007-engineering-and-maintenance-handoff.md) when the inquiry becomes an **onsite or Engineering-led execution** handoff (customer Maintenance or Marine Technologies Engineering), including vessel attendance, Factory Acceptance Testing (FAT), or commissioning.
+
 ## Required record
 
 Every inquiry record must include, at minimum:
@@ -98,6 +101,7 @@ Every inquiry record must include, at minimum:
 - [SOP-UROC-001 — Incident Management and Escalation](SOP-UROC-001-incident-management-and-escalation.md)
 - [SOP-UROC-002 — Office-Hours Handoff and On-Call Continuity](SOP-UROC-002-office-hours-handoff-and-on-call-continuity.md)
 - [SOP-UROC-003 — Remote Intervention / Assisted Operations Authorization](SOP-UROC-003-remote-intervention-assisted-operations-authorization.md)
+- [SOP-UROC-007 — Engineering and Maintenance Handoff (Onsite / Non-Remote Work)](SOP-UROC-007-engineering-and-maintenance-handoff.md)
 - [UROC charter](../strategy/charter.md)
 - [Roles and levels](../org/roles-and-levels.md)
 - [Migration Frequently Asked Questions](../migration/faq.md)
@@ -107,3 +111,4 @@ Every inquiry record must include, at minimum:
 | Date | Author | Change |
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
+| 2026-05-14 | Cursor agent draft | Linked onsite / Engineering handoff path and inquiry category for SOP-UROC-007. |
