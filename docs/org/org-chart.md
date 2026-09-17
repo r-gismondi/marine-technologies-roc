@@ -13,13 +13,10 @@ flowchart TB
   GM[General Manager]
   SUP[ROC Supervisor]
   GM --> SUP
-  subgraph agents [Agent pool: generic levels]
-    AJ[Agent Junior]
-    AI[Agent Intermediate]
-    AS[Agent Senior]
-    AL[Agent Lead optional]
-  end
-  SUP --> agents
+  SUP --> AJ[Agent Junior]
+  SUP --> AI[Agent Intermediate]
+  SUP --> AS[Agent Senior]
+  SUP --> AL[Agent Lead optional]
 ```
 
 ## Streams under ROC (matrix, not separate reporting lines initially)
