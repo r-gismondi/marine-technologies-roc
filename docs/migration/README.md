@@ -1,6 +1,6 @@
-# Employee migration — UROC
+# Employee migration — ROC
 
-Documents for staff moving into UROC from other departments.
+Documents for staff moving into ROC from other departments.
 
 | Resource | Description |
 |----------|-------------|

@@ -1,6 +1,6 @@
 # External publication review checklist
 
-Before any UROC material leaves Marine Technologies (website, press, brochure, partner deck):
+Before any ROC material leaves Marine Technologies (website, press, brochure, partner deck):
 
 - [ ] **Accuracy**: Matches actual services and contracts; no implied coverage beyond agreements.
 - [ ] **Safety/regulatory**: No statements that could be read as replacing statutory obligations (watchkeeping, classification, etc.) without Legal review.

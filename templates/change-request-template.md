@@ -1,6 +1,6 @@
-# Change request — UROC / tooling
+# Change request — ROC / tooling
 
-**Identifier (ID):** Change Request (CR)-UROC-____  
+**Identifier (ID):** Change Request (CR)-ROC-____  
 **Requested by:**  
 **Date:**  
 
@@ -18,8 +18,8 @@
 
 | Role | Name | Date |
 |------|------|------|
-| UROC Supervisor | | |
-| UROC Information Technology (IT) stream / platform owner (if applicable) | | |
+| ROC Supervisor | | |
+| ROC Information Technology (IT) stream / platform owner (if applicable) | | |
 
 ## Implementation window
 

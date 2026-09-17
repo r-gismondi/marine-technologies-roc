@@ -1,12 +1,12 @@
-# Presentation outline — UROC internal migration
+# Presentation outline — ROC internal migration
 
-_Slide-by-slide outline for employees moving into UROC. Import into PowerPoint/Google Slides or use [Marp](https://marp.app/) if you want Markdown-driven slides._
+_Slide-by-slide outline for employees moving into ROC. Import into PowerPoint/Google Slides or use [Marp](https://marp.app/) if you want Markdown-driven slides._
 
 ---
 
 ## Slide 1 — Title
 
-**Welcome to UROC (Unified Remote Operations Center)**  
+**Welcome to ROC (Remote Operations Center)**  
 Marine Technologies — building one coherent remote operations organization
 
 _Speaker notes: Set tone—clarity, respect for existing expertise, purpose._
@@ -22,7 +22,7 @@ _Speaker notes: Set tone—clarity, respect for existing expertise, purpose._
 
 ---
 
-## Slide 3 — What UROC covers
+## Slide 3 — What ROC covers
 
 - Customer support (operational)
 - Information Technology (IT) stream for remote services
@@ -32,18 +32,18 @@ _Speaker notes: Set tone—clarity, respect for existing expertise, purpose._
 
 ---
 
-## Slide 4 — What UROC does not replace
+## Slide 4 — What ROC does not replace
 
 - Product **engineering authority** for safety-critical decisions
 - **On-board** responsibilities and crewing
-- **Legal/commercial** commitments—UROC executes within agreed rules
+- **Legal/commercial** commitments—ROC executes within agreed rules
 
 ---
 
 ## Slide 5 — Organization (high level)
 
 - **General Manager**
-- **UROC Supervisor** (day-to-day lead)
+- **ROC Supervisor** (day-to-day lead)
 - **Agents** at levels: Junior → Intermediate → Senior → (optional Lead)
 
 _See org diagram in [org-chart.md](../docs/org/org-chart.md)._
@@ -56,7 +56,7 @@ Generic **Agent** role; assignments in:
 
 - Support | Information Technology (IT) | Monitoring | Remote operations support | Data/shore pipeline
 
-All streams sit under the UROC Supervisor; Information Technology is not a separate reporting line in the UROC startup model.
+All streams sit under the ROC Supervisor; Information Technology is not a separate reporting line in the ROC startup model.
 
 You may wear **one primary stream** or combine—defined by roster and training.
 
@@ -96,4 +96,4 @@ _Detail: [roles-and-levels.md](../docs/org/roles-and-levels.md)._
 
 ## Slide 11 — Thank you / contact
 
-_UROC Supervisor contact / town hall schedule / intranet link._
+_ROC Supervisor contact / town hall schedule / intranet link._

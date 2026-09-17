@@ -1,17 +1,17 @@
 # For the next agent — read this first
 
-This file is the **onboarding brief** for continuing UROC documentation work. The human (Rodrigo) will point new chats here so context survives across agents.
+This file is the **onboarding brief** for continuing ROC documentation work. The human (Rodrigo) will point new chats here so context survives across agents.
 
 ## What this repository is
 
-- **UROC** = **Unified Remote Operations Center** at **Marine Technologies** (marine / remote operations company).
+- **ROC** = **Remote Operations Center** at **Marine Technologies** (marine / remote operations company).
 - **Purpose (department):** One shore-side organization combining customer support, Information Technology (IT) touchpoints for remote services, vessel remote monitoring, vessel remote operations support, and governance of data from vessels to shore.
-- **Human’s role:** Supervisor of UROC; leading **department implementation** (goals, procedures, marketing drafts, employee migration messaging, presentations).
+- **Human’s role:** Supervisor of ROC; leading **department implementation** (goals, procedures, marketing drafts, employee migration messaging, presentations).
 - **Audience for docs:** Internal first; external/marketing pieces need Legal/Commercial review before release.
 
 ## Critical workspace rule
 
-- **All UROC work lives in this repository only:** `marine-technologies-uroc` (local path is often `C:\Repo\marine-technologies-uroc`).
+- **All ROC work lives in this repository only:** `marine-technologies-uroc` (local path is often `C:\Repo\marine-technologies-uroc`).
 - **Do not** treat **`C:\Repo\DP`** as part of this project — that is a **large separate product/engineering codebase**. Ignore pending reviews or git state in that separate repository unless the human explicitly asks about it.
 
 ## Git and GitHub
@@ -23,9 +23,9 @@ This file is the **onboarding brief** for continuing UROC documentation work. Th
 
 ## Org model (decisions already reflected in docs)
 
-- **General Manager** → **UROC Supervisor** → **Agents** (generic role name).
+- **General Manager** → **ROC Supervisor** → **Agents** (generic role name).
 - **Agent levels:** Junior → Intermediate → Senior → optional **Lead** (add Lead when scale justifies it; promote **up** before multiplying parallel hierarchies).
-- **Streams** (how work is assigned under the UROC Supervisor, not separate reporting lines): Support, Information Technology (IT), remote monitoring, remote operations support, data/shore pipeline — see matrix in [org/org-chart.md](org/org-chart.md) and detail in [org/roles-and-levels.md](org/roles-and-levels.md).
+- **Streams** (how work is assigned under the ROC Supervisor, not separate reporting lines): Support, Information Technology (IT), remote monitoring, remote operations support, data/shore pipeline — see matrix in [org/org-chart.md](org/org-chart.md) and detail in [org/roles-and-levels.md](org/roles-and-levels.md).
 
 ## What exists vs placeholders
 

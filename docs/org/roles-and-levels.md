@@ -1,12 +1,12 @@
-# Roles and levels — UROC Agents
+# Roles and levels — ROC Agents
 
-**Agent** is the umbrella role. Levels describe **scope**, **decision rights**, **tools**, **escalation**, and **competencies**. Streams (support, Information Technology (IT), monitoring, remote operations, data) are assignments under the UROC Supervisor—not separate departments or titles at startup.
+**Agent** is the umbrella role. Levels describe **scope**, **decision rights**, **tools**, **escalation**, and **competencies**. Streams (support, Information Technology (IT), monitoring, remote operations, data) are assignments under the ROC Supervisor—not separate departments or titles at startup.
 
-## UROC Supervisor
+## ROC Supervisor
 
 | Dimension | Expectation |
 |-----------|-------------|
-| Scope | Owns UROC day-to-day priorities, office-hours coverage expectations, quality, and stakeholder alignment with the General Manager (GM). |
+| Scope | Owns ROC day-to-day priorities, office-hours coverage expectations, quality, and stakeholder alignment with the General Manager (GM). |
 | Decision rights | Approves procedure deviations within policy; escalates policy/budget/legal outside band to the General Manager (GM) and specialists. |
 | Escalation path | Reports to **General Manager**. |
 | Competencies | Operational leadership, incident judgment, stakeholder communication, coaching Agents. |
@@ -55,7 +55,7 @@ Introduce when team size justifies a **technical/coaching lead** without creatin
 
 | Dimension | Expectation |
 |-----------|-------------|
-| Scope | Coordinates daily workload across Agents; represents UROC in operational forums when delegated by Supervisor. |
+| Scope | Coordinates daily workload across Agents; represents ROC in operational forums when delegated by Supervisor. |
 | Decision rights | Defined by General Manager (GM) / Supervisor charter—typically scheduling, quality checks, not Human Resources (HR) discipline unless delegated. |
 | Escalation path | To **Supervisor** for conflicts, policy, and resource asks. |
 

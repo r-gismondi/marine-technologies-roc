@@ -1,4 +1,4 @@
-const documentSections = window.UROC_DOCUMENT_SECTIONS || [];
+const documentSections = window.ROC_DOCUMENT_SECTIONS || [];
 const state = {
   documents: [],
   activePath: "",
@@ -310,7 +310,7 @@ function loadInitialDocument() {
 }
 
 function configureTheme() {
-  const storedTheme = localStorage.getItem("urocPortalTheme");
+  const storedTheme = localStorage.getItem("rocPortalTheme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
 
@@ -326,7 +326,7 @@ function configureTheme() {
 
   themeToggle.addEventListener("click", () => {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("urocPortalTheme", nextTheme);
+    localStorage.setItem("rocPortalTheme", nextTheme);
     applyTheme(nextTheme);
   });
 }

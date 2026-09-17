@@ -1,17 +1,17 @@
-# UROC organization chart
+# ROC organization chart
 
 ## Narrative
 
 - **General Manager (GM)** owns overall business outcomes and resource allocation for Marine Technologies lines reporting through this structure.
-- **UROC Supervisor** is the single operational lead for UROC: priorities, staffing alignment (with the General Manager (GM)), escalation ownership, and quality of remote operations and customer touchpoints.
-- **Agents** form a deliberately **generic** job family with **levels** (Junior → Senior, optional Lead). Work is organized by **streams** under the UROC Supervisor (support, Information Technology (IT), monitoring, remote operations support, data/shore pipeline) without multiplying parallel hierarchies prematurely—people grow **up** the ladder before the org grows **wide**.
+- **ROC Supervisor** is the single operational lead for ROC: priorities, staffing alignment (with the General Manager (GM)), escalation ownership, and quality of remote operations and customer touchpoints.
+- **Agents** form a deliberately **generic** job family with **levels** (Junior → Senior, optional Lead). Work is organized by **streams** under the ROC Supervisor (support, Information Technology (IT), monitoring, remote operations support, data/shore pipeline) without multiplying parallel hierarchies prematurely—people grow **up** the ladder before the org grows **wide**.
 
 ## Diagram
 
 ```mermaid
 flowchart TB
   GM[General Manager]
-  SUP[UROC Supervisor]
+  SUP[ROC Supervisor]
   GM --> SUP
   subgraph agents [Agent pool: generic levels]
     AJ[Agent Junior]
@@ -22,7 +22,7 @@ flowchart TB
   SUP --> agents
 ```
 
-## Streams under UROC (matrix, not separate reporting lines initially)
+## Streams under ROC (matrix, not separate reporting lines initially)
 
 Map people to streams in Human Resources (HR) / job descriptions or a roster—not as extra boxes above unless scale demands it.
 

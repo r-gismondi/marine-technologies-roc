@@ -1,14 +1,14 @@
-# Messaging — UROC (draft)
+# Messaging — ROC (draft)
 
 _Internal drafting aid. Do not publish without review._
 
 ## Elevator pitch (internal)
 
-UROC unifies our remote-facing operations so customers experience one coherent Marine Technologies response, and we run vessel-to-shore activities with clear roles and measurable quality.
+ROC unifies our remote-facing operations so customers experience one coherent Marine Technologies response, and we run vessel-to-shore activities with clear roles and measurable quality.
 
 ## Boilerplate (external — pending approval)
 
-**Unified Remote Operations Center (UROC):** Marine Technologies’ coordinated shore-side organization for customer support, remote monitoring, and remote operational assistance—supported by disciplined handling of operational data from vessel to shore.
+**Remote Operations Center (ROC):** Marine Technologies’ coordinated shore-side organization for customer support, remote monitoring, and remote operational assistance—supported by disciplined handling of operational data from vessel to shore.
 
 ## Definitions
 

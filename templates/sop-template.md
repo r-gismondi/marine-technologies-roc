@@ -1,11 +1,11 @@
-# Standard Operating Procedure (SOP)-UROC-NNN — [Title]
+# Standard Operating Procedure (SOP)-ROC-NNN — [Title]
 
 | Field | Value |
 |-------|-------|
-| Document identifier | SOP-UROC-NNN |
+| Document identifier | SOP-ROC-NNN |
 | Version | 0.1 |
-| Owner | UROC Supervisor |
-| Approver | UROC Supervisor / Document Control / Quality, as applicable |
+| Owner | ROC Supervisor |
+| Approver | ROC Supervisor / Document Control / Quality, as applicable |
 | Effective date | Year-Month-Day (YYYY-MM-DD) or Pending approval |
 | Last reviewed | Year-Month-Day (YYYY-MM-DD) |
 | Review cycle | Annual or after major process change |

@@ -1,6 +1,6 @@
-# UROC employee document portal
+# ROC employee document portal
 
-This folder contains a lightweight static webpage for browsing UROC documents from a local web server.
+This folder contains a lightweight static webpage for browsing ROC documents from a local web server.
 
 ## Run locally
 
@@ -40,12 +40,12 @@ When access control is implemented, filter the manifest by `audience` or replace
 
 The portal automatically looks for common logo filenames in `docs/marketing/`, including:
 
-- `UROC logo transparent.png`
-- `UROC logo.png`
-- `UROC logo black.png`
-- `uroc-logo-transparent.png`
-- `uroc-logo-white.png`
-- `uroc-logo-black.png`
+- `ROC logo transparent.png`
+- `ROC logo.png`
+- `ROC logo black.png`
+- `roc-logo-transparent.png`
+- `roc-logo-white.png`
+- `roc-logo-black.png`
 - `logo-transparent.png`
 - `logo-white.png`
 - `logo-black.png`

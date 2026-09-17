@@ -4,5 +4,5 @@ Drafts for **customer/partner-safe** language. All pieces require review before 
 
 | File | Use |
 |------|-----|
-| [one-pager.md](one-pager.md) | Short overview of UROC |
+| [one-pager.md](one-pager.md) | Short overview of ROC |
 | [messaging.md](messaging.md) | Boilerplate, taglines, definitions |

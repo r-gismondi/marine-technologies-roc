@@ -3,7 +3,7 @@ const DOCUMENT_SECTIONS = [
     id: "start",
     label: "Start Here",
     documents: [
-      { title: "UROC Home", path: "README.md", audience: "all" },
+      { title: "ROC Home", path: "README.md", audience: "all" },
       { title: "New Agent Handoff", path: "docs/FOR_NEXT_AGENT.md", audience: "admin" },
       { title: "First GitHub Push Guide", path: "docs/FIRST_PUSH.md", audience: "admin" },
       { title: "GitHub Branch Protection", path: "docs/github-branch-protection.md", audience: "admin" },
@@ -13,7 +13,7 @@ const DOCUMENT_SECTIONS = [
     id: "strategy",
     label: "Strategy",
     documents: [
-      { title: "UROC Charter", path: "docs/strategy/charter.md", audience: "all" },
+      { title: "ROC Charter", path: "docs/strategy/charter.md", audience: "all" },
       { title: "Responsibility Matrix", path: "docs/strategy/raci.md", audience: "all" },
     ],
   },
@@ -38,13 +38,13 @@ const DOCUMENT_SECTIONS = [
     label: "Procedures",
     documents: [
       { title: "Procedure Index", path: "docs/procedures/README.md", audience: "all" },
-      { title: "Incident Management and Escalation", path: "docs/procedures/SOP-UROC-001-incident-management-and-escalation.md", audience: "all" },
-      { title: "Office-Hours Handoff and On-Call Continuity", path: "docs/procedures/SOP-UROC-002-office-hours-handoff-and-on-call-continuity.md", audience: "all" },
-      { title: "Remote Intervention Authorization", path: "docs/procedures/SOP-UROC-003-remote-intervention-assisted-operations-authorization.md", audience: "all" },
-      { title: "Customer Inquiry Routing and Ownership", path: "docs/procedures/SOP-UROC-004-customer-inquiry-routing-and-ownership.md", audience: "all" },
-      { title: "Data Export, Retention, and Access Requests", path: "docs/procedures/SOP-UROC-005-data-export-retention-access-requests.md", audience: "all" },
-      { title: "Major Incident Communications", path: "docs/procedures/SOP-UROC-006-major-incident-communications-internal.md", audience: "all" },
-      { title: "Engineering and Maintenance Handoff", path: "docs/procedures/SOP-UROC-007-engineering-and-maintenance-handoff.md", audience: "all" },
+      { title: "Incident Management and Escalation", path: "docs/procedures/SOP-ROC-001-incident-management-and-escalation.md", audience: "all" },
+      { title: "Office-Hours Handoff and On-Call Continuity", path: "docs/procedures/SOP-ROC-002-office-hours-handoff-and-on-call-continuity.md", audience: "all" },
+      { title: "Remote Intervention Authorization", path: "docs/procedures/SOP-ROC-003-remote-intervention-assisted-operations-authorization.md", audience: "all" },
+      { title: "Customer Inquiry Routing and Ownership", path: "docs/procedures/SOP-ROC-004-customer-inquiry-routing-and-ownership.md", audience: "all" },
+      { title: "Data Export, Retention, and Access Requests", path: "docs/procedures/SOP-ROC-005-data-export-retention-access-requests.md", audience: "all" },
+      { title: "Major Incident Communications", path: "docs/procedures/SOP-ROC-006-major-incident-communications-internal.md", audience: "all" },
+      { title: "Engineering and Maintenance Handoff", path: "docs/procedures/SOP-ROC-007-engineering-and-maintenance-handoff.md", audience: "all" },
     ],
   },
   {
@@ -52,7 +52,7 @@ const DOCUMENT_SECTIONS = [
     label: "Quality",
     documents: [
       { title: "ISO 9001 and QMS Alignment", path: "docs/quality/iso-9001-alignment.md", audience: "all" },
-      { title: "UROC Records Matrix", path: "docs/quality/records-matrix.md", audience: "all" },
+      { title: "ROC Records Matrix", path: "docs/quality/records-matrix.md", audience: "all" },
     ],
   },
   {
@@ -96,16 +96,16 @@ const DOCUMENT_SECTIONS = [
 ];
 
 const LOGO_CANDIDATES = [
-  "docs/marketing/UROC logo transparent.png",
-  "docs/marketing/UROC logo.png",
-  "docs/marketing/UROC logo black.png",
-  "docs/marketing/uroc-logo-transparent.png",
-  "docs/marketing/uroc-logo-white.png",
-  "docs/marketing/uroc-logo-black.png",
+  "docs/marketing/ROC logo transparent.png",
+  "docs/marketing/ROC logo.png",
+  "docs/marketing/ROC logo black.png",
+  "docs/marketing/roc-logo-transparent.png",
+  "docs/marketing/roc-logo-white.png",
+  "docs/marketing/roc-logo-black.png",
   "docs/marketing/logo-transparent.png",
   "docs/marketing/logo-white.png",
   "docs/marketing/logo-black.png",
 ];
 
-window.UROC_DOCUMENT_SECTIONS = DOCUMENT_SECTIONS;
-window.UROC_LOGO_CANDIDATES = LOGO_CANDIDATES;
+window.ROC_DOCUMENT_SECTIONS = DOCUMENT_SECTIONS;
+window.ROC_LOGO_CANDIDATES = LOGO_CANDIDATES;

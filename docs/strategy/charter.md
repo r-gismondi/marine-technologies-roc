@@ -1,10 +1,10 @@
-# UROC charter
+# ROC charter
 
-**Unified Remote Operations Center (UROC)** — Marine Technologies
+**Remote Operations Center (ROC)** — Marine Technologies
 
 ## Purpose
 
-UROC concentrates shore-side capabilities that connect our fleet and customers to reliable operations: customer support, Information Technology (IT) operations relevant to remote services, vessel remote monitoring, vessel remote operations support, and governance of data flowing from vessels to shore.
+ROC concentrates shore-side capabilities that connect our fleet and customers to reliable operations: customer support, Information Technology (IT) operations relevant to remote services, vessel remote monitoring, vessel remote operations support, and governance of data flowing from vessels to shore.
 
 ## In scope
 
@@ -16,8 +16,8 @@ UROC concentrates shore-side capabilities that connect our fleet and customers t
 ## Out of scope (unless explicitly assigned)
 
 - Replacing **product engineering** sign-off for safety-critical control changes.
-- **On-vessel** physical work or crewing decisions (UROC informs; other roles decide).
-- **Legal or contractual** interpretation without involvement of authorized stakeholders—UROC documents facts and timelines; Legal/Commercial own commitments.
+- **On-vessel** physical work or crewing decisions (ROC informs; other roles decide).
+- **Legal or contractual** interpretation without involvement of authorized stakeholders—ROC documents facts and timelines; Legal/Commercial own commitments.
 
 ## Principles
 
@@ -28,7 +28,7 @@ UROC concentrates shore-side capabilities that connect our fleet and customers t
 
 ## Reporting line
 
-UROC **Supervisor** reports to the **General Manager** (see [org-chart.md](../org/org-chart.md)).
+ROC **Supervisor** reports to the **General Manager** (see [org-chart.md](../org/org-chart.md)).
 
 ## Review cycle
 
