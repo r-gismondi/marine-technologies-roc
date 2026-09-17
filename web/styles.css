@@ -344,6 +344,18 @@ h1 {
   height: auto;
 }
 
+.diagram-card .node.is-doc-link {
+  cursor: pointer;
+}
+
+.diagram-card .node.is-doc-link div,
+.diagram-card .node.is-doc-link span,
+.diagram-card .node.is-doc-link p {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .goal-visual {
   margin: 20px 0 28px;
   border: 1px solid var(--line);

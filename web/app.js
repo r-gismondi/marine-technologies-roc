@@ -266,6 +266,59 @@ function renderMarkdown(markdown, currentPath) {
   return html.join("\n");
 }
 
+function documentViewerUrl(path) {
+  const url = new URL(window.location.href);
+  url.hash = encodeURIComponent(path);
+  return url.toString();
+}
+
+function findDocumentPathFromChartLabel(label) {
+  const compact = label.replace(/\s+/g, " ").trim();
+  if (!compact) return "";
+
+  const sopMatch = compact.match(/SOP-(?:ROC-)?0*(\d{1,3})\b/i);
+  if (sopMatch) {
+    const number = sopMatch[1].padStart(3, "0");
+    const sop = state.documents.find((document) =>
+      /SOP-(?:ROC|UROC)-/.test(document.path) && document.path.includes(`SOP-ROC-${number}`)
+    );
+    if (sop) return sop.path;
+  }
+
+  const normalized = compact.toLowerCase();
+  const exactTitle = state.documents.find((document) => document.title.toLowerCase() === normalized);
+  if (exactTitle) return exactTitle.path;
+
+  return "";
+}
+
+function wireMermaidDocumentLinks() {
+  document.querySelectorAll(".mermaid .node").forEach((node) => {
+    const path = findDocumentPathFromChartLabel(node.textContent || "");
+    if (!path || !findDocument(path)) return;
+
+    const documentMeta = findDocument(path);
+    node.classList.add("is-doc-link");
+    node.setAttribute("role", "link");
+    node.setAttribute("tabindex", "0");
+    node.setAttribute("aria-label", `Open ${documentMeta.title} in a new tab`);
+    node.style.cursor = "pointer";
+
+    const openDocument = (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      window.open(documentViewerUrl(path), "_blank", "noopener,noreferrer");
+    };
+
+    node.addEventListener("click", openDocument);
+    node.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        openDocument(event);
+      }
+    });
+  });
+}
+
 async function renderDiagrams() {
   if (!window.mermaid) return;
 
@@ -276,6 +329,7 @@ async function renderDiagrams() {
       theme: document.documentElement.dataset.theme === "dark" ? "dark" : "default",
     });
     await window.mermaid.run({ querySelector: ".mermaid" });
+    wireMermaidDocumentLinks();
   } catch (error) {
     console.warn("Diagram rendering failed", error);
   }

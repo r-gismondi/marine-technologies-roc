@@ -1,6 +1,6 @@
 # Standard Operating Procedures (SOPs)
 
-Each procedure keeps the full written steps and also a **flowchart** so Agents can see the path before reading the detail.
+Each procedure keeps the full written steps and also a **flowchart** so Agents can see the path before reading the detail. In the employee portal, boxes that name another procedure are links — click one to open that document in a new tab.
 
 ## Which procedure do I use?
 
