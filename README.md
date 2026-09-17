@@ -31,8 +31,8 @@ See **[docs/FIRST_PUSH.md](docs/FIRST_PUSH.md)** for step-by-step options (brows
 ## Working from another machine
 
 ```powershell
-git clone https://github.com/r-gismondi/marine-technologies-uroc.git
-cd marine-technologies-uroc
+git clone https://github.com/r-gismondi/marine-technologies-roc.git
+cd marine-technologies-roc
 ```
 
 Open the folder in Cursor and continue.
@@ -43,7 +43,7 @@ If [GitHub Command Line Interface (CLI)](https://cli.github.com/) (`gh`) is inst
 
 ```powershell
 gh auth login
-gh repo create r-gismondi/marine-technologies-uroc --private --source=. --remote=origin --push
+gh repo create r-gismondi/marine-technologies-roc --private --source=. --remote=origin --push
 ```
 
 See [docs/github-branch-protection.md](docs/github-branch-protection.md) for optional branch protection on `main`.

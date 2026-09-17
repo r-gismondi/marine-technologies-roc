@@ -280,7 +280,7 @@ function findDocumentPathFromChartLabel(label) {
   if (sopMatch) {
     const number = sopMatch[1].padStart(3, "0");
     const sop = state.documents.find((document) =>
-      /SOP-(?:ROC|UROC)-/.test(document.path) && document.path.includes(`SOP-ROC-${number}`)
+      document.path.includes(`SOP-ROC-${number}`)
     );
     if (sop) return sop.path;
   }
