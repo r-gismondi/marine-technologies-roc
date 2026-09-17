@@ -32,7 +32,8 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 | Role | Responsibility |
 |------|----------------|
 | Agent | Opens or updates the official record, confirms inquiry type and ownership, provides approved responses within scope, and escalates ambiguity or commitments outside authority. |
-| Senior Agent / Lead (if assigned) | Supports triage for complex or recurring inquiries, validates response quality, coordinates cross-stream handoffs, and identifies runbook or FAQ gaps. |
+| Senior Agent | Supports triage for complex or recurring inquiries, validates response quality, and identifies runbook or Frequently Asked Questions (FAQ) gaps. |
+| Agent Lead (if assigned) | Coordinates other Agents on who owns the inquiry and any cross-stream handoff. Does not replace Supervisor ownership decisions. |
 | ROC Supervisor | Owns routing standards, resolves ownership conflicts, approves response deviations within policy, and escalates to the General Manager or specialist stakeholders when needed. |
 | Product / Engineering | Owns product behavior, technical interpretation, product limitations, and safety-critical response content. |
 | ROC Information Technology (IT) stream / platform owner | Owns access, tooling, infrastructure, and platform support responses under ROC Supervisor direction. |

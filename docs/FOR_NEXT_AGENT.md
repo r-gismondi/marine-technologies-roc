@@ -24,7 +24,7 @@ This file is the **onboarding brief** for continuing ROC documentation work. The
 ## Org model (decisions already reflected in docs)
 
 - **General Manager** → **ROC Supervisor** → **Agents** (generic role name).
-- **Agent levels:** Junior → Intermediate → Senior → optional **Lead** (add Lead when scale justifies it; promote **up** before multiplying parallel hierarchies).
+- **Agent levels:** Junior → Intermediate → Senior, plus optional **Lead**. The Lead is a peer Agent who **coordinates other Agents**; all Agents report to the Supervisor. Add Lead when scale justifies it; promote **up** before multiplying parallel hierarchies.
 - **Streams** (how work is assigned under the ROC Supervisor, not separate reporting lines): Support, Information Technology (IT), remote monitoring, remote operations support, data/shore pipeline — see matrix in [org/org-chart.md](org/org-chart.md) and detail in [org/roles-and-levels.md](org/roles-and-levels.md).
 
 ## What exists vs placeholders

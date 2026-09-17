@@ -32,7 +32,8 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 | Role | Responsibility |
 |------|----------------|
 | Agent | Receives or observes the request, opens or updates the official ticket, confirms whether authorization is documented, follows approved runbooks, and stops/escalates when boundaries are unclear. |
-| Senior Agent / Lead (if assigned) | Reviews complex or cross-stream requests, confirms procedure fit, supports Agents with runbook interpretation, and escalates gaps or ambiguity. |
+| Senior Agent | Reviews complex or cross-stream requests, confirms procedure fit, supports Agents with runbook interpretation, and escalates gaps or ambiguity. |
+| Agent Lead (if assigned) | Coordinates other Agents on who prepares, reviews, or stands by for the request. Does not authorize the remote action. |
 | ROC Supervisor | Owns ROC authorization discipline, approves ROC procedure deviations within policy, resolves priority conflicts, and escalates to the General Manager or specialist stakeholders when authority is outside ROC. |
 | Product / Engineering | Owns product behavior, technical authority, safety-critical control decisions, and product/runbook approval. |
 | ROC Information Technology (IT) stream / platform owner | Owns access, tooling, infrastructure, and platform changes needed for remote-service support under ROC Supervisor direction. |

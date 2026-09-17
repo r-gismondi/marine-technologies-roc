@@ -44,7 +44,7 @@ _Speaker notes: Set tone—clarity, respect for existing expertise, purpose._
 
 - **General Manager**
 - **ROC Supervisor** (day-to-day lead)
-- **Agents** at levels: Junior → Intermediate → Senior → (optional Lead)
+- **Agents** at levels: Junior, Intermediate, Senior, and optional Lead (peer who coordinates other Agents; all report to the Supervisor)
 
 _See org diagram in [org-chart.md](../docs/org/org-chart.md)._
 

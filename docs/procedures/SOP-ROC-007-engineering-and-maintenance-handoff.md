@@ -43,7 +43,8 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 | Role                                                    | Responsibility                                                                                                                                                                                                                                               |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ROC Agent                                              | Completes remote triage within policy, documents facts and evidence pointers, proposes handoff type (customer Maintenance vs Marine Technologies Engineering), updates the official ticket, and requests Supervisor confirmation when the choice is unclear. |
-| Senior Agent / Lead (if assigned)                       | Supports complex triage, validates handoff package quality, and coordinates timing with stakeholders.                                                                                                                                                        |
+| Senior Agent                                           | Supports complex triage and validates handoff package quality.                                                                                                                                                                                               |
+| Agent Lead (if assigned)                                | Coordinates other Agents on who prepares the handoff package and tracks timing with stakeholders. Does not accept ownership on behalf of Engineering or Maintenance.                                                                                         |
 | ROC Supervisor                                         | Approves handoff recipient when ambiguous, escalates contract or resource conflicts, and ensures a single accountable receiving owner is recorded before ROC closes coordination.                                                                           |
 | Product / Engineering (Marine Technologies Engineering) | Accepts or declines ownership for engineering-led work (including projects, FAT, commissioning, and approved vessel technical attendance), provides acceptance criteria and planning inputs, and executes per company engineering and safety processes.      |
 | Customer Maintenance department                         | Executes customer-owned physical response, onboard checks, or contractually assigned maintenance actions when the handoff is to the client.                                                                                                                  |
@@ -118,7 +119,7 @@ Escalate to the **General Manager** for cross-department resource conflicts (for
 
 ## Training and acknowledgment
 
-- **Affected roles:** ROC Agents and Senior Agents / Leads; ROC Supervisor; Marine Technologies Engineering intake or project leads; Commercial where contract routing applies.
+- **Affected roles:** ROC Agents, Senior Agents, and Agent Leads (if assigned); ROC Supervisor; Marine Technologies Engineering intake or project leads; Commercial where contract routing applies.
 - **Training / read-and-acknowledge:** Per Marine Technologies Human Resources (HR) / Quality process once the Standard Operating Procedure is approved.
 - **Competence evidence location:** Company learning or Quality system.
 - **Retraining triggers:** Material change to ticketing tools, contract templates, or Engineering intake process.

@@ -31,7 +31,8 @@ Do not record customer names, vessel identifiers, credentials, or detailed incid
 | Role | Responsibility |
 |------|----------------|
 | Agent | Detects or receives the issue, protects immediate safety, opens or updates the official ticket, assigns an initial severity, follows documented steps, and escalates ambiguity or high-impact conditions. |
-| Senior Agent / Lead (if assigned) | Supports triage for complex or cross-stream incidents, coordinates handoffs, validates documentation quality, and coaches Agents through the procedure. |
+| Senior Agent | Supports triage for complex or cross-stream incidents, validates documentation quality, and coaches Agents through technical steps of the procedure. |
+| Agent Lead (if assigned) | Coordinates other Agents on who owns the response, coverage, and handoffs. Does not replace Supervisor escalation or severity decisions. |
 | ROC Supervisor | Owns escalation decisions, approves procedure deviations within policy, confirms severity changes for high-impact cases, and coordinates with the General Manager or specialist stakeholders. |
 | General Manager | Provides business direction for resource, policy, or customer-impact decisions outside the Supervisor’s authority. |
 | Product / Engineering | Provides product authority, technical assessment, and safety-critical sign-off where required. |
@@ -45,7 +46,7 @@ These severity classes are planning defaults until approved by the ROC Superviso
 | Severity | Criteria | Initial escalation expectation |
 |----------|----------|-------------------------------|
 | Severity Level 1 (Sev1) | Immediate safety risk, active regulatory exposure, major customer-impacting outage, or any situation where delay could materially increase harm. | Notify the ROC Supervisor immediately and use the published duty / on-call path. If someone is in immediate danger, follow local emergency procedures first. |
-| Severity Level 2 (Sev2) | Significant operational disruption, repeated monitoring alarm with customer or fleet impact, blocked remote operations support, or unresolved ambiguity that needs Supervisor/Senior judgment. | Notify the ROC Supervisor or Senior Agent / Lead within 30 minutes of classification. |
+| Severity Level 2 (Sev2) | Significant operational disruption, repeated monitoring alarm with customer or fleet impact, blocked remote operations support, or unresolved ambiguity that needs Supervisor/Senior judgment. | Notify the ROC Supervisor or Senior Agent within 30 minutes of classification. If a Lead is assigned, the Lead coordinates which Agent owns the response. |
 | Severity Level 3 (Sev3) | Standard incident or service degradation with limited impact, known workaround, or contained issue requiring follow-up. | Handle through the official queue; escalate if blocked, impact grows, or ownership is unclear. |
 | Severity Level 4 (Sev4) | Routine question, minor issue, documentation gap, or low-impact follow-up that does not require urgent response. | Track in the official system and resolve through normal prioritization. |
 
@@ -53,7 +54,7 @@ These severity classes are planning defaults until approved by the ROC Superviso
 
 1. **Protect safety first.** If there is immediate danger, follow local emergency procedures before any ROC workflow. Do not perform remote actions unless authorization is clear under product, regulatory, and company policy.
 2. **Open or update the official ticket.** Use the company-approved ticketing system as the source of truth. Include the issue summary, observed impact, current owner, initial severity, and related ticket or Configuration Management Database (CMDB) identifiers.
-3. **Classify initial severity.** Use the severity table above. When in doubt between two severities, choose the higher severity and ask the ROC Supervisor or Senior Agent / Lead to confirm.
+3. **Classify initial severity.** Use the severity table above. When in doubt between two severities, choose the higher severity and ask the ROC Supervisor or Senior Agent to confirm. If a Lead is assigned, the Lead coordinates which Agent continues the work.
 4. **Capture minimum facts.** Record what was observed, when it was observed, who is affected by role or system category, what action has already been taken, and what decision or support is needed next. Avoid sensitive identifiers in uncontrolled notes.
 5. **Escalate according to severity.** Use the published duty / on-call path for Severity Level 1 (Sev1) and urgent Severity Level 2 (Sev2) incidents. Escalate immediately if safety, legal, commercial, or product-authorization boundaries are unclear.
 6. **Coordinate the response.** Keep ownership explicit in the ticket. Handoff notes must include current status, next action, owner, timestamp, and open risks.

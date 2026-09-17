@@ -9,7 +9,7 @@ Marine Technologies is consolidating remote-facing operations into **one coheren
 - **Reporting and priorities** align to ROC Supervisor and shared departmental goals.
 - **Ways of working** emphasize documented procedures, handovers, and escalation paths over informal channels.
 - **Tooling** may standardize (ticketing, monitoring, collaboration)—training will be provided.
-- **Career growth** uses the **Agent** ladder (Junior → Senior, optional Lead) so progression is clear as the department scales.
+- **Career growth** uses the **Agent** ladder (Junior → Intermediate → Senior). An optional **Lead** assignment coordinates other Agents and is not a new manager layer.
 
 ## What should stay familiar
 
