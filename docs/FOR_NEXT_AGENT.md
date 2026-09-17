@@ -32,7 +32,7 @@ This file is the **onboarding brief** for continuing ROC documentation work. The
 | Area | Status |
 |------|--------|
 | Charter, Responsible, Accountable, Consulted, Informed (RACI) template, org chart, Agent levels | Draft content in place — fill names, metrics, approvals |
-| Year-one goals | [goals/year-one-goals.md](goals/year-one-goals.md) — metrics/targets are placeholders |
+| Year-one goals | [goals/year-one-goals.md](goals/year-one-goals.md) — highest priority is work / time efficiency (1.0 → 0.7) with saved time moved to prevention |
 | Migration pack + internal deck outline | [migration/](migration/) + [../presentations/internal-migration.md](../presentations/internal-migration.md) — Frequently Asked Questions (FAQ) and training need real answers |
 | Standard Operating Procedure (SOP) index | [procedures/README.md](procedures/README.md) — Standard Operating Procedure bodies mostly “planned”; use [../templates/sop-template.md](../templates/sop-template.md) |
 | Marketing drafts | [marketing/](marketing/) — explicitly draft; use [marketing/review-checklist.md](marketing/review-checklist.md) before external use |

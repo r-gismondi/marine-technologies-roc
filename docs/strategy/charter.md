@@ -25,6 +25,7 @@ ROC concentrates shore-side capabilities that connect our fleet and customers to
 2. **Single coherent customer experience** — One front door for operational inquiries where practical; no conflicting answers across teams.
 3. **Data discipline** — Minimum necessary access; audit-friendly handling; no secrets in general documentation repos.
 4. **Measurable operations** — Goals use Key Performance Indicators (KPIs) and Service Level Agreements (SLAs) that can be reviewed quarterly.
+5. **Time for prevention** — Improve work / time efficiency so saved capacity goes to planning and preventing problems, not only to fixing them. See [year one goals](../goals/year-one-goals.md).
 
 ## Reporting line
 
