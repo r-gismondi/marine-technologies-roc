@@ -51,6 +51,20 @@ At minimum, include:
 - Related ticket identifiers, Configuration Management Database (CMDB) identifiers, or controlled record references.
 - Whether the item can wait until the next business day or must follow the company on-call schedule.
 
+## How it flows
+
+```mermaid
+flowchart TD
+  review[Review open work] --> wait{Can it wait until next business day?}
+  wait -->|Yes| record[Update official handoff note]
+  wait -->|No, office hours| same[Lead or Supervisor same day]
+  wait -->|No, after hours| oncall[Company on-call path]
+  same --> record
+  oncall --> record
+  record --> next[Next-business-day carryover review]
+  next --> close[Close the loop]
+```
+
 ## Procedure
 
 1. **Review open work before leaving office-hours coverage.** Check assigned tickets, monitoring follow-ups, customer inquiries, data/shore-pipeline items, and remote operations support tasks.
@@ -95,3 +109,4 @@ If there is immediate danger, follow local emergency procedures first, then noti
 | Date | Author | Change |
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
+| 2026-09-17 | Cursor agent draft | Added flowchart of office-hours and on-call continuity. |

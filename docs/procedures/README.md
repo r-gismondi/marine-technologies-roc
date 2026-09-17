@@ -1,5 +1,26 @@
 # Standard Operating Procedures (SOPs)
 
+Each procedure keeps the full written steps and also a **flowchart** so Agents can see the path before reading the detail.
+
+## Which procedure do I use?
+
+```mermaid
+flowchart TD
+  in[Work arrives in ROC] --> q1{Danger, outage, or incident?}
+  q1 -->|Yes| s001[SOP-001 Incident]
+  q1 -->|No| q2{Need a remote action?}
+  q2 -->|Yes| s003[SOP-003 Authorization]
+  q2 -->|No| q3{Customer or internal question?}
+  q3 -->|Yes| s004[SOP-004 Inquiry]
+  q3 -->|No| q4{Data export, access, or retention?}
+  q4 -->|Yes| s005[SOP-005 Data]
+  q4 -->|No| q5{Leaving office hours or after hours?}
+  q5 -->|Yes| s002[SOP-002 Continuity]
+  q5 -->|No| q6{Onsite Engineering or Maintenance needed?}
+  q6 -->|Yes| s007[SOP-007 Handoff]
+  s001 --> s006[SOP-006 Internal comms if major]
+```
+
 ## Index
 
 Prioritize authoring these first; link each row when the Standard Operating Procedure (SOP) file exists.
@@ -21,7 +42,7 @@ Use prefix **SOP-ROC-###** for departmental Standard Operating Procedures. If Ma
 ## How to add a Standard Operating Procedure
 
 1. Copy [sop-template.md](../../templates/sop-template.md) to `docs/procedures/SOP-ROC-NNN-title.md`.
-2. Fill all required fields, including owner, approver, effective date, review cycle, records/evidence, training/acknowledgment, and revision history.
+2. Fill all required fields, including owner, approver, effective date, review cycle, records/evidence, training/acknowledgment, revision history, and a **How it flows** flowchart before the written steps.
 3. Map any records created by the procedure in the [ROC records matrix](../quality/records-matrix.md).
 4. Obtain **Supervisor** review and follow Marine Technologies Document Control / Quality Management System (QMS) approval before marking Approved.
 5. Update the index table above.

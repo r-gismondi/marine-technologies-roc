@@ -22,6 +22,16 @@
 |------|----------------|
 | | |
 
+## How it flows
+
+```mermaid
+flowchart TD
+  start[Start] --> decision{Decision?}
+  decision -->|Yes| actionA[Approved action]
+  decision -->|No| escalate[Stop and escalate]
+  actionA --> close[Close with record]
+```
+
 ## Procedure
 
 1.

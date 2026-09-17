@@ -52,6 +52,19 @@ Remote intervention or assisted operations support may proceed only when all of 
 
 If any principle cannot be confirmed, do not proceed. Escalate according to this procedure and, if impact is urgent, follow [SOP-ROC-001](SOP-ROC-001-incident-management-and-escalation.md).
 
+## How it flows
+
+```mermaid
+flowchart TD
+  ticket[Open or update official ticket] --> check{All authorization principles met?}
+  check -->|No| stop[Stop. Do not act. Escalate]
+  check -->|Yes| act[Proceed only within approved limits]
+  act --> monitor[Monitor and document]
+  monitor --> still{Still within approved limits?}
+  still -->|No| stop
+  still -->|Yes| close[Close or hand off]
+```
+
 ## Procedure
 
 1. **Open or update the official ticket.** Record the request, source, current owner, affected system category, intended outcome, and related ticket or Configuration Management Database (CMDB) identifiers.
@@ -110,3 +123,4 @@ Every remote intervention or assisted operations authorization record must inclu
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
 | 2026-05-14 | Cursor agent draft | Linked onsite / Engineering handoff reference to SOP-ROC-007. |
+| 2026-09-17 | Cursor agent draft | Added flowchart of the authorization gate. |

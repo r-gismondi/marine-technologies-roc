@@ -50,6 +50,27 @@ These severity classes are planning defaults until approved by the ROC Superviso
 | Severity Level 3 (Sev3) | Standard incident or service degradation with limited impact, known workaround, or contained issue requiring follow-up. | Handle through the official queue; escalate if blocked, impact grows, or ownership is unclear. |
 | Severity Level 4 (Sev4) | Routine question, minor issue, documentation gap, or low-impact follow-up that does not require urgent response. | Track in the official system and resolve through normal prioritization. |
 
+## How it flows
+
+```mermaid
+flowchart TD
+  start[Issue detected] --> danger{Immediate danger?}
+  danger -->|Yes| emergency[Local emergency first]
+  emergency --> ticket[Open or update official ticket]
+  danger -->|No| ticket
+  ticket --> sev[Classify severity]
+  sev --> s1[Sev1: Supervisor and on-call now]
+  sev --> s2[Sev2: Supervisor or Senior in 30 min]
+  sev --> s34[Sev3 or Sev4: official queue]
+  s1 --> coord[Coordinate, record, communicate approved facts]
+  s2 --> coord
+  s34 --> coord
+  coord --> close{Resolved or transferred?}
+  close -->|No| more[Escalate or continue]
+  more --> coord
+  close -->|Yes| done[Close with confirmation]
+```
+
 ## Procedure
 
 1. **Protect safety first.** If there is immediate danger, follow local emergency procedures before any ROC workflow. Do not perform remote actions unless authorization is clear under product, regulatory, and company policy.
@@ -94,3 +115,4 @@ Company-specific phone numbers, bridges, rosters, ticket priorities, and channel
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
 | 2026-05-14 | Cursor agent draft | Linked Engineering / Maintenance onsite handoff to SOP-ROC-007. |
+| 2026-09-17 | Cursor agent draft | Added flowchart of the incident path. |

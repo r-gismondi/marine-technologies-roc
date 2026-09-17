@@ -52,6 +52,21 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 | Commercial / Legal | Contract interpretation, customer promise, claim, liability, legal wording. | Commercial / Legal |
 | Potential incident | Safety risk, outage, material degradation, urgent ambiguity. | ROC Supervisor via [SOP-ROC-001](SOP-ROC-001-incident-management-and-escalation.md) |
 
+## How it flows
+
+```mermaid
+flowchart TD
+  capture[Capture inquiry in official system] --> urgent{Safety, outage, or urgent?}
+  urgent -->|Yes| incident[Use SOP-001]
+  urgent -->|No| classify[Classify and assign one owner]
+  classify --> can{ROC can answer with approved facts?}
+  can -->|Yes| answer[Respond with approved language]
+  can -->|No| route[Route to accountable owner]
+  answer --> track[Track until closed or transferred]
+  route --> track
+  track --> close[Close and improve FAQ or runbook]
+```
+
 ## Procedure
 
 1. **Capture the inquiry in the official system.** Open or update the company-approved ticket or queue. Record inquiry source, summary, current owner, requested outcome, related ticket or CMDB identifiers, and target response expectation if known.
@@ -113,3 +128,4 @@ Every inquiry record must include, at minimum:
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
 | 2026-05-14 | Cursor agent draft | Linked onsite / Engineering handoff path and inquiry category for SOP-ROC-007. |
+| 2026-09-17 | Cursor agent draft | Added flowchart of inquiry routing. |

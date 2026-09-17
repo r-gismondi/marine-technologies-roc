@@ -50,6 +50,19 @@ Do not record customer names, vessel identifiers, credentials, raw exports, or d
 | Data quality / pipeline issue | Missing data, delayed ingest, inconsistent record, export failure. | Data/shore stream owner and ROC Information Technology (IT) stream; incident handling if urgent. |
 | Unclear or unusual request | Sensitive data, new use case, unusual recipient, informal workaround. | ROC Supervisor before action. |
 
+## How it flows
+
+```mermaid
+flowchart TD
+  open[Open official request] --> cat[Classify access, export, retention, quality, or unusual]
+  cat --> facts[Confirm purpose, owner, recipient]
+  facts --> informal{Informal workaround requested?}
+  informal -->|Yes| stop[Do not move data. Escalate]
+  informal -->|No| route[Route for approval]
+  route --> track[Track approval and fulfillment]
+  track --> close[Close with audit trail]
+```
+
 ## Procedure
 
 1. **Open or update the official request record.** Use the approved ticketing or request system. Capture requester role, business purpose, requested data or access category, intended recipient, timing, and related ticket or CMDB identifiers.
@@ -105,3 +118,4 @@ Every request record must include, at minimum:
 | Date | Author | Change |
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
+| 2026-09-17 | Cursor agent draft | Added flowchart of data request routing. |

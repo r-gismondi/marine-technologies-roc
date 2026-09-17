@@ -50,6 +50,25 @@ Internal major incident communications must be:
 4. **Non-speculative.** Do not guess root cause, restoration timing, customer obligations, or legal/commercial impact.
 5. **Time-bound.** Every update should state the next expected update time or closure condition.
 
+## How it flows
+
+```mermaid
+flowchart TD
+  trigger[Major incident needs internal update] --> owner[Supervisor owns the message]
+  owner --> facts[Collect approved facts]
+  facts --> draft[Draft the update]
+  draft --> who{Who must approve wording?}
+  who -->|Technical or safety| eng[Product / Engineering]
+  who -->|Contract or legal| legal[Commercial / Legal]
+  who -->|ROC only| send[Send on approved channel]
+  eng --> send
+  legal --> send
+  send --> record[Record time, audience, next update]
+  record --> open{Incident still open?}
+  open -->|Yes| facts
+  open -->|No| close[Send closure summary]
+```
+
 ## Procedure
 
 1. **Confirm communication trigger.** Determine whether the incident meets scope above or whether the ROC Supervisor has requested internal updates.
@@ -116,3 +135,4 @@ Every major incident communication record must include, at minimum:
 | Date | Author | Change |
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
+| 2026-09-17 | Cursor agent draft | Added flowchart of internal incident communications. |

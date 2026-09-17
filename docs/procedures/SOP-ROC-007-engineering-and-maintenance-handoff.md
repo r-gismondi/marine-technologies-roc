@@ -76,6 +76,24 @@ Use the official ticket and contract / service documents as the source of truth.
 | Ambiguous scope (“who attends the vessel?”)                                                                                            | **ROC Supervisor** align with **Project Engineer Manager**; record decision criteria in the ticket                       |
 
 
+## How it flows
+
+```mermaid
+flowchart TD
+  remote[Remote path blocked or exhausted] --> ticket[Confirm official ticket]
+  ticket --> who{Who owns the next physical step?}
+  who -->|Customer first-line maintenance| maint[Customer Maintenance]
+  who -->|Product, FAT, commissioning, or MT visit| eng[MT Engineering]
+  who -->|Unclear| sup[Supervisor. Commercial if contract is unclear]
+  maint --> pack[Build handoff package]
+  eng --> pack
+  sup --> pack
+  pack --> accept{Receiving owner accepts?}
+  accept -->|No| wait[Not handed off yet. Escalate]
+  accept -->|Yes| track[Track to completion or return]
+  track --> close[Close handoff record]
+```
+
 ## Procedure
 
 1. **Confirm the official record.** Open or continue a record in the company-approved ticketing or incident system. If the situation meets incident criteria, follow [SOP-ROC-001](SOP-ROC-001-incident-management-and-escalation.md) in parallel until severity and safety posture are stable.
@@ -140,5 +158,6 @@ Escalate to the **General Manager** for cross-department resource conflicts (for
 | Date       | Author             | Change                                                         |
 | ---------- | ------------------ | -------------------------------------------------------------- |
 | 2026-05-14 | Cursor agent draft | Initial draft for ROC Supervisor and Document Control review. |
+| 2026-09-17 | Cursor agent draft | Added flowchart of Engineering / Maintenance handoff. |
 
 
