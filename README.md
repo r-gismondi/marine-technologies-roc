@@ -1,6 +1,6 @@
-# UROC — Unified Remote Operations Center
+# ROC — Remote Operations Center
 
-Internal documentation for **Marine Technologies** UROC: strategy, org design, procedures, migration communications, and marketing drafts.
+Internal documentation for **Marine Technologies** ROC: strategy, org design, procedures, migration communications, and marketing drafts.
 
 ## How to use this repository
 

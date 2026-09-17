@@ -9,4 +9,4 @@ When more than one person contributes, protect `main` in GitHub:
    - **Require approvals** (e.g. 1)
    - **Do not allow bypassing** (optional, for stricter compliance)
 
-UROC documentation rarely needs force-push; keeping history linear is enough for most teams.
+ROC documentation rarely needs force-push; keeping history linear is enough for most teams.

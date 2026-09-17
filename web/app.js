@@ -1,4 +1,4 @@
-const documentSections = window.UROC_DOCUMENT_SECTIONS || [];
+const documentSections = window.ROC_DOCUMENT_SECTIONS || [];
 const state = {
   documents: [],
   activePath: "",
@@ -46,6 +46,103 @@ function inlineMarkdown(value, currentPath) {
     });
 }
 
+function parseVisualFields(source) {
+  const fields = {};
+  source.split("\n").forEach((line) => {
+    const match = line.match(/^\s*([^:#]+):\s*(.+?)\s*$/);
+    if (match) {
+      fields[match[1].trim()] = match[2].trim();
+    }
+  });
+  return fields;
+}
+
+function renderRocVisual(source) {
+  const fields = parseVisualFields(source);
+  const type = fields.type || "ratio";
+
+  if (type === "ratio") {
+    const today = fields.today || "1.0";
+    const target = fields.target || "0.7";
+    const saved = fields.saved || "30%";
+    return `
+      <div class="goal-visual" aria-label="Time per completed task today versus year-one target">
+        <div class="goal-visual-head">
+          <p class="goal-kicker">Highest priority</p>
+          <h3>Time per completed task</h3>
+          <p>Lower is better. Today absorbed teams run at <strong>1.0 : 1</strong>. Year-one target is <strong>0.7 : 1</strong>.</p>
+        </div>
+        <div class="ratio-grid">
+          <article class="ratio-card">
+            <span class="ratio-label">Today</span>
+            <strong class="ratio-value">${escapeHtml(today)}</strong>
+            <span class="ratio-unit">time : task conclusion</span>
+            <div class="ratio-bar" aria-hidden="true"><span style="width:100%"></span></div>
+            <p>Information Technology (IT), Support, C-Comm, and other teams being absorbed by ROC.</p>
+          </article>
+          <div class="ratio-arrow" aria-hidden="true">→</div>
+          <article class="ratio-card target">
+            <span class="ratio-label">Year-one target</span>
+            <strong class="ratio-value">${escapeHtml(target)}</strong>
+            <span class="ratio-unit">time : task conclusion</span>
+            <div class="ratio-bar" aria-hidden="true"><span style="width:70%"></span></div>
+            <p><strong>${escapeHtml(saved)}</strong> less time per completed task.</p>
+          </article>
+        </div>
+      </div>`;
+  }
+
+  if (type === "allocation") {
+    const fix = fields.fix || "70";
+    const prevent = fields.prevent || "30";
+    return `
+      <div class="goal-visual" aria-label="How saved time is used">
+        <div class="goal-visual-head">
+          <p class="goal-kicker">Where the saved time goes</p>
+          <h3>Do not just finish faster — prevent the next problem</h3>
+          <p>The ${escapeHtml(prevent)}% gained from efficiency is relocated to planning and prevention, not left idle and not used only to take more break-fix work.</p>
+        </div>
+        <div class="split-legend">
+          <span><i class="swatch fix"></i> Fixing problems ${escapeHtml(fix)}%</span>
+          <span><i class="swatch prevent"></i> Planning and prevention ${escapeHtml(prevent)}%</span>
+        </div>
+        <div class="split-bar" role="img" aria-label="After the gain, ${escapeHtml(fix)} percent fixing problems and ${escapeHtml(prevent)} percent planning and prevention">
+          <span class="split-fix" style="flex:${escapeHtml(fix)}">Fix ${escapeHtml(fix)}%</span>
+          <span class="split-prevent" style="flex:${escapeHtml(prevent)}">Prevent ${escapeHtml(prevent)}%</span>
+        </div>
+      </div>`;
+  }
+
+  if (type === "steps") {
+    const steps = ["q1", "q2", "q3", "q4"]
+      .filter((key) => fields[key])
+      .map((key) => {
+        const [label, value] = fields[key].split("|").map((part) => part.trim());
+        return { label: label || key.toUpperCase(), value: value || "" };
+      });
+    const items = steps
+      .map(
+        (step, index) => `
+        <li>
+          <span class="step-label">${escapeHtml(step.label)}</span>
+          <strong>${escapeHtml(step.value)}</strong>
+          ${index < steps.length - 1 ? '<span class="step-join" aria-hidden="true">→</span>' : ""}
+        </li>`
+      )
+      .join("");
+    return `
+      <div class="goal-visual" aria-label="Gradual efficiency path">
+        <div class="goal-visual-head">
+          <p class="goal-kicker">Gradual path</p>
+          <h3>Reduce time per task in steps, then lock the gain into prevention</h3>
+        </div>
+        <ol class="step-path">${items}</ol>
+      </div>`;
+  }
+
+  return `<pre><code>${escapeHtml(source)}</code></pre>`;
+}
+
 function renderMarkdown(markdown, currentPath) {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const html = [];
@@ -56,12 +153,16 @@ function renderMarkdown(markdown, currentPath) {
   let inTable = false;
 
   const renderCodeBlock = () => {
-    const code = escapeHtml(codeLines.join("\n"));
+    const code = codeLines.join("\n");
     if (codeLanguage === "mermaid") {
-      return `<div class="diagram-card"><div class="mermaid">${code}</div></div>`;
+      return `<div class="diagram-card"><div class="mermaid">${escapeHtml(code)}</div></div>`;
     }
 
-    return `<pre><code>${code}</code></pre>`;
+    if (codeLanguage === "roc-visual") {
+      return renderRocVisual(code);
+    }
+
+    return `<pre><code>${escapeHtml(code)}</code></pre>`;
   };
 
   const closeList = () => {
@@ -165,6 +266,59 @@ function renderMarkdown(markdown, currentPath) {
   return html.join("\n");
 }
 
+function documentViewerUrl(path) {
+  const url = new URL(window.location.href);
+  url.hash = encodeURIComponent(path);
+  return url.toString();
+}
+
+function findDocumentPathFromChartLabel(label) {
+  const compact = label.replace(/\s+/g, " ").trim();
+  if (!compact) return "";
+
+  const sopMatch = compact.match(/SOP-(?:ROC-)?0*(\d{1,3})\b/i);
+  if (sopMatch) {
+    const number = sopMatch[1].padStart(3, "0");
+    const sop = state.documents.find((document) =>
+      /SOP-(?:ROC|UROC)-/.test(document.path) && document.path.includes(`SOP-ROC-${number}`)
+    );
+    if (sop) return sop.path;
+  }
+
+  const normalized = compact.toLowerCase();
+  const exactTitle = state.documents.find((document) => document.title.toLowerCase() === normalized);
+  if (exactTitle) return exactTitle.path;
+
+  return "";
+}
+
+function wireMermaidDocumentLinks() {
+  document.querySelectorAll(".mermaid .node").forEach((node) => {
+    const path = findDocumentPathFromChartLabel(node.textContent || "");
+    if (!path || !findDocument(path)) return;
+
+    const documentMeta = findDocument(path);
+    node.classList.add("is-doc-link");
+    node.setAttribute("role", "link");
+    node.setAttribute("tabindex", "0");
+    node.setAttribute("aria-label", `Open ${documentMeta.title} in a new tab`);
+    node.style.cursor = "pointer";
+
+    const openDocument = (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      window.open(documentViewerUrl(path), "_blank", "noopener,noreferrer");
+    };
+
+    node.addEventListener("click", openDocument);
+    node.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        openDocument(event);
+      }
+    });
+  });
+}
+
 async function renderDiagrams() {
   if (!window.mermaid) return;
 
@@ -175,6 +329,7 @@ async function renderDiagrams() {
       theme: document.documentElement.dataset.theme === "dark" ? "dark" : "default",
     });
     await window.mermaid.run({ querySelector: ".mermaid" });
+    wireMermaidDocumentLinks();
   } catch (error) {
     console.warn("Diagram rendering failed", error);
   }
@@ -310,7 +465,7 @@ function loadInitialDocument() {
 }
 
 function configureTheme() {
-  const storedTheme = localStorage.getItem("urocPortalTheme");
+  const storedTheme = localStorage.getItem("rocPortalTheme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
 
@@ -326,7 +481,7 @@ function configureTheme() {
 
   themeToggle.addEventListener("click", () => {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("urocPortalTheme", nextTheme);
+    localStorage.setItem("rocPortalTheme", nextTheme);
     applyTheme(nextTheme);
   });
 }

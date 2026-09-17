@@ -1,12 +1,12 @@
-# ISO 9001 / QMS alignment for UROC documentation
+# ISO 9001 / QMS alignment for ROC documentation
 
-Marine Technologies is ISO 9001 certified. UROC documentation must support the company Quality Management System (QMS); it must not create a parallel or conflicting quality system.
+Marine Technologies is ISO 9001 certified. ROC documentation must support the company Quality Management System (QMS); it must not create a parallel or conflicting quality system.
 
-Use this page as an alignment checklist for UROC-owned procedures, goals, records, and training material. Final approval, numbering, retention, and controlled-copy handling must follow Marine Technologies Document Control and Quality requirements.
+Use this page as an alignment checklist for ROC-owned procedures, goals, records, and training material. Final approval, numbering, retention, and controlled-copy handling must follow Marine Technologies Document Control and Quality requirements.
 
 ## Scope of this guide
 
-This guide applies to UROC documentation in this repository, including:
+This guide applies to ROC documentation in this repository, including:
 
 - Standard Operating Procedures (SOPs).
 - Goals and Key Performance Indicators (KPIs).
@@ -18,9 +18,9 @@ This guide is not a substitute for Marine Technologies' official Quality Manual,
 
 ## ISO 9001 alignment checklist
 
-| ISO 9001 topic | UROC expectation | Evidence in this repository |
+| ISO 9001 topic | ROC expectation | Evidence in this repository |
 |----------------|------------------|-----------------------------|
-| Context and scope | UROC scope, boundaries, and interfaces are documented. | [UROC charter](../strategy/charter.md), [organization chart](../org/org-chart.md), [roles and levels](../org/roles-and-levels.md). |
+| Context and scope | ROC scope, boundaries, and interfaces are documented. | [ROC charter](../strategy/charter.md), [organization chart](../org/org-chart.md), [roles and levels](../org/roles-and-levels.md). |
 | Leadership and accountability | Owners and escalation paths are defined for objectives, procedures, and decisions. | [Responsible, Accountable, Consulted, Informed (RACI) matrix](../strategy/raci.md), SOP role tables, goals owners. |
 | Quality objectives | Objectives are measurable, assigned, and reviewed. | [Year one goals](../goals/year-one-goals.md). |
 | Competence and awareness | Required onboarding, stream training, and retraining triggers are documented. | [Training plan outline](../migration/training-plan-outline.md). |
@@ -34,7 +34,7 @@ This guide is not a substitute for Marine Technologies' official Quality Manual,
 
 ## Controlled document expectations
 
-Each UROC SOP should include:
+Each ROC SOP should include:
 
 - Document identifier.
 - Title.
@@ -52,9 +52,9 @@ Drafts in this repository are working documents until approved through Marine Te
 
 ## Records expectations
 
-UROC documentation should not store controlled records directly unless Document Control approves that location.
+ROC documentation should not store controlled records directly unless Document Control approves that location.
 
-Instead, UROC documents should identify:
+Instead, ROC documents should identify:
 
 - Which record must exist.
 - Where the controlled record is stored.
@@ -85,7 +85,7 @@ Changes to approved SOPs should:
 
 ## Audit readiness
 
-For ISO 9001 audits, UROC should be able to show:
+For ISO 9001 audits, ROC should be able to show:
 
 - Approved current SOPs and revision history.
 - Evidence of review and approval.

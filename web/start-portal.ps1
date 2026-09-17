@@ -5,7 +5,7 @@ $port = 8000
 
 Set-Location $repoRoot
 
-Write-Host "Starting UROC employee document portal..."
+Write-Host "Starting ROC employee document portal..."
 Write-Host "Open: http://localhost:$port/web/"
 Write-Host "Press Ctrl+C to stop the server."
 Write-Host ""

@@ -1,26 +1,26 @@
-# Standard Operating Procedure (SOP)-UROC-006 — Major Incident Communications (Internal)
+# Standard Operating Procedure (SOP)-ROC-006 — Major Incident Communications (Internal)
 
 | Field | Value |
 |-------|-------|
 | Version | 0.1 |
-| Owner | UROC Supervisor |
+| Owner | ROC Supervisor |
 | Last reviewed | 2026-05-07 |
 | Status | Draft |
 
 ## Purpose
 
-Define how UROC prepares, approves, sends, and tracks internal communications during major incidents so stakeholders receive timely, factual updates without creating conflicting messages, unsupported commitments, or uncontrolled disclosure.
+Define how ROC prepares, approves, sends, and tracks internal communications during major incidents so stakeholders receive timely, factual updates without creating conflicting messages, unsupported commitments, or uncontrolled disclosure.
 
-This procedure supports [SOP-UROC-001](SOP-UROC-001-incident-management-and-escalation.md). It does not replace incident response, customer communications policy, Legal / Commercial review, or company-wide crisis communications procedures when those apply.
+This procedure supports [SOP-ROC-001](SOP-ROC-001-incident-management-and-escalation.md). It does not replace incident response, customer communications policy, Legal / Commercial review, or company-wide crisis communications procedures when those apply.
 
 ## Scope
 
 Use this procedure when an incident or urgent operational issue requires internal updates beyond the immediate response team, including:
 
-- Severity Level 1 (Sev1) or Severity Level 2 (Sev2) incidents under [SOP-UROC-001](SOP-UROC-001-incident-management-and-escalation.md).
+- Severity Level 1 (Sev1) or Severity Level 2 (Sev2) incidents under [SOP-ROC-001](SOP-ROC-001-incident-management-and-escalation.md).
 - Customer-impacting outage, material service degradation, or repeated monitoring concern.
 - Safety, regulatory, legal, commercial, or product-authorization ambiguity.
-- Cross-stream incidents involving UROC streams, Product / Engineering, Commercial, Legal, or General Manager attention.
+- Cross-stream incidents involving ROC streams, Product / Engineering, Commercial, Legal, or General Manager attention.
 - Issues likely to generate repeated stakeholder questions before the incident is resolved.
 
 This procedure covers **internal communications only**. External customer, press, partner, regulator, or public communications require the authorized Commercial, Legal, or company communications process.
@@ -32,11 +32,12 @@ Do not record customer names, vessel identifiers, credentials, detailed incident
 | Role | Responsibility |
 |------|----------------|
 | Agent | Captures facts in the official incident record, routes stakeholder questions to the incident owner, and avoids informal commitments or speculative updates. |
-| Senior Agent / Lead (if assigned) | Helps consolidate facts, drafts internal updates when delegated, and checks that handoffs and open questions are clear. |
-| UROC Supervisor | Owns UROC internal incident communications, approves UROC updates, confirms audience and cadence, and escalates approval needs outside UROC authority. |
+| Senior Agent | Helps consolidate facts and drafts internal updates when the ROC Supervisor delegates that task. |
+| Agent Lead (if assigned) | Coordinates other Agents on who gathers facts, reviews drafts, and tracks open questions. Does not approve the message. |
+| ROC Supervisor | Owns ROC internal incident communications, approves ROC updates, confirms audience and cadence, and escalates approval needs outside ROC authority. |
 | General Manager | Provides business direction for high-impact, cross-functional, or resource-sensitive communications. |
 | Product / Engineering | Approves product behavior, technical status, root-cause, safety-critical, and restoration-readiness statements. |
-| UROC Information Technology (IT) stream / platform owner | Supports tooling, access, infrastructure, platform status, and restoration statements under UROC Supervisor direction. |
+| ROC Information Technology (IT) stream / platform owner | Supports tooling, access, infrastructure, platform status, and restoration statements under ROC Supervisor direction. |
 | Commercial / Legal | Approves contractual, customer commitment, claims, legal, regulatory, or externally sensitive wording. |
 
 ## Communication principles
@@ -49,21 +50,40 @@ Internal major incident communications must be:
 4. **Non-speculative.** Do not guess root cause, restoration timing, customer obligations, or legal/commercial impact.
 5. **Time-bound.** Every update should state the next expected update time or closure condition.
 
+## How it flows
+
+```mermaid
+flowchart TD
+  trigger[Major incident needs internal update] --> owner[Supervisor owns the message]
+  owner --> facts[Collect approved facts]
+  facts --> draft[Draft the update]
+  draft --> who{Who must approve wording?}
+  who -->|Technical or safety| eng[Product / Engineering]
+  who -->|Contract or legal| legal[Commercial / Legal]
+  who -->|ROC only| send[Send on approved channel]
+  eng --> send
+  legal --> send
+  send --> record[Record time, audience, next update]
+  record --> open{Incident still open?}
+  open -->|Yes| facts
+  open -->|No| close[Send closure summary]
+```
+
 ## Procedure
 
-1. **Confirm communication trigger.** Determine whether the incident meets scope above or whether the UROC Supervisor has requested internal updates.
-2. **Identify the communications owner.** The UROC Supervisor owns UROC internal communications unless they delegate drafting to a Senior Agent / Lead or another named role in the official record.
+1. **Confirm communication trigger.** Determine whether the incident meets scope above or whether the ROC Supervisor has requested internal updates.
+2. **Identify the communications owner.** The ROC Supervisor owns ROC internal communications unless they delegate drafting to a Senior Agent or another named role in the official record. If a Lead is assigned, the Lead coordinates which Agents contribute facts; the Lead does not approve the message.
 3. **Confirm audience.** Define the internal audience by role or controlled distribution list. Use the smallest audience that still supports response, leadership awareness, and stakeholder alignment.
 4. **Collect approved facts.** Pull facts from the official incident record. Confirm severity, current impact, owner, actions underway, known blockers, and next decision point.
 5. **Draft the update.** Use the [communications brief template](../../templates/comms-brief-template.md) for structured updates when the incident is complex or recurring.
-6. **Check approval boundaries.** Obtain Product / Engineering approval for technical or safety-critical statements, UROC Supervisor approval for platform statements prepared by the UROC Information Technology (IT) stream, and Commercial / Legal approval for contractual, customer commitment, legal, or external-sensitivity statements.
+6. **Check approval boundaries.** Obtain Product / Engineering approval for technical or safety-critical statements, ROC Supervisor approval for platform statements prepared by the ROC Information Technology (IT) stream, and Commercial / Legal approval for contractual, customer commitment, legal, or external-sensitivity statements.
 7. **Send through approved internal channel.** Use controlled company channels only. Do not add recipients or channels ad hoc if the information is sensitive.
 8. **Record the communication.** Link or summarize the approved internal update in the official incident record, including time sent, audience, approver, and next update time.
 9. **Repeat until closed.** Continue updates at the approved cadence until the incident is resolved, transferred, or downgraded. Send a final closure summary when appropriate.
 
 ## Update cadence
 
-These cadence defaults are planning guidance until approved by the UROC Supervisor and General Manager:
+These cadence defaults are planning guidance until approved by the ROC Supervisor and General Manager:
 
 | Situation | Default internal update cadence |
 |-----------|---------------------------------|
@@ -74,7 +94,7 @@ These cadence defaults are planning guidance until approved by the UROC Supervis
 
 ## Escalation
 
-Escalate communication approval to the UROC Supervisor when:
+Escalate communication approval to the ROC Supervisor when:
 
 - Audience, wording, or cadence is unclear.
 - The incident may affect customer commitments, safety, compliance, legal posture, or business reputation.
@@ -102,12 +122,12 @@ Every major incident communication record must include, at minimum:
 ## References
 
 - [Standard Operating Procedures index](README.md)
-- [SOP-UROC-001 — Incident Management and Escalation](SOP-UROC-001-incident-management-and-escalation.md)
-- [SOP-UROC-002 — Office-Hours Handoff and On-Call Continuity](SOP-UROC-002-office-hours-handoff-and-on-call-continuity.md)
+- [SOP-ROC-001 — Incident Management and Escalation](SOP-ROC-001-incident-management-and-escalation.md)
+- [SOP-ROC-002 — Office-Hours Handoff and On-Call Continuity](SOP-ROC-002-office-hours-handoff-and-on-call-continuity.md)
 - [Communications brief template](../../templates/comms-brief-template.md)
 - [Incident report template](../../templates/incident-report-template.md)
 - [External publication review checklist](../marketing/review-checklist.md)
-- [UROC charter](../strategy/charter.md)
+- [ROC charter](../strategy/charter.md)
 - [Roles and levels](../org/roles-and-levels.md)
 
 ## Revision history
@@ -115,3 +135,4 @@ Every major incident communication record must include, at minimum:
 | Date | Author | Change |
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
+| 2026-09-17 | Cursor agent draft | Added flowchart of internal incident communications. |
