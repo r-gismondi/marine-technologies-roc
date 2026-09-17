@@ -11,13 +11,13 @@ This file is the **onboarding brief** for continuing ROC documentation work. The
 
 ## Critical workspace rule
 
-- **All ROC work lives in this repository only:** `marine-technologies-uroc` (local path is often `C:\Repo\marine-technologies-uroc`).
+- **All ROC work lives in this repository only:** `marine-technologies-roc` (local path is often `C:\Repo\marine-technologies-roc`).
 - **Do not** treat **`C:\Repo\DP`** as part of this project — that is a **large separate product/engineering codebase**. Ignore pending reviews or git state in that separate repository unless the human explicitly asks about it.
 
 ## Git and GitHub
 
 - **Default branch:** `main`.
-- **Remote:** `https://github.com/r-gismondi/marine-technologies-uroc.git` (private).
+- **Remote:** `https://github.com/r-gismondi/marine-technologies-roc.git` (private).
 - First-time push / clone help: [FIRST_PUSH.md](FIRST_PUSH.md).
 - Optional branch protection: [github-branch-protection.md](github-branch-protection.md).
 
