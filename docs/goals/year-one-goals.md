@@ -6,7 +6,7 @@ Targets below are **planning defaults** for year one; confirm numeric floors and
 
 ## 1. Work / time efficiency and prevention (highest priority)
 
-Absorbed teams — **Information Technology (IT)**, **Support**, **Customer Communications (C-Comm)**, and other departments joining ROC — currently run at about **1.0 : 1** time to task conclusion (one unit of time for each completed task).
+Absorbed teams — **Information Technology (IT)**, **Support**, **C-Comm**, and other departments joining ROC — currently run at about **1.0 : 1** time to task conclusion (one unit of time for each completed task).
 
 The year-one target is a **30%** gain: **0.7 : 1**. That freed **30%** is relocated to **planning and prevention**.
 
@@ -43,7 +43,7 @@ flowchart LR
 
 - **Metric**: **Time-to-conclusion ratio** for ROC-owned completed work, indexed so today’s absorbed-department baseline is **1.0**. Also track the **share of time** spent on planning / prevention versus break-fix once the baseline exists.
 - **Target**: Reach **0.7 : 1** by end of year one, in steps (about **0.9** after the first gain quarter, **0.8** by mid-year, **0.7** at year end). Relocate the recovered **30%** to planning and prevention — do not fill it only with more reactive tickets.
-- **How we count**: Use the company-approved ticketing / work system. Baseline in the **first full month** of unified ROC tracking across Information Technology (IT), Support, Customer Communications (C-Comm), and other absorbed queues. Compare average working time per completed item to that baseline. Exclude approved exceptions (for example major incidents) so one crisis does not hide the trend.
+- **How we count**: Use the company-approved ticketing / work system. Baseline in the **first full month** of unified ROC tracking across Information Technology (IT), Support, C-Comm, and other absorbed queues. Compare average working time per completed item to that baseline. Exclude approved exceptions (for example major incidents) so one crisis does not hide the trend.
 - **Owner**: ROC Supervisor
 - **Cadence**: Monthly ratio review; quarterly check that saved time is actually used for prevention work (runbook improvements, monitoring hygiene, training, known-error reduction).
 

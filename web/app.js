@@ -78,7 +78,7 @@ function renderRocVisual(source) {
             <strong class="ratio-value">${escapeHtml(today)}</strong>
             <span class="ratio-unit">time : task conclusion</span>
             <div class="ratio-bar" aria-hidden="true"><span style="width:100%"></span></div>
-            <p>Information Technology (IT), Support, Customer Communications (C-Comm), and other teams being absorbed by ROC.</p>
+            <p>Information Technology (IT), Support, C-Comm, and other teams being absorbed by ROC.</p>
           </article>
           <div class="ratio-arrow" aria-hidden="true">→</div>
           <article class="ratio-card target">
