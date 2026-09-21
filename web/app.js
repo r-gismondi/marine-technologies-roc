@@ -557,7 +557,7 @@ async function loadDocument(path, updateHash = true) {
   }
 
   try {
-    const response = await fetch(`../${documentMeta.path}?v=26`);
+    const response = await fetch(`../${documentMeta.path}?v=27`);
     if (!response.ok) {
       throw new Error(`Unable to load ${documentMeta.path}`);
     }

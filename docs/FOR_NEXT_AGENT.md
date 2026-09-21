@@ -8,6 +8,7 @@ This file is the **onboarding brief** for continuing ROC documentation work. The
 - **Purpose (department):** One shore-side organization combining customer support, Information Technology (IT) touchpoints for remote services, vessel remote monitoring, vessel remote operations support, and governance of data from vessels to shore.
 - **Human’s role:** Supervisor of ROC; leading **department implementation** (goals, procedures, marketing drafts, employee migration messaging, presentations).
 - **Audience for docs:** Internal first; external/marketing pieces need Legal/Commercial review before release.
+- **Employee portal Start Here:** [start-here.md](start-here.md) is the Agent landing page. Keep GitHub, Cursor, and documentation-authoring notes **out of the portal** (this file, [FIRST_PUSH.md](FIRST_PUSH.md), and [github-branch-protection.md](github-branch-protection.md) stay in the repo only).
 
 ## Critical workspace rule
 

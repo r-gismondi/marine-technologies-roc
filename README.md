@@ -50,6 +50,8 @@ See [docs/github-branch-protection.md](docs/github-branch-protection.md) for opt
 
 ## Local employee document portal
 
+The portal **Start Here** page for Agents is [docs/start-here.md](docs/start-here.md), not this README.
+
 Run the local web server from the repository root:
 
 ```powershell
