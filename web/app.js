@@ -20,7 +20,40 @@ documentSections.forEach((section) => {
 const sectionNav = document.querySelector("#section-nav");
 const content = document.querySelector("#document-content");
 const documentTitle = document.querySelector("#document-title");
+const documentSection = document.querySelector("#document-section");
 const themeToggle = document.querySelector("#theme-toggle");
+const navToggle = document.querySelector("#nav-toggle");
+const navBackdrop = document.querySelector("#nav-backdrop");
+const homeLink = document.querySelector("#home-link");
+
+const SECTION_ICONS = {
+  start:
+    '<svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+  strategy:
+    '<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/><path d="M12 8v4l2.5 2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+  goals:
+    '<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>',
+  organization:
+    '<svg viewBox="0 0 24 24" fill="none"><path d="M8 17v-4h8v4M12 13V9M6 20h4v-6H6zm8 0h4v-6h-4zM10 9h4V4h-4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+  procedures:
+    '<svg viewBox="0 0 24 24" fill="none"><path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.7"/><path d="M10 8h4M10 12h4M10 16h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+  quality:
+    '<svg viewBox="0 0 24 24" fill="none"><path d="m7.5 12.5 3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"/></svg>',
+  migration:
+    '<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  marketing:
+    '<svg viewBox="0 0 24 24" fill="none"><path d="M5 9v6l11-3zm11 3 3 4V8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+  presentations:
+    '<svg viewBox="0 0 24 24" fill="none"><path d="M5 6h14v10H5zM12 16v4M8 20h8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+  templates:
+    '<svg viewBox="0 0 24 24" fill="none"><path d="M7 4h7l5 5v11H7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 4v5h5M9 13h6M9 16h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+};
+
+const THEME_ICONS = {
+  dark: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2M6 6l1.6 1.6M16.4 16.4 18 18M18 6l-1.6 1.6M7.6 16.4 6 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
+  light:
+    '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16.5 13.2A6 6 0 0 1 10.8 7.5 6.2 6.2 0 1 0 16.5 13.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+};
 
 function escapeHtml(value) {
   return value
@@ -279,9 +312,7 @@ function findDocumentPathFromChartLabel(label) {
   const sopMatch = compact.match(/SOP-(?:ROC-)?0*(\d{1,3})\b/i);
   if (sopMatch) {
     const number = sopMatch[1].padStart(3, "0");
-    const sop = state.documents.find((document) =>
-      document.path.includes(`SOP-ROC-${number}`)
-    );
+    const sop = state.documents.find((document) => document.path.includes(`SOP-ROC-${number}`));
     if (sop) return sop.path;
   }
 
@@ -319,15 +350,58 @@ function wireMermaidDocumentLinks() {
   });
 }
 
+function mermaidTheme() {
+  const dark = document.documentElement.dataset.theme === "dark";
+  return {
+    startOnLoad: false,
+    securityLevel: "strict",
+    theme: dark ? "dark" : "base",
+    themeVariables: dark
+      ? {
+          primaryColor: "#16324f",
+          primaryTextColor: "#e6edf5",
+          primaryBorderColor: "#5aa2ff",
+          lineColor: "#8ea0b6",
+          secondaryColor: "#101b2b",
+          tertiaryColor: "#0c1624",
+          background: "#101b2b",
+          mainBkg: "#16324f",
+          nodeBorder: "#5aa2ff",
+          clusterBkg: "#0c1624",
+          titleColor: "#e6edf5",
+          fontFamily: "IBM Plex Sans, Segoe UI, sans-serif",
+        }
+      : {
+          primaryColor: "#dce9f8",
+          primaryTextColor: "#122033",
+          primaryBorderColor: "#0b63ce",
+          lineColor: "#5c6b7c",
+          secondaryColor: "#f7f9fc",
+          tertiaryColor: "#eef2f6",
+          background: "#ffffff",
+          mainBkg: "#dce9f8",
+          nodeBorder: "#0b63ce",
+          clusterBkg: "#f7f9fc",
+          titleColor: "#122033",
+          fontFamily: "IBM Plex Sans, Segoe UI, sans-serif",
+        },
+  };
+}
+
 async function renderDiagrams() {
   if (!window.mermaid) return;
 
   try {
-    window.mermaid.initialize({
-      startOnLoad: false,
-      securityLevel: "strict",
-      theme: document.documentElement.dataset.theme === "dark" ? "dark" : "default",
+    document.querySelectorAll(".mermaid").forEach((el) => {
+      if (!el.dataset.source) {
+        el.dataset.source = el.textContent.trim();
+      } else {
+        el.removeAttribute("data-processed");
+        el.innerHTML = el.dataset.source;
+      }
     });
+
+    window.mermaid.initialize(mermaidTheme());
     await window.mermaid.run({ querySelector: ".mermaid" });
     wireMermaidDocumentLinks();
   } catch (error) {
@@ -366,26 +440,89 @@ function resolveDocumentPath(href, currentPath) {
   return normalized.join("/");
 }
 
+function setNavOpen(open) {
+  document.body.classList.toggle("nav-open", open);
+  navBackdrop.hidden = !open;
+  navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close document library" : "Open document library");
+}
+
+function buildNavigation() {
+  sectionNav.innerHTML = documentSections
+    .map((section) => {
+      const links = section.documents
+        .map(
+          (document) =>
+            `<a class="doc-link" href="#${encodeURIComponent(document.path)}" data-doc-path="${escapeHtml(document.path)}">${escapeHtml(document.title)}</a>`
+        )
+        .join("");
+
+      return `
+        <section class="nav-group" data-section-id="${escapeHtml(section.id)}">
+          <button class="nav-group-toggle" type="button" aria-expanded="false">
+            <span class="nav-group-icon">${SECTION_ICONS[section.id] || SECTION_ICONS.templates}</span>
+            <span>${escapeHtml(section.label)}</span>
+            <span class="nav-group-count">${section.documents.length}</span>
+            <span class="nav-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="nav-group-panel">${links}</div>
+        </section>`;
+    })
+    .join("");
+
+  sectionNav.querySelectorAll(".nav-group-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const group = button.closest(".nav-group");
+      const willOpen = !group.classList.contains("is-open");
+      group.classList.toggle("is-open", willOpen);
+      button.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  sectionNav.querySelectorAll(".doc-link").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      loadDocument(link.dataset.docPath);
+      setNavOpen(false);
+    });
+  });
+}
+
 function renderNavigation() {
   const query = state.searchText.toLowerCase();
   let visibleSections = 0;
 
-  sectionNav.querySelectorAll(".section").forEach((section) => {
+  sectionNav.querySelectorAll(".nav-group").forEach((group) => {
     let visibleDocuments = 0;
+    let hasActive = false;
 
-    section.querySelectorAll(".doc-link").forEach((link) => {
-      const linkPath = link.dataset.docPath || pathFromLink(link);
+    group.querySelectorAll(".doc-link").forEach((link) => {
       const matches = link.textContent.toLowerCase().includes(query);
-
+      const isActive = link.dataset.docPath === state.activePath;
       link.hidden = !matches;
-      link.classList.toggle("active", linkPath === state.activePath);
+      link.classList.toggle("active", isActive);
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
 
       if (matches) {
         visibleDocuments += 1;
       }
+      if (isActive) {
+        hasActive = true;
+      }
     });
 
-    section.hidden = visibleDocuments === 0;
+    group.hidden = visibleDocuments === 0;
+    group.classList.toggle("has-active", hasActive);
+
+    if (hasActive) {
+      group.classList.add("is-open");
+      group.querySelector(".nav-group-toggle")?.setAttribute("aria-expanded", "true");
+    }
+
     if (visibleDocuments > 0) {
       visibleSections += 1;
     }
@@ -408,6 +545,8 @@ async function loadDocument(path, updateHash = true) {
   renderNavigation();
 
   documentTitle.textContent = documentMeta.title;
+  documentSection.textContent = documentMeta.sectionLabel;
+  document.title = `${documentMeta.title} · ROC`;
   content.innerHTML = `<div class="empty-state">Loading ${escapeHtml(documentMeta.title)}...</div>`;
 
   if (updateHash) {
@@ -439,29 +578,17 @@ function wireDocumentLinks() {
   });
 }
 
-function pathFromLink(link) {
-  const href = link.getAttribute("href") || "";
-  return href.replace(/^\.\.\//, "").split("#")[0];
-}
-
-function wireNavigationLinks() {
-  sectionNav.querySelectorAll(".doc-link").forEach((link) => {
-    const linkPath = pathFromLink(link);
-    const documentMeta = findDocument(linkPath);
-
-    if (!documentMeta) return;
-
-    link.dataset.docPath = documentMeta.path;
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      loadDocument(documentMeta.path);
-    });
-  });
-}
-
 function loadInitialDocument() {
   const hashPath = decodeURIComponent(window.location.hash.replace(/^#/, ""));
   loadDocument(findDocument(hashPath) ? hashPath : state.documents[0].path, false);
+}
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+  themeToggle.innerHTML = THEME_ICONS[theme];
+  themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to day mode" : "Switch to night mode");
+  themeToggle.title = theme === "dark" ? "Switch to day mode" : "Switch to night mode";
 }
 
 function configureTheme() {
@@ -469,28 +596,51 @@ function configureTheme() {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
 
-  const applyTheme = (theme) => {
-    document.documentElement.dataset.theme = theme;
-    themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
-    themeToggle.textContent = theme === "dark" ? "☀" : "☾";
-    themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to day mode" : "Switch to night mode");
-    themeToggle.title = theme === "dark" ? "Switch to day mode" : "Switch to night mode";
-  };
-
   applyTheme(initialTheme);
 
   themeToggle.addEventListener("click", () => {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     localStorage.setItem("rocPortalTheme", nextTheme);
     applyTheme(nextTheme);
+    renderDiagrams();
+  });
+}
+
+function configureChrome() {
+  navToggle.addEventListener("click", () => {
+    setNavOpen(!document.body.classList.contains("nav-open"));
+  });
+
+  navBackdrop.addEventListener("click", () => setNavOpen(false));
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setNavOpen(false);
+    }
+  });
+
+  homeLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (state.documents[0]) {
+      loadDocument(state.documents[0].path);
+      setNavOpen(false);
+    }
+  });
+
+  window.addEventListener("hashchange", () => {
+    const hashPath = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+    if (findDocument(hashPath) && hashPath !== state.activePath) {
+      loadDocument(hashPath, false);
+    }
   });
 }
 
 if (!state.documents.length) {
-  renderNavigation();
+  sectionNav.innerHTML = `<div class="empty-state nav-empty-state">No documents are listed in the library.</div>`;
 } else {
-  wireNavigationLinks();
+  buildNavigation();
   renderNavigation();
   configureTheme();
+  configureChrome();
   loadInitialDocument();
 }

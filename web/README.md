@@ -36,18 +36,6 @@ The navigation is controlled by [`documents.js`](documents.js). Each item has:
 
 When access control is implemented, filter the manifest by `audience` or replace it with an authenticated document API.
 
-## Logo
+## Brand mark
 
-The portal automatically looks for common logo filenames in `docs/marketing/`, including:
-
-- `ROC logo transparent.png`
-- `ROC logo.png`
-- `ROC logo black.png`
-- `roc-logo-transparent.png`
-- `roc-logo-white.png`
-- `roc-logo-black.png`
-- `logo-transparent.png`
-- `logo-white.png`
-- `logo-black.png`
-
-If no matching file is present, the page shows a text fallback.
+The portal uses a compact **ROC** oval mark in the sidebar. Marketing PNG files in `docs/marketing/` remain available for print and presentations.
