@@ -37,7 +37,7 @@ Fill **Accountable** with one named role each before approval. Multiple **Respon
 
 - **Accountable** must be unambiguous for audit and escalation paths.
 - Department-specific streams are represented within ROC Agents under the ROC Supervisor.
-- Optional **Agent Lead** coordinates other Agents. The Lead is not Accountable for department decisions and is not a second reporting line.
+- **Agent Specialist** is the highest Agent level and an individual contributor. The Specialist is not Accountable for department decisions, does not coordinate other Agents, and is not a second reporting line.
 - When **Commercial / Legal**, **Product / Engineering**, or **Quality / Document Control** is Accountable, ROC remains **Responsible** for coordination and execution only after written guidance or approval.
 - This matrix is role-based until Marine Technologies confirms named owners or official function names.
 - Update this file when RACI workshops complete, when SOP scope changes, or when Marine Technologies Quality / Document Control requirements change.

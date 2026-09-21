@@ -33,7 +33,7 @@ Do not record customer names, vessel identifiers, credentials, raw exports, or d
 |------|----------------|
 | Agent | Opens or updates the official request record, classifies the request, verifies required facts, avoids uncontrolled data movement, and routes to the accountable owner. |
 | Senior Agent | Reviews complex or cross-stream requests, validates documentation quality, and identifies data-handling gaps. |
-| Agent Lead (if assigned) | Coordinates other Agents on who prepares or tracks the request and how it is sequenced. Does not approve access or export. |
+| Agent Specialist | Handles the most complex or novel data-handling questions in their domain and shares expertise when asked. Does not sequence requests, assign owners, or approve access or export. |
 | ROC Supervisor | Owns ROC routing discipline, resolves ownership conflicts, approves ROC procedure deviations within policy, and escalates policy gaps to the General Manager or specialist stakeholders. |
 | ROC Information Technology (IT) stream / platform owner | Owns access control, platform permissions, export tooling, secure transfer methods, and technical enforcement under ROC Supervisor direction. |
 | Data owner / system owner | Owns data classification, allowed use, retention posture, and approval for release or movement where assigned. |

@@ -33,7 +33,7 @@ Do not record customer names, vessel identifiers, credentials, detailed incident
 |------|----------------|
 | Agent | Captures facts in the official incident record, routes stakeholder questions to the incident owner, and avoids informal commitments or speculative updates. |
 | Senior Agent | Helps consolidate facts and drafts internal updates when the ROC Supervisor delegates that task. |
-| Agent Lead (if assigned) | Coordinates other Agents on who gathers facts, reviews drafts, and tracks open questions. Does not approve the message. |
+| Agent Specialist | Contributes domain facts for the most complex cases when asked. Does not coordinate who gathers facts, assign draft work, or approve the message. |
 | ROC Supervisor | Owns ROC internal incident communications, approves ROC updates, confirms audience and cadence, and escalates approval needs outside ROC authority. |
 | General Manager | Provides business direction for high-impact, cross-functional, or resource-sensitive communications. |
 | Product / Engineering | Approves product behavior, technical status, root-cause, safety-critical, and restoration-readiness statements. |
@@ -72,7 +72,7 @@ flowchart TD
 ## Procedure
 
 1. **Confirm communication trigger.** Determine whether the incident meets scope above or whether the ROC Supervisor has requested internal updates.
-2. **Identify the communications owner.** The ROC Supervisor owns ROC internal communications unless they delegate drafting to a Senior Agent or another named role in the official record. If a Lead is assigned, the Lead coordinates which Agents contribute facts; the Lead does not approve the message.
+2. **Identify the communications owner.** The ROC Supervisor owns ROC internal communications unless they delegate drafting to a Senior Agent or another named role in the official record. Ownership of who contributes facts stays with the ROC Supervisor.
 3. **Confirm audience.** Define the internal audience by role or controlled distribution list. Use the smallest audience that still supports response, leadership awareness, and stakeholder alignment.
 4. **Collect approved facts.** Pull facts from the official incident record. Confirm severity, current impact, owner, actions underway, known blockers, and next decision point.
 5. **Draft the update.** Use the [communications brief template](../../templates/comms-brief-template.md) for structured updates when the incident is complex or recurring.

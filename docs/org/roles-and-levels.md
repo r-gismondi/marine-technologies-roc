@@ -20,7 +20,7 @@
 | Scope | Executes documented procedures; handles routine cases with supervision available. |
 | Decision rights | No autonomous deviation from Standard Operating Procedures (SOPs); escalates ambiguous or high-impact situations. |
 | Tools | Core ticketing/monitoring/tools as assigned—read-only or limited write per policy. |
-| Escalation path | Technical or case questions to **Intermediate/Senior** or the **Supervisor**. Coverage or “who owns this?” questions to the **Lead** if assigned, otherwise the Supervisor. |
+| Escalation path | Technical or case questions to **Intermediate**, **Senior**, **Specialist**, or the **Supervisor**. Coverage, priority, or “who owns this?” questions go to the **Supervisor**. |
 | Competency checklist | Product/service fundamentals; written communication; follows checklists accurately. |
 
 ---
@@ -32,7 +32,7 @@
 | Scope | Owns end-to-end handling for standard scenarios in assigned stream(s). |
 | Decision rights | Minor procedural judgment within Standard Operating Procedures (SOPs); documents exceptions. |
 | Tools | Standard operator access for assigned systems; no elevated break-glass without approval process. |
-| Escalation path | Complex technical, safety, or customer-risk cases to **Senior** or the **Supervisor**. Workload or coverage conflicts to the **Lead** if assigned, otherwise the Supervisor. |
+| Escalation path | Complex technical, safety, or customer-risk cases to **Senior**, **Specialist**, or the **Supervisor**. Workload or coverage conflicts go to the **Supervisor**. |
 | Competency checklist | Root-cause triage; coaching juniors; office-hours handoff quality. |
 
 ---
@@ -44,25 +44,25 @@
 | Scope | Handles complex and cross-stream incidents; improves runbooks and onboarding. |
 | Decision rights | Structured authority within published limits (define in Standard Operating Procedures); flags policy gaps. |
 | Tools | Elevated access only where justified by role and approvals; least privilege. |
-| Escalation path | Commercial/legal/safety boundaries to the **Supervisor** and specialist stakeholders. The Senior remains a peer of the Lead; the Lead coordinates Agents, and the Senior does not report through the Lead. |
+| Escalation path | Deepest technical questions to a **Specialist** when the case needs that domain depth. Commercial, legal, or safety boundaries to the **Supervisor** and specialist stakeholders. The Senior does not report through the Specialist. |
 | Competency checklist | Mentorship; incident leadership; metrics contribution; calm communication under pressure. |
 
 ---
 
-## Agent — Lead (optional)
+## Agent — Specialist
 
-Introduce when team size justifies a **coordination lead** among Agents. The Lead remains an Agent who reports to the **ROC Supervisor**—the same as Junior, Intermediate, and Senior. The Lead does **not** sit between other Agents and the Supervisor and does **not** become a second manager.
+**Specialist** is the highest Agent level. It is an individual-contributor rank for deep technical or domain expertise. The Specialist reports to the **ROC Supervisor**—the same as Junior, Intermediate, and Senior. The Specialist does **not** coordinate other Agents, assign work, own coverage, sequence handoffs, or hold any responsibility over other Agents.
 
 | Dimension | Expectation |
 |-----------|-------------|
-| Scope | Coordinates other Agents: daily workload, office-hours coverage, handoffs, and who owns which items. Keeps Agents aligned to Supervisor priorities. May represent ROC in operational forums when the Supervisor delegates that coordination task. |
-| Decision rights | Coordination and quality-check decisions within Supervisor-set limits (who picks up work, sequencing, handoff completeness). No Human Resources (HR) discipline, hiring, or policy exceptions unless the Supervisor or General Manager (GM) delegates them in writing. |
-| Tools | Same operator access as needed for the assigned stream, plus visibility into team queues so coordination is possible. The Lead title alone does not grant extra break-glass rights. |
-| Escalation path | To the **ROC Supervisor** for conflicts between Agents, priority disputes, policy, and resource asks. Other Agents still escalate technically to Intermediate/Senior or the Supervisor. |
-| Competency checklist | Workload coordination; coaching without taking case ownership away from the assigned Agent; complete office-hours handoffs; knowing when to stop coordinating and escalate to the Supervisor. |
+| Scope | Handles the hardest or most novel cases in their domain; improves runbooks, procedures, and technical standards from that expertise. Shares knowledge when asked. Does not own other Agents’ work, coverage, or performance. |
+| Decision rights | Structured technical authority within published Standard Operating Procedure limits. No Human Resources (HR) discipline, hiring, workload assignment, or policy exceptions unless the Supervisor or General Manager (GM) delegates them in writing. |
+| Tools | Elevated access only where justified by the case and approvals; least privilege. The Specialist title alone does not grant extra break-glass rights or team-queue authority. |
+| Escalation path | To the **ROC Supervisor** for priority, policy, commercial, legal, safety, and resource asks. Other Agents may consult the Specialist on technical questions; they still escalate coverage and ownership questions to the Supervisor. |
+| Competency checklist | Deep domain judgment; high-quality documentation of complex cases; knowing when to stop and escalate to the Supervisor or an external specialist stakeholder. |
 
 ---
 
 ## Promotion path
 
-Default progression: **Junior → Intermediate → Senior**. **Lead** is an optional coordination assignment when scale requires it—not a required next manager rank and not a new reporting line. Prefer **level promotions** before adding parallel manager roles.
+Default progression: **Junior → Intermediate → Senior → Specialist**. Prefer **level promotions** before adding parallel manager roles. Specialist is not a coordinator or a new reporting line.

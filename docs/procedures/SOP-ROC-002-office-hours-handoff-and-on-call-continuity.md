@@ -19,7 +19,7 @@ Use this procedure for:
 
 - End-of-day office-hours closeout for open tickets, monitoring follow-ups, customer inquiries, data/shore-pipeline tasks, and remote operations support items.
 - Handoff before planned absence, travel, training, or other time away from office-hours coverage.
-- Carryover work that must be visible to another Agent, Senior Agent, Agent Lead (if assigned), or the ROC Supervisor.
+- Carryover work that must be visible to another Agent, Senior Agent, Agent Specialist, or the ROC Supervisor.
 - After-hours, holiday, and weekend issues that must follow the company on-call schedule.
 
 This procedure does not define the company on-call schedule itself, assign on-call staff, or publish phone numbers, bridges, rosters, ticket priorities, or channel names. Those details belong in controlled internal systems.
@@ -32,7 +32,7 @@ Do not record customer names, vessel identifiers, credentials, or detailed incid
 |------|----------------|
 | Agent | Maintains current work records, prepares handoff notes before leaving office-hours coverage, flags blocked or urgent items, and follows the company on-call path when needed. |
 | Senior Agent | Reviews carryover risk, supports prioritization of complex items, and confirms that important next technical actions are clear. |
-| Agent Lead (if assigned) | Coordinates other Agents on coverage, who picks up carryover, and next-business-day ownership. Does not replace Supervisor priority decisions. |
+| Agent Specialist | Handles the most complex carryover technical questions in their domain when asked. Does not coordinate coverage, assign next owners, or own other Agents’ handoffs. |
 | ROC Supervisor | Owns office-hours continuity expectations, assigns coverage for planned absences, resolves priority conflicts, and confirms when an item must enter the company on-call path. |
 | Company on-call owner | Receives after-hours, holiday, and weekend escalations according to the company on-call schedule and owns response within that process. |
 | Product / Engineering | Supports product behavior, technical diagnosis, and authorization questions that cannot wait for the next business day. |
@@ -57,7 +57,7 @@ At minimum, include:
 flowchart TD
   review[Review open work] --> wait{Can it wait until next business day?}
   wait -->|Yes| record[Update official handoff note]
-  wait -->|No, office hours| same[Lead or Supervisor same day]
+  wait -->|No, office hours| same[Supervisor same day]
   wait -->|No, after hours| oncall[Company on-call path]
   same --> record
   oncall --> record
@@ -70,7 +70,7 @@ flowchart TD
 1. **Review open work before leaving office-hours coverage.** Check assigned tickets, monitoring follow-ups, customer inquiries, data/shore-pipeline items, and remote operations support tasks.
 2. **Separate routine carryover from urgent work.** Routine carryover stays in the official queue with a clear next-business-day action. Urgent work follows the escalation rules below and, where applicable, [SOP-ROC-001](SOP-ROC-001-incident-management-and-escalation.md).
 3. **Update the official record.** Add the handoff record requirements listed above. If ownership changes, identify the next owner by role or controlled internal assignment, not by adding sensitive details to this repository.
-4. **Notify the right role during office hours.** For work that needs same-day attention, notify the Agent Lead if assigned so they can coordinate who picks it up, or notify the ROC Supervisor through the approved internal method. Escalate technically complex items to a Senior Agent.
+4. **Notify the right role during office hours.** For work that needs same-day attention, notify the ROC Supervisor through the approved internal method so ownership and coverage stay explicit. Escalate technically complex items to a Senior Agent or Agent Specialist.
 5. **Prepare planned absence coverage.** Before planned time away, confirm coverage expectations with the ROC Supervisor and update open items with next action, owner, and timing.
 6. **Use the company on-call schedule after hours.** After normal office hours, on holidays, or on weekends, route urgent issues through the company on-call schedule. Do not invent alternate informal coverage paths.
 7. **Start the next business day with carryover review.** Review open handoffs, confirm ownership, update status, and escalate anything that became urgent or blocked.
