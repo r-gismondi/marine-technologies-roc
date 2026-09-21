@@ -66,23 +66,6 @@ const DOCUMENT_SECTIONS = [
     ],
   },
   {
-    id: "marketing",
-    label: "Marketing",
-    documents: [
-      { title: "Marketing Folder Guide", path: "docs/marketing/README.md", audience: "commercial" },
-      { title: "Messaging Guide", path: "docs/marketing/messaging.md", audience: "commercial" },
-      { title: "One-Page Overview", path: "docs/marketing/one-pager.md", audience: "commercial" },
-      { title: "Marketing Review Checklist", path: "docs/marketing/review-checklist.md", audience: "commercial" },
-    ],
-  },
-  {
-    id: "presentations",
-    label: "Presentations",
-    documents: [
-      { title: "Internal Migration Presentation", path: "presentations/internal-migration.md", audience: "all" },
-    ],
-  },
-  {
     id: "templates",
     label: "Templates",
     documents: [

@@ -41,10 +41,6 @@ const SECTION_ICONS = {
     '<svg viewBox="0 0 24 24" fill="none"><path d="m7.5 12.5 3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"/></svg>',
   migration:
     '<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-  marketing:
-    '<svg viewBox="0 0 24 24" fill="none"><path d="M5 9v6l11-3zm11 3 3 4V8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
-  presentations:
-    '<svg viewBox="0 0 24 24" fill="none"><path d="M5 6h14v10H5zM12 16v4M8 20h8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
   templates:
     '<svg viewBox="0 0 24 24" fill="none"><path d="M7 4h7l5 5v11H7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 4v5h5M9 13h6M9 16h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>',
 };
