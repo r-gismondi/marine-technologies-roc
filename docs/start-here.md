@@ -38,7 +38,7 @@ flowchart TB
 
 - **General Manager** owns business outcomes and resources.
 - **ROC Supervisor** owns day-to-day priorities, coverage, quality, and escalation.
-- **Agents** do the work. Levels are **Junior → Intermediate → Senior → Specialist**. Specialist is the highest Agent level and is an individual contributor: it does not coordinate other Agents or own coverage.
+- **Agents** do the work. Levels are **Junior → Agent → Senior → Specialist**. Specialist is the highest Agent level and is an individual contributor: it does not coordinate other Agents or own coverage.
 
 See the [organization chart](org/org-chart.md) and [roles and levels](org/roles-and-levels.md).
 

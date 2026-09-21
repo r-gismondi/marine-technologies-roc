@@ -26,7 +26,7 @@ This file is the **onboarding brief** for continuing ROC documentation work. The
 ## Org model (decisions already reflected in docs)
 
 - **General Manager** → **ROC Supervisor** → **Agents** (generic role name).
-- **Agent levels:** Junior → Intermediate → Senior → **Specialist**. Specialist is the highest Agent level and is an individual contributor: no coordinating other Agents, assigning work, or owning coverage. All Agents report to the Supervisor. Promote **up** before multiplying parallel hierarchies.
+- **Agent levels:** Junior → Agent → Senior → **Specialist**. Specialist is the highest Agent level and is an individual contributor: no coordinating other Agents, assigning work, or owning coverage. All Agents report to the Supervisor. Promote **up** before multiplying parallel hierarchies.
 - **Streams** (how work is assigned under the ROC Supervisor, not separate reporting lines): Support, Information Technology (IT), remote monitoring, remote operations support, data/shore pipeline — see matrix in [org/org-chart.md](org/org-chart.md) and detail in [org/roles-and-levels.md](org/roles-and-levels.md).
 - **Class watch profiles** (Bridge / Technical / Supervision / Command) are seat assignments, not a second HR ladder. Do not replace Agent Specialist with a coordinating lead.
 

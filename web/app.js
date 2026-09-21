@@ -56,7 +56,7 @@ function repositoryRootUrl() {
 }
 
 function documentFileUrl(path) {
-  return new URL(`${path}?v=29`, repositoryRootUrl()).toString();
+  return new URL(`${path}?v=30`, repositoryRootUrl()).toString();
 }
 
 function escapeHtml(value) {
