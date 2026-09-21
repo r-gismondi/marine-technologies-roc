@@ -92,14 +92,21 @@ function renderRocVisual(source) {
 
   if (type === "ratio") {
     const today = fields.today || "1.0";
-    const target = fields.target || "0.7";
-    const saved = fields.saved || "30%";
+    const target = fields.target || "0.80";
+    const saved = fields.saved || "20%";
+    const stretch = fields.stretch || "";
+    const todayNum = Number.parseFloat(today) || 1;
+    const targetNum = Number.parseFloat(target) || 0.8;
+    const barWidth = Math.max(8, Math.min(100, Math.round((targetNum / todayNum) * 100)));
+    const stretchNote = stretch
+      ? ` Stretch is <strong>${escapeHtml(stretch)} : 1</strong> if knowledge, problem management, and assist tools are funded.`
+      : "";
     return `
-      <div class="goal-visual" aria-label="Time per completed task today versus year-one target">
+      <div class="goal-visual" aria-label="Time per completed task today versus year-one committed target">
         <div class="goal-visual-head">
           <p class="goal-kicker">Highest priority</p>
           <h3>Time per completed task</h3>
-          <p>Lower is better. Today absorbed teams run at <strong>1.0 : 1</strong>. Year-one target is <strong>0.7 : 1</strong>.</p>
+          <p>Lower is better. Today absorbed teams run at <strong>${escapeHtml(today)} : 1</strong>. Year-one <strong>commit</strong> is <strong>${escapeHtml(target)} : 1</strong>.${stretchNote}</p>
         </div>
         <div class="ratio-grid">
           <article class="ratio-card">
@@ -111,10 +118,10 @@ function renderRocVisual(source) {
           </article>
           <div class="ratio-arrow" aria-hidden="true">→</div>
           <article class="ratio-card target">
-            <span class="ratio-label">Year-one target</span>
+            <span class="ratio-label">Year-one commit</span>
             <strong class="ratio-value">${escapeHtml(target)}</strong>
             <span class="ratio-unit">time : task conclusion</span>
-            <div class="ratio-bar" aria-hidden="true"><span style="width:70%"></span></div>
+            <div class="ratio-bar" aria-hidden="true"><span style="width:${barWidth}%"></span></div>
             <p><strong>${escapeHtml(saved)}</strong> less time per completed task.</p>
           </article>
         </div>
@@ -122,14 +129,14 @@ function renderRocVisual(source) {
   }
 
   if (type === "allocation") {
-    const fix = fields.fix || "70";
-    const prevent = fields.prevent || "30";
+    const fix = fields.fix || "85";
+    const prevent = fields.prevent || "15";
     return `
       <div class="goal-visual" aria-label="How saved time is used">
         <div class="goal-visual-head">
           <p class="goal-kicker">Where the saved time goes</p>
           <h3>Do not just finish faster — prevent the next problem</h3>
-          <p>The ${escapeHtml(prevent)}% gained from efficiency is relocated to planning and prevention, not left idle and not used only to take more break-fix work.</p>
+          <p>Year-one committed mix: keep most time on delivery, and lock <strong>${escapeHtml(prevent)}%</strong> into planning and prevention — not idle time and not only more break-fix work. A 70 / 30 mix is the year-two stretch.</p>
         </div>
         <div class="split-legend">
           <span><i class="swatch fix"></i> Fixing problems ${escapeHtml(fix)}%</span>
@@ -550,7 +557,7 @@ async function loadDocument(path, updateHash = true) {
   }
 
   try {
-    const response = await fetch(`../${documentMeta.path}`);
+    const response = await fetch(`../${documentMeta.path}?v=25`);
     if (!response.ok) {
       throw new Error(`Unable to load ${documentMeta.path}`);
     }
