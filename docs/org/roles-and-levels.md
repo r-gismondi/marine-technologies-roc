@@ -22,12 +22,12 @@ Class Concept of Operations **watch profiles** (Bridge / Navigation, Technical, 
 | Scope | Executes documented procedures; handles routine cases with supervision available. |
 | Decision rights | No autonomous deviation from Standard Operating Procedures (SOPs); escalates ambiguous or high-impact situations. |
 | Tools | Core ticketing/monitoring/tools as assigned—read-only or limited write per policy. |
-| Escalation path | Technical or case questions to **Intermediate**, **Senior**, **Specialist**, or the **Supervisor**. Coverage, priority, or “who owns this?” questions go to the **Supervisor**. |
+| Escalation path | Technical or case questions to **Agent**, **Senior**, **Specialist**, or the **Supervisor**. Coverage, priority, or “who owns this?” questions go to the **Supervisor**. |
 | Competency checklist | Product/service fundamentals; written communication; follows checklists accurately. |
 
 ---
 
-## Agent — Intermediate
+## Agent
 
 | Dimension | Expectation |
 |-----------|-------------|
@@ -53,7 +53,7 @@ Class Concept of Operations **watch profiles** (Bridge / Navigation, Technical, 
 
 ## Agent — Specialist
 
-**Specialist** is the highest Agent level. It is an individual-contributor rank for deep technical or domain expertise. The Specialist reports to the **ROC Supervisor**—the same as Junior, Intermediate, and Senior. The Specialist does **not** coordinate other Agents, assign work, own coverage, sequence handoffs, or hold any responsibility over other Agents.
+**Specialist** is the highest Agent level. It is an individual-contributor rank for deep technical or domain expertise. The Specialist reports to the **ROC Supervisor**—the same as Junior, Agent, and Senior. The Specialist does **not** coordinate other Agents, assign work, own coverage, sequence handoffs, or hold any responsibility over other Agents.
 
 | Dimension | Expectation |
 |-----------|-------------|
@@ -67,4 +67,4 @@ Class Concept of Operations **watch profiles** (Bridge / Navigation, Technical, 
 
 ## Promotion path
 
-Default progression: **Junior → Intermediate → Senior → Specialist**. Prefer **level promotions** before adding parallel manager roles. Specialist is not a coordinator or a new reporting line.
+Default progression: **Junior → Agent → Senior → Specialist**. Prefer **level promotions** before adding parallel manager roles. Specialist is not a coordinator or a new reporting line.

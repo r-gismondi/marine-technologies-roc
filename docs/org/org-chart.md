@@ -4,7 +4,7 @@
 
 - **General Manager (GM)** owns overall business outcomes and resource allocation for Marine Technologies lines reporting through this structure.
 - **ROC Supervisor** is the single operational lead for ROC: priorities, staffing alignment (with the General Manager (GM)), escalation ownership, and quality of remote operations and customer touchpoints.
-- **Agents** form a deliberately **generic** job family with **levels** (Junior, Intermediate, Senior, and Specialist). **All Agent levels report to the ROC Supervisor.** Specialist is the highest Agent level and is an individual contributor: it does **not** coordinate other Agents or sit between Agents and the Supervisor. Work is organized by **streams** under the ROC Supervisor (support, Information Technology (IT), monitoring, remote operations support, data/shore pipeline) without multiplying parallel hierarchies prematurely—people grow **up** the ladder before the org grows **wide**.
+- **Agents** form a deliberately **generic** job family with **levels** (Junior, Agent, Senior, and Specialist). **All Agent levels report to the ROC Supervisor.** Specialist is the highest Agent level and is an individual contributor: it does **not** coordinate other Agents or sit between Agents and the Supervisor. Work is organized by **streams** under the ROC Supervisor (support, Information Technology (IT), monitoring, remote operations support, data/shore pipeline) without multiplying parallel hierarchies prematurely—people grow **up** the ladder before the org grows **wide**.
 
 ## Diagram
 
@@ -14,7 +14,7 @@ flowchart TB
   SUP[ROC Supervisor]
   GM --> SUP
   SUP --> AJ[Agent Junior]
-  SUP --> AI[Agent Intermediate]
+  SUP --> AI[Agent]
   SUP --> AS[Agent Senior]
   SUP --> ASP[Agent Specialist]
 ```

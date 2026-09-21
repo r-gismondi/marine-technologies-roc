@@ -36,7 +36,7 @@ Assisted functions in the current notation set include **navigation (NAV)**, **m
 
 ## Department roles versus watch profiles
 
-The employee org stays **General Manager → ROC Supervisor → Agents** (Junior → Intermediate → Senior → Specialist). That ladder does not change.
+The employee org stays **General Manager → ROC Supervisor → Agents** (Junior → Agent → Senior → Specialist). That ladder does not change.
 
 The ConOps watch floor uses **profiles** for how a watch is seated:
 
