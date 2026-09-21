@@ -32,3 +32,7 @@ Map people to streams in Human Resources (HR) / job descriptions or a roster—n
 | Data / shore pipeline | Ingest health, retention requests, export workflows |
 
 See [roles-and-levels.md](roles-and-levels.md) for level definitions.
+
+## Watch profiles (class ConOps, not a second org chart)
+
+The official Concept of Operations seats a watch as Bridge / Navigation, Technical, Supervision, and Command. Those are **how a watch is assigned**, not extra boxes above the Supervisor and not Agent titles. Map them to streams in the roster. Command and coverage stay with the **ROC Supervisor**. Detail: [class concept](../strategy/class-and-conops.md).

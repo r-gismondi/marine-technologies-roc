@@ -11,7 +11,7 @@
 
 Define when ROC may support a remote intervention or assisted operation, what authorization must exist before action, and when ROC must stop and escalate to Product / Engineering, the ROC Supervisor, or other authorized stakeholders.
 
-This procedure protects safety, compliance, product authority, and customer commitments. ROC can coordinate, document, monitor, and support authorized remote work, but ROC does not independently approve safety-critical control changes or replace on-vessel command.
+This procedure protects safety, compliance, product authority, class limits, and customer commitments. ROC can coordinate, document, monitor, and support authorized remote work, but ROC does not independently approve safety-critical control changes or replace on-vessel command. In the official assisted-operations concept, the master and minimum crew stay aboard and can override any assisted function without shore consent.
 
 ## Scope
 
@@ -38,7 +38,7 @@ Do not record customer names, vessel identifiers, credentials, or detailed opera
 | Product / Engineering | Owns product behavior, technical authority, safety-critical control decisions, and product/runbook approval. |
 | ROC Information Technology (IT) stream / platform owner | Owns access, tooling, infrastructure, and platform changes needed for remote-service support under ROC Supervisor direction. |
 | Commercial / Legal | Owns contract interpretation, customer commitments, legal guidance, and externally binding statements. |
-| On-vessel / customer-authorized party | Provides vessel-side or customer-side authorization where contract, product rules, or local procedure require it. |
+| On-vessel / customer-authorized party | Holds or confirms vessel-side authorization. Onboard override of any assisted function does not need shore consent. Operates the crew-controlled remote-access isolation when required. |
 
 ## Authorization principles
 
@@ -46,11 +46,17 @@ Remote intervention or assisted operations support may proceed only when all of 
 
 1. **Authority is clear.** The request is within ROC scope, and any required Product / Engineering, customer, vessel-side, ROC Information Technology (IT) stream, Commercial, or Legal approval is documented in the official system of record.
 2. **The action is defined.** The intended action, expected outcome, rollback or stop condition, and accountable owner are captured in the ticket or approved runbook.
-3. **Safety and compliance are protected.** No action conflicts with product safety rules, regulatory obligations, contract boundaries, or on-vessel command.
+3. **Safety and compliance are protected.** No action conflicts with product safety rules, class limits, regulatory obligations, contract boundaries, or on-vessel command.
 4. **Access is appropriate.** Personnel use approved accounts, approved tools, and least-privilege access. Credentials must never be shared in tickets, chats, or documentation.
 5. **Communication is controlled.** Customer-facing or external commitments are approved by the accountable stakeholder before they are sent.
 
-If any principle cannot be confirmed, do not proceed. Escalate according to this procedure and, if impact is urgent, follow [SOP-ROC-001](SOP-ROC-001-incident-management-and-escalation.md).
+Apply these class-concept rules in addition to the five principles:
+
+6. **One controller at a time.** Control of a function is held by exactly one party (local, engine-control room, bridge, or ROC). Do not command if another party holds the function or if a transfer handshake is incomplete.
+7. **Assisted baseline is observe and advise.** Monitoring and recommendations (authority levels R1–R2) are the default for assisted operations. Operating, repairing, or supervising autonomy from shore (R3–R5) needs a separate, time-limited authorization, the crew-controlled remote-access isolation on board if that isolation is in the approved design, and — for actions that can cause blackout, affect propulsion or steering, change protective settings, or touch a safety system — a second qualified person ashore plus onboard acknowledgement when the vessel is crewed.
+8. **Onboard override and loss of link.** If the crew takes the function back, or the vessel–shore link is lost or falls below the approved level for the action, **stop commanding**. Control reverts to the vessel. Re-establish the link; do not improvise a second path.
+
+If any principle cannot be confirmed, do not proceed. Escalate according to this procedure and, if impact is urgent, follow [SOP-ROC-001](SOP-ROC-001-incident-management-and-escalation.md). See [class concept](../strategy/class-and-conops.md).
 
 ## How it flows
 
@@ -70,11 +76,12 @@ flowchart TD
 1. **Open or update the official ticket.** Record the request, source, current owner, affected system category, intended outcome, and related ticket or Configuration Management Database (CMDB) identifiers.
 2. **Classify the request.** Determine whether it is routine support, assisted operations support, potential remote intervention, access/tooling change, incident response, or out-of-scope request.
 3. **Check authorization.** Confirm the approved runbook, product rule, contract boundary, or explicit stakeholder approval that permits the action. Link the controlled reference rather than copying sensitive details.
-4. **Confirm prerequisites.** Verify required roles are available, access is appropriate, monitoring/rollback expectations are understood, and customer/internal communications are approved where needed.
-5. **Proceed only within approved limits.** Agents may execute documented steps within their access and decision rights. Do not improvise product behavior, safety-critical action, or customer commitments.
-6. **Monitor and document.** Record start time, action taken, result, next action, owner, and any observed risk in the official system of record.
-7. **Stop on uncertainty.** Pause and escalate if the action differs from the approved runbook, impact changes, authorization becomes unclear, signals conflict, or the requester asks for something outside documented limits.
-8. **Close or hand off.** Close only when the accountable owner confirms the action is complete or no longer needed, required communications are complete, and follow-up work is recorded. Use [SOP-ROC-002](SOP-ROC-002-office-hours-handoff-and-on-call-continuity.md) for carryover or after-hours continuity.
+4. **Confirm prerequisites.** Verify required roles are available, access is appropriate, monitoring/rollback expectations are understood, who currently holds the function, and customer/internal communications are approved where needed.
+5. **Complete the transfer handshake if control will move to ROC.** Record who authorized the transfer, who holds the function after it, and the stop / reversion condition. If the handshake fails, leave control where it is and escalate.
+6. **Proceed only within approved limits.** Agents may execute documented steps within their access and decision rights. Do not improvise product behavior, safety-critical action, or customer commitments. Do not share accounts. Do not keep standing administrative access to a vessel.
+7. **Monitor and document.** Record start time, action taken, result, next action, owner, and any observed risk in the official system of record.
+8. **Stop on uncertainty.** Pause and escalate if the action differs from the approved runbook, impact changes, authorization becomes unclear, signals conflict, the crew overrides, the link degrades, or the requester asks for something outside documented limits.
+9. **Close or hand off.** Close only when the accountable owner confirms the action is complete or no longer needed, required communications are complete, and follow-up work is recorded. Use [SOP-ROC-002](SOP-ROC-002-office-hours-handoff-and-on-call-continuity.md) for carryover or after-hours continuity.
 
 ## Escalation
 
@@ -102,6 +109,7 @@ Every remote intervention or assisted operations authorization record must inclu
 - Request type and affected system category.
 - Accountable owner.
 - Authorization source or controlled reference.
+- Who held control of the function before, during, and after the action.
 - Intended action and expected result.
 - Stop condition, rollback expectation, or next safe state if applicable.
 - Time action started and ended.
@@ -114,6 +122,7 @@ Every remote intervention or assisted operations authorization record must inclu
 - [SOP-ROC-002 — Office-Hours Handoff and On-Call Continuity](SOP-ROC-002-office-hours-handoff-and-on-call-continuity.md)
 - [SOP-ROC-007 — Engineering and Maintenance Handoff (Onsite / Non-Remote Work)](SOP-ROC-007-engineering-and-maintenance-handoff.md)
 - [ROC charter](../strategy/charter.md)
+- [Class concept — assisted remote operations](../strategy/class-and-conops.md)
 - [Roles and levels](../org/roles-and-levels.md)
 - [Training plan outline](../migration/training-plan-outline.md)
 
@@ -124,3 +133,4 @@ Every remote intervention or assisted operations authorization record must inclu
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
 | 2026-05-14 | Cursor agent draft | Linked onsite / Engineering handoff reference to SOP-ROC-007. |
 | 2026-09-17 | Cursor agent draft | Added flowchart of the authorization gate. |
+| 2026-09-21 | Cursor agent draft | Aligned authorization with official ABS/DNV ConOps: one controller, override, link-loss reversion, R1–R5. |

@@ -8,7 +8,11 @@ Documents here are **internal drafts** until the ROC Supervisor or Marine Techno
 
 ROC is the shore-side center for remote-facing operations. It brings together customer support, Information Technology (IT) that supports remote services, vessel remote monitoring, remote operations support, and stewardship of data from vessel to shore.
 
-The point is a **coherent Marine Technologies response** for customers, and **clear roles, documented procedures, and measurable quality** for the company.
+For class and vessel work, the same ROC is the **Remote-Control Station**: a shore watch that **monitors and assists crewed vessels**. The master and minimum crew stay aboard. We do not run uncrewed operations as the default, and we do not take command away from the vessel.
+
+The point is a **coherent Marine Technologies response** for customers, **safe assisted operations** for the fleet, and **clear roles, documented procedures, and measurable quality** for the company.
+
+Read [class concept — assisted remote operations](strategy/class-and-conops.md) before you support a remote action.
 
 ## What we do
 
@@ -19,7 +23,7 @@ Streams are **how work is assigned**, not separate reporting lines. All ROC Agen
 | Customer support | Tickets, triage, escalation to engineering or vendors |
 | Information Technology (IT) | Accounts, remote access logistics, tooling, platform support |
 | Remote monitoring | Consoles, alarms, routine checks |
-| Remote operations support | Assisted operations within contract and product rules |
+| Remote operations support | Assisted watch: monitor in transit, lock 1:1 in demanding station-keeping, stay inside contract, product, and class rules |
 | Data / shore pipeline | Ingest health, retention requests, export workflows |
 
 ```mermaid
@@ -42,7 +46,7 @@ See the [organization chart](org/org-chart.md) and [roles and levels](org/roles-
 
 - **Office hours, not shifts.** Leave clear next-business-day ownership. After hours, holidays, and weekends follow the **company on-call schedule**.
 - **The official ticketing system is the record.** Do not keep customer or operational decisions only in chat or personal notes.
-- **Safety and authorization first.** Do not take remote actions unless product, regulatory, and company rules allow it.
+- **Safety and authorization first.** Do not take remote actions unless product, class, regulatory, and company rules allow it. One controller at a time; onboard override and loss of link send control back to the vessel.
 - **Escalate early** when safety, legal, commercial, or ownership is unclear. Coverage and “who owns this?” questions go to the Supervisor.
 - **Do not put** customer names, vessel identifiers, credentials, or detailed incident narratives in this library. Use ticket or Configuration Management Database (CMDB) identifiers.
 
@@ -51,6 +55,7 @@ See the [organization chart](org/org-chart.md) and [roles and levels](org/roles-
 | If you need… | Open |
 |--------------|------|
 | Purpose, scope, and principles | [ROC Charter](strategy/charter.md) |
+| Class-assisted operating concept | [Class concept](strategy/class-and-conops.md) |
 | Who does what on key activities | [Responsibility matrix](strategy/raci.md) |
 | Year-one targets | [Year one goals](goals/year-one-goals.md) |
 | Your role and level | [Roles and Agent levels](org/roles-and-levels.md) |

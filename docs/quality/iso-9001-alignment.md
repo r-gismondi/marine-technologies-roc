@@ -20,7 +20,7 @@ This guide is not a substitute for Marine Technologies' official Quality Manual,
 
 | ISO 9001 topic | ROC expectation | Evidence in this repository |
 |----------------|------------------|-----------------------------|
-| Context and scope | ROC scope, boundaries, and interfaces are documented. | [ROC charter](../strategy/charter.md), [organization chart](../org/org-chart.md), [roles and levels](../org/roles-and-levels.md). |
+| Context and scope | ROC scope, boundaries, and interfaces are documented. | [ROC charter](../strategy/charter.md), [class concept](../strategy/class-and-conops.md), [organization chart](../org/org-chart.md), [roles and levels](../org/roles-and-levels.md). |
 | Leadership and accountability | Owners and escalation paths are defined for objectives, procedures, and decisions. | [Responsible, Accountable, Consulted, Informed (RACI) matrix](../strategy/raci.md), SOP role tables, goals owners. |
 | Quality objectives | Objectives are measurable, assigned, and reviewed. | [Year one goals](../goals/year-one-goals.md). |
 | Competence and awareness | Required onboarding, stream training, and retraining triggers are documented. | [Training plan outline](../migration/training-plan-outline.md). |

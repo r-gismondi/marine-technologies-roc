@@ -5,6 +5,7 @@ Tailor per person based on **stream** assignment under the ROC Supervisor: Custo
 ## Universal onboarding (all Agents)
 
 - ROC charter and principles ([charter.md](../strategy/charter.md))
+- Class-assisted operating concept ([class-and-conops.md](../strategy/class-and-conops.md)) — one controller, onboard override, link-loss reversion
 - Security and data-handling rules (link internal security training)
 - Ticketing and escalation basics ([SOP-ROC-001](../procedures/SOP-ROC-001-incident-management-and-escalation.md))
 - Office-hours handoff and on-call continuity expectations ([SOP-ROC-002](../procedures/SOP-ROC-002-office-hours-handoff-and-on-call-continuity.md))
