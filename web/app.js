@@ -51,6 +51,14 @@ const THEME_ICONS = {
     '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16.5 13.2A6 6 0 0 1 10.8 7.5 6.2 6.2 0 1 0 16.5 13.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>',
 };
 
+function repositoryRootUrl() {
+  return new URL("../", window.location.href);
+}
+
+function documentFileUrl(path) {
+  return new URL(`${path}?v=29`, repositoryRootUrl()).toString();
+}
+
 function escapeHtml(value) {
   return value
     .replace(/&/g, "&amp;")
@@ -557,7 +565,7 @@ async function loadDocument(path, updateHash = true) {
   }
 
   try {
-    const response = await fetch(`../${documentMeta.path}?v=28`);
+    const response = await fetch(documentFileUrl(documentMeta.path));
     if (!response.ok) {
       throw new Error(`Unable to load ${documentMeta.path}`);
     }

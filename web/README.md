@@ -2,6 +2,12 @@
 
 This folder contains a lightweight static webpage for browsing ROC documents from a local web server.
 
+## Internet link
+
+GitHub Pages: https://r-gismondi.github.io/marine-technologies-roc/
+
+The site is rebuilt from `main`. Open that URL; it forwards into this `web/` folder.
+
 ## Run locally
 
 From the repository root:
