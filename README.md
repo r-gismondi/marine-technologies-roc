@@ -22,7 +22,7 @@ Internal documentation for **Marine Technologies** ROC: strategy, org design, pr
 | [docs/marketing/](docs/marketing/) | External-facing drafts (review before release) |
 | [presentations/](presentations/) | Slide outlines (e.g. internal migration deck) |
 | [templates/](templates/) | Blank Standard Operating Procedure (SOP), Responsible, Accountable, Consulted, Informed (RACI) matrix, incident report, etc. |
-| [web/](web/) | Local employee document portal for browsing repository documents |
+| [web/](web/) | Employee document portal (local and [GitHub Pages](https://r-gismondi.github.io/marine-technologies-roc/)) |
 
 ## GitHub setup (first push)
 
@@ -48,11 +48,15 @@ gh repo create r-gismondi/marine-technologies-roc --private --source=. --remote=
 
 See [docs/github-branch-protection.md](docs/github-branch-protection.md) for optional branch protection on `main`.
 
-## Local employee document portal
+## Employee document portal
 
 The portal **Start Here** page for Agents is [docs/start-here.md](docs/start-here.md), not this README.
 
-Run the local web server from the repository root:
+**Internet (GitHub Pages):** https://r-gismondi.github.io/marine-technologies-roc/
+
+That site publishes the employee portal from this repository. Anyone with the link can open it. Do not put customer names, vessel identifiers, or credentials in documents the portal can load.
+
+**Local:** run the web server from the repository root:
 
 ```powershell
 .\web\start-portal.ps1
