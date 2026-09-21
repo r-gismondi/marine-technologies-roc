@@ -3,10 +3,7 @@ const DOCUMENT_SECTIONS = [
     id: "start",
     label: "Start Here",
     documents: [
-      { title: "ROC Home", path: "README.md", audience: "all" },
-      { title: "New Agent Handoff", path: "docs/FOR_NEXT_AGENT.md", audience: "admin" },
-      { title: "First GitHub Push Guide", path: "docs/FIRST_PUSH.md", audience: "admin" },
-      { title: "GitHub Branch Protection", path: "docs/github-branch-protection.md", audience: "admin" },
+      { title: "Welcome to ROC", path: "docs/start-here.md", audience: "all" },
     ],
   },
   {

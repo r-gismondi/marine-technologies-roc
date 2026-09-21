@@ -28,7 +28,9 @@ Type the command in PowerShell. If you see the Python `>>>` prompt, type `exit()
 
 ## Document list
 
-The navigation is controlled by [`documents.js`](documents.js). Each item has:
+The navigation is controlled by [`documents.js`](documents.js). The portal home / **Start Here** page is the employee landing document [`docs/start-here.md`](../docs/start-here.md). GitHub setup and Cursor-agent handoff files stay in the repository and are not listed in the portal.
+
+Each item has:
 
 - `title`: the user-friendly button label shown in the left navigation.
 - `path`: the Markdown file to load.

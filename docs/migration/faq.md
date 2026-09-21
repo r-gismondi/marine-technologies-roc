@@ -19,7 +19,7 @@ A: **Payroll and Human Resources Information System (HRIS) titles** are whatever
 ## Tools and access
 
 **Q: Which systems are the source of truth for tickets and monitoring?**  
-A: **Work records:** The **company-approved ticketing system** (and linked boards or queues, if your stream uses them) is the source of truth for case ownership, decisions, escalations, and handoffs—reference **ticket or Configuration Management Database (CMDB) identifiers (IDs)** instead of pasting sensitive details into informal channels (see [README](../../README.md)). **Situational awareness:** Use the **authorized monitoring consoles and alarm tools** assigned to your stream; for a given scenario, the **runbook, product owner, or contract** defines which signals are authoritative. If sources conflict, **pause**, document what you see, and escalate via the duty path above. Personal chats and ad hoc files are **not** systems of record.
+A: **Work records:** The **company-approved ticketing system** (and linked boards or queues, if your stream uses them) is the source of truth for case ownership, decisions, escalations, and handoffs—reference **ticket or Configuration Management Database (CMDB) identifiers (IDs)** instead of pasting sensitive details into informal channels (see [Welcome to ROC](../start-here.md)). **Situational awareness:** Use the **authorized monitoring consoles and alarm tools** assigned to your stream; for a given scenario, the **runbook, product owner, or contract** defines which signals are authoritative. If sources conflict, **pause**, document what you see, and escalate via the duty path above. Personal chats and ad hoc files are **not** systems of record.
 
 ## Career
 
