@@ -16,7 +16,7 @@ Then open:
 http://localhost:8000/web/
 ```
 
-Run the server from the repository root so the portal can load Markdown files from `docs/`, `templates/`, and `presentations/`.
+Run the server from the repository root so the portal can load Markdown files from `docs/` and `templates/`.
 
 If PowerShell blocks scripts, use the Windows Python launcher directly from the repository root:
 
