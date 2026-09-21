@@ -11,6 +11,7 @@ const DOCUMENT_SECTIONS = [
     label: "Strategy",
     documents: [
       { title: "ROC Charter", path: "docs/strategy/charter.md", audience: "all" },
+      { title: "Class Concept", path: "docs/strategy/class-and-conops.md", audience: "all" },
       { title: "Responsibility Matrix", path: "docs/strategy/raci.md", audience: "all" },
     ],
   },

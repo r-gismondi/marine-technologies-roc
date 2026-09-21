@@ -5,7 +5,8 @@ This file is the **onboarding brief** for continuing ROC documentation work. The
 ## What this repository is
 
 - **ROC** = **Remote Operations Center** at **Marine Technologies** (marine / remote operations company).
-- **Purpose (department):** One shore-side organization combining customer support, Information Technology (IT) touchpoints for remote services, vessel remote monitoring, vessel remote operations support, and governance of data from vessels to shore.
+- **Purpose (department):** One shore-side organization combining customer support, Information Technology (IT) touchpoints for remote services, vessel remote monitoring, vessel remote operations support, and governance of data from vessels to shore. The same ROC is the designated Remote-Control Station in the official ABS/DNV Concept of Operations (assisted, crewed vessels — not uncrewed by default).
+- **Official class ConOps (source, do not copy into this repo):** `MT_ROC_with_ABS_v8_2.docx` on the Marine Technologies OneDrive UROC folder. Employee digest: [strategy/class-and-conops.md](strategy/class-and-conops.md). Do not paste drawings, test packages, pricing, site names, or vessel identifiers from that file.
 - **Human’s role:** Supervisor of ROC; leading **department implementation** (goals, procedures, marketing drafts, employee migration messaging, presentations).
 - **Audience for docs:** Internal first; external/marketing pieces need Legal/Commercial review before release.
 - **Employee portal Start Here:** [start-here.md](start-here.md) is the Agent landing page. Keep GitHub, Cursor, and documentation-authoring notes **out of the portal** (this file, [FIRST_PUSH.md](FIRST_PUSH.md), and [github-branch-protection.md](github-branch-protection.md) stay in the repo only).
@@ -27,6 +28,7 @@ This file is the **onboarding brief** for continuing ROC documentation work. The
 - **General Manager** → **ROC Supervisor** → **Agents** (generic role name).
 - **Agent levels:** Junior → Intermediate → Senior → **Specialist**. Specialist is the highest Agent level and is an individual contributor: no coordinating other Agents, assigning work, or owning coverage. All Agents report to the Supervisor. Promote **up** before multiplying parallel hierarchies.
 - **Streams** (how work is assigned under the ROC Supervisor, not separate reporting lines): Support, Information Technology (IT), remote monitoring, remote operations support, data/shore pipeline — see matrix in [org/org-chart.md](org/org-chart.md) and detail in [org/roles-and-levels.md](org/roles-and-levels.md).
+- **Class watch profiles** (Bridge / Technical / Supervision / Command) are seat assignments, not a second HR ladder. Do not replace Agent Specialist with a coordinating lead.
 
 ## What exists vs placeholders
 
@@ -49,6 +51,7 @@ This file is the **onboarding brief** for continuing ROC documentation work. The
 
 ## Likely next tasks (pick with human)
 
+- Measurement playbook for year-one goals is **planned but not started** — wait for the human before adding scorecards or SOP measurement sections.
 - Replace placeholders in [migration/faq.md](migration/faq.md) and [goals/year-one-goals.md](goals/year-one-goals.md).
 - Draft first real Standard Operating Procedure (SOP) (e.g. incident/escalation) from template.
 - Expand Responsible, Accountable, Consulted, Informed (RACI) matrix in [strategy/raci.md](strategy/raci.md) with real names/roles.

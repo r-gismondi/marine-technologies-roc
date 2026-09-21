@@ -45,7 +45,7 @@ Every handoff or carryover note must be recorded in the official system of recor
 At minimum, include:
 
 - Current status.
-- Current owner and next owner, if ownership changes.
+- Current owner and next owner, if ownership changes. For a vessel on remote watch, name the console or seat and who holds the function.
 - Next action and expected timing.
 - Known blockers, risks, or dependencies.
 - Related ticket identifiers, Configuration Management Database (CMDB) identifiers, or controlled record references.
@@ -69,7 +69,7 @@ flowchart TD
 
 1. **Review open work before leaving office-hours coverage.** Check assigned tickets, monitoring follow-ups, customer inquiries, data/shore-pipeline items, and remote operations support tasks.
 2. **Separate routine carryover from urgent work.** Routine carryover stays in the official queue with a clear next-business-day action. Urgent work follows the escalation rules below and, where applicable, [SOP-ROC-001](SOP-ROC-001-incident-management-and-escalation.md).
-3. **Update the official record.** Add the handoff record requirements listed above. If ownership changes, identify the next owner by role or controlled internal assignment, not by adding sensitive details to this repository.
+3. **Update the official record.** Add the handoff record requirements listed above. If ownership changes, identify the next owner by role or controlled internal assignment, not by adding sensitive details to this repository. Vessel-to-console and watch-to-watch handovers follow the same rule: the next owner is named before the previous owner stands down. The official Concept of Operations treats handover discipline as a safety item, not an optional courtesy.
 4. **Notify the right role during office hours.** For work that needs same-day attention, notify the ROC Supervisor through the approved internal method so ownership and coverage stay explicit. Escalate technically complex items to a Senior Agent or Agent Specialist.
 5. **Prepare planned absence coverage.** Before planned time away, confirm coverage expectations with the ROC Supervisor and update open items with next action, owner, and timing.
 6. **Use the company on-call schedule after hours.** After normal office hours, on holidays, or on weekends, route urgent issues through the company on-call schedule. Do not invent alternate informal coverage paths.
@@ -101,6 +101,7 @@ If there is immediate danger, follow local emergency procedures first, then noti
 - [Standard Operating Procedures index](README.md)
 - [SOP-ROC-001 — Incident Management and Escalation](SOP-ROC-001-incident-management-and-escalation.md)
 - [ROC charter](../strategy/charter.md)
+- [Class concept — assisted remote operations](../strategy/class-and-conops.md)
 - [Roles and levels](../org/roles-and-levels.md)
 - [Training plan outline](../migration/training-plan-outline.md)
 
@@ -110,3 +111,4 @@ If there is immediate danger, follow local emergency procedures first, then noti
 |------|--------|--------|
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
 | 2026-09-17 | Cursor agent draft | Added flowchart of office-hours and on-call continuity. |
+| 2026-09-21 | Cursor agent draft | Required named vessel/console owner on watch handovers, per official ConOps handover discipline. |

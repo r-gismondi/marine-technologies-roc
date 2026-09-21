@@ -2,6 +2,8 @@
 
 **Agent** is the umbrella role. Levels describe **scope**, **decision rights**, **tools**, **escalation**, and **competencies**. Streams (support, Information Technology (IT), monitoring, remote operations, data) are assignments under the ROC Supervisor—not separate departments or titles at startup.
 
+Class Concept of Operations **watch profiles** (Bridge / Navigation, Technical, Supervision, Command) are seat assignments on a watch. They do not create a second reporting line and they do not give any Agent level the right to coordinate other Agents. Command and “who owns this vessel on this watch?” stay with the **ROC Supervisor**. See [class concept](../strategy/class-and-conops.md).
+
 ## ROC Supervisor
 
 | Dimension | Expectation |

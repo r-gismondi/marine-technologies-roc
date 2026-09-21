@@ -73,12 +73,12 @@ flowchart TD
 
 ## Procedure
 
-1. **Protect safety first.** If there is immediate danger, follow local emergency procedures before any ROC workflow. Do not perform remote actions unless authorization is clear under product, regulatory, and company policy.
+1. **Protect safety first.** If there is immediate danger, follow local emergency procedures before any ROC workflow. Do not perform remote actions unless authorization is clear under product, class, regulatory, and company policy. If the vessel–shore link is lost, do not keep commanding; the vessel follows its pre-agreed safe behavior with the crew in control.
 2. **Open or update the official ticket.** Use the company-approved ticketing system as the source of truth. Include the issue summary, observed impact, current owner, initial severity, and related ticket or Configuration Management Database (CMDB) identifiers.
 3. **Classify initial severity.** Use the severity table above. When in doubt between two severities, choose the higher severity and ask the ROC Supervisor or Senior Agent to confirm. If ownership is unclear, ask the ROC Supervisor.
 4. **Capture minimum facts.** Record what was observed, when it was observed, who is affected by role or system category, what action has already been taken, and what decision or support is needed next. Avoid sensitive identifiers in uncontrolled notes.
 5. **Escalate according to severity.** Use the published duty / on-call path for Severity Level 1 (Sev1) and urgent Severity Level 2 (Sev2) incidents. Escalate immediately if safety, legal, commercial, or product-authorization boundaries are unclear.
-6. **Coordinate the response.** Keep ownership explicit in the ticket. Handoff notes must include current status, next action, owner, timestamp, and open risks.
+6. **Coordinate the response.** Keep ownership explicit in the ticket. Confirm a named responsible person for the vessel (master aboard in assisted mode). If one vessel needs focused attention while others are being monitored, the ROC Supervisor pulls that vessel to a dedicated seat and redistributes the rest. Handoff notes must include current status, next action, owner, timestamp, and open risks.
 7. **Communicate carefully.** Share only approved facts. Do not make commitments about service restoration, contract interpretation, or root cause until the accountable stakeholder has approved the message.
 8. **Record timeline and actions.** For significant incidents, use the [incident report template](../../templates/incident-report-template.md) or controlled company incident system to capture timeline, actions taken, root cause if known, and follow-ups.
 9. **Close with confirmation.** Close the incident only after the owner confirms impact is resolved or transferred, required communications are complete, follow-up tasks are created, and any procedure or training gaps are noted.
@@ -106,6 +106,7 @@ Company-specific phone numbers, bridges, rosters, ticket priorities, and channel
 - [SOP-ROC-007 — Engineering and Maintenance Handoff (Onsite / Non-Remote Work)](SOP-ROC-007-engineering-and-maintenance-handoff.md)
 - [Incident report template](../../templates/incident-report-template.md)
 - [ROC charter](../strategy/charter.md)
+- [Class concept — assisted remote operations](../strategy/class-and-conops.md)
 - [Roles and levels](../org/roles-and-levels.md)
 - [Migration Frequently Asked Questions](../migration/faq.md)
 
@@ -116,3 +117,4 @@ Company-specific phone numbers, bridges, rosters, ticket priorities, and channel
 | 2026-05-07 | Cursor agent draft | Initial draft for Supervisor review. |
 | 2026-05-14 | Cursor agent draft | Linked Engineering / Maintenance onsite handoff to SOP-ROC-007. |
 | 2026-09-17 | Cursor agent draft | Added flowchart of the incident path. |
+| 2026-09-21 | Cursor agent draft | Aligned incident response with official ConOps: link-loss, named vessel responsible person, focused-seat pull. |
