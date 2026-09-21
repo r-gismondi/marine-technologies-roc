@@ -2,50 +2,59 @@
 
 Targets below are **planning defaults** for year one; confirm numeric floors and dates with the **General Manager** and **ROC Supervisor**, then adjust after the first baseline quarter. Review quarterly.
 
-**Highest priority:** improve **work / time efficiency**, then spend the time we save on **planning and preventing problems**, not only on fixing them.
+**Highest priority:** improve **work / time efficiency**, then spend a **committed share** of saved time on **planning and preventing problems**, not only on fixing them.
 
 ## 1. Work / time efficiency and prevention (highest priority)
 
 Absorbed teams — **Information Technology (IT)**, **Support**, **C-Comm**, and other departments joining ROC — currently run at about **1.0 : 1** time to task conclusion (one unit of time for each completed task).
 
-The year-one target is a **30%** gain: **0.7 : 1**. That freed **30%** is relocated to **planning and prevention**.
+**Commit (year one):** **20%** gain to **0.80 : 1**. **Stretch:** **30%** to **0.70 : 1** only if knowledge, problem management, and assist / wrap-up tools are funded and used. Do not treat 30% as the committed floor.
+
+Those two numbers are separate from the prevention mix. Year-one **commit** is about **15%** of recorded time on planning / prevention. A **70% delivery / 30% prevention** mix is the **year-two stretch**, not a stand-up-year guarantee.
 
 ```roc-visual
 type: ratio
 today: 1.0
-target: 0.7
-saved: 30%
+target: 0.80
+saved: 20%
+stretch: 0.70
 ```
 
 ```roc-visual
 type: allocation
-fix: 70
-prevent: 30
+fix: 85
+prevent: 15
 ```
 
 ```roc-visual
 type: steps
-q1: Baseline | 1.0
-q2: First gain | 0.9
-q3: Mid-year | 0.8
-q4: Year-one target | 0.7
+q1: Baseline | 1.00
+q2: First gain | 0.90
+q3: Mid-year | 0.85
+q4: Year-one commit | 0.80
 ```
 
 ```mermaid
 flowchart LR
-  A[Today: fix only<br/>1.0 time : 1 task]
+  A[Today: mostly fix<br/>1.00 time : 1 task]
   B[Work faster<br/>same quality]
-  C[Keep 0.7 on delivery]
-  D[Move 0.3 to<br/>planning and prevention]
+  C[Commit: keep 0.80<br/>on delivery]
+  D[Year one: 15%<br/>planning and prevention]
+  E[Stretch: 0.70<br/>if tools are funded]
   A --> B --> C
   B --> D
+  C -.-> E
 ```
 
-- **Metric**: **Time-to-conclusion ratio** for ROC-owned completed work, indexed so today’s absorbed-department baseline is **1.0**. Also track the **share of time** spent on planning / prevention versus break-fix once the baseline exists.
-- **Target**: Reach **0.7 : 1** by end of year one, in steps (about **0.9** after the first gain quarter, **0.8** by mid-year, **0.7** at year end). Relocate the recovered **30%** to planning and prevention — do not fill it only with more reactive tickets.
-- **How we count**: Use the company-approved ticketing / work system. Baseline in the **first full month** of unified ROC tracking across Information Technology (IT), Support, C-Comm, and other absorbed queues. Compare average working time per completed item to that baseline. Exclude approved exceptions (for example major incidents) so one crisis does not hide the trend.
+**Why these numbers:** A 30% time-per-task cut in year one sits above typical first-year shared-services productivity (about **15%** initial) and at the aggressive end of contact-center handle-time programs (**15–25%** typical; **30%+** usually needs automation). It matches top-quartile shared-services labor cases, which are often multi-year, not merger-year results. ROC is still unifying queues and drafting Standard Operating Procedures (SOPs), and the same scorecard holds Service Level Agreement (SLA) and quality floors — so **20%** is the official year-one target and **30%** stays the stretch.
+
+- **Metric A**: **Time-to-conclusion ratio** for ROC-owned completed work, indexed so today’s absorbed-department baseline is **1.0**.
+- **Target A**: **Commit 0.80 : 1** by end of year one, in steps (**1.00** baseline, about **0.90** after the first gain quarter, **0.85** by mid-year, **0.80** at year end). **Stretch 0.70 : 1** only with funded knowledge, problem management, and assist tools. Do not trade away published Service Level Agreement (SLA) or Quality Assurance (QA) floors to hit the stretch.
+- **Metric B**: **Share of recorded time** on planning / prevention (runbook improvements, monitoring hygiene, training, known-error reduction) versus break-fix, once the baseline exists.
+- **Target B**: **Commit ≥ 15%** prevention time by year end. **Stretch 25–30%** in year two. Do not fill recovered capacity only with more reactive tickets.
+- **How we count**: Use the company-approved ticketing / work system. Baseline in the **first full month** of unified ROC tracking across Information Technology (IT), Support, C-Comm, and other absorbed queues. Compare average working time per completed item to that baseline. Exclude approved exceptions (for example major incidents) so one crisis does not hide the trend. Score Metric A and Metric B separately so a missed handle-time target is not hidden by prevention-time accounting.
 - **Owner**: ROC Supervisor
-- **Cadence**: Monthly ratio review; quarterly check that saved time is actually used for prevention work (runbook improvements, monitoring hygiene, training, known-error reduction).
+- **Cadence**: Monthly ratio review; quarterly check that saved time is actually used for prevention work.
 
 ## 2. Operational reliability
 
