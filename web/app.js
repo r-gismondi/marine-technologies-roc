@@ -517,11 +517,15 @@ function escapeRegExp(value) {
 
 function plainTextFromMarkdown(markdown) {
   return markdown
+    .split("\n")
+    .filter((line) => !/^\s*\|?[:|\-\s]+\|?\s*$/.test(line))
+    .join("\n")
     .replace(/```[\s\S]*?```/g, (block) => block.replace(/```[a-z0-9-]*/gi, " "))
     .replace(/!\[[^\]]*]\([^)]*\)/g, " ")
     .replace(/\[([^\]]+)]\([^)]*\)/g, "$1")
     .replace(/<[^>]+>/g, " ")
-    .replace(/[#>*_`~|[\]()]/g, " ")
+    .replace(/[()]/g, "")
+    .replace(/[#>*_`~|[\]]/g, " ")
     .replace(/&[a-z]+;/gi, " ")
     .replace(/\s+/g, " ")
     .trim();
@@ -670,7 +674,9 @@ async function indexDocuments() {
   state.contentIndexReady = true;
   if (state.searchText.trim()) {
     renderNavigation();
-    renderSearchResults();
+    if (document.activeElement === searchInput || !searchResults.hidden) {
+      renderSearchResults();
+    }
   }
 }
 
