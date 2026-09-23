@@ -3,6 +3,8 @@ const state = {
   documents: [],
   activePath: "",
   searchText: "",
+  searchActiveIndex: -1,
+  contentIndexReady: false,
 };
 
 documentSections.forEach((section) => {
@@ -25,6 +27,12 @@ const themeToggle = document.querySelector("#theme-toggle");
 const navToggle = document.querySelector("#nav-toggle");
 const navBackdrop = document.querySelector("#nav-backdrop");
 const homeLink = document.querySelector("#home-link");
+const searchForm = document.querySelector("#site-search-form");
+const searchInput = document.querySelector("#site-search");
+const searchClear = document.querySelector("#search-clear");
+const searchResults = document.querySelector("#search-results");
+const searchStatus = document.querySelector("#search-status");
+const markdownRequests = new Map();
 
 const SECTION_ICONS = {
   start:
@@ -56,7 +64,7 @@ function repositoryRootUrl() {
 }
 
 function documentFileUrl(path) {
-  return new URL(`${path}?v=30`, repositoryRootUrl()).toString();
+  return new URL(`${path}?v=31`, repositoryRootUrl()).toString();
 }
 
 function escapeHtml(value) {
@@ -499,8 +507,258 @@ function buildNavigation() {
   });
 }
 
+function searchTokens(query) {
+  return (query.toLowerCase().match(/[a-z0-9]{2,}/g) || []).filter((token, index, tokens) => tokens.indexOf(token) === index);
+}
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function plainTextFromMarkdown(markdown) {
+  return markdown
+    .replace(/```[\s\S]*?```/g, (block) => block.replace(/```[a-z0-9-]*/gi, " "))
+    .replace(/!\[[^\]]*]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]+)]\([^)]*\)/g, "$1")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/[#>*_`~|[\]()]/g, " ")
+    .replace(/&[a-z]+;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function searchableText(documentMeta) {
+  return [documentMeta.title, documentMeta.sectionLabel, documentMeta.plainText || ""].join("\n").toLowerCase();
+}
+
+function matchesTokens(documentMeta, tokens) {
+  if (!tokens.length) return true;
+  const text = searchableText(documentMeta);
+  return tokens.every((token) => text.includes(token));
+}
+
+function matchScore(documentMeta, tokens) {
+  const title = documentMeta.title.toLowerCase();
+  const section = documentMeta.sectionLabel.toLowerCase();
+  const body = (documentMeta.plainText || "").toLowerCase();
+  return tokens.reduce((score, token) => {
+    let next = score;
+    if (title.includes(token)) next += 8;
+    if (section.includes(token)) next += 3;
+    if (body.includes(token)) next += 1;
+    return next;
+  }, 0);
+}
+
+function matchingDocuments(tokens) {
+  return state.documents
+    .filter((documentMeta) => matchesTokens(documentMeta, tokens))
+    .sort((left, right) => matchScore(right, tokens) - matchScore(left, tokens) || left.title.localeCompare(right.title));
+}
+
+function snippetFor(documentMeta, tokens) {
+  const plain = documentMeta.plainText || "";
+  if (!plain || !tokens.length) return "";
+
+  const lower = plain.toLowerCase();
+  const positions = tokens.map((token) => lower.indexOf(token)).filter((index) => index !== -1);
+  if (!positions.length) return "";
+
+  const best = Math.min(...positions);
+  const start = Math.max(0, plain.lastIndexOf(" ", Math.max(0, best - 50)));
+  const end = Math.min(plain.length, best + 150);
+  let text = plain.slice(start, end).trim();
+  if (start > 0) text = `…${text}`;
+  if (end < plain.length) text = `${text}…`;
+  return text;
+}
+
+function highlightText(text, tokens) {
+  const escaped = escapeHtml(text);
+  if (!tokens.length) return escaped;
+  const pattern = tokens
+    .slice()
+    .sort((left, right) => right.length - left.length)
+    .map(escapeRegExp)
+    .join("|");
+  return escaped.replace(new RegExp(`(${pattern})`, "gi"), "<mark>$1</mark>");
+}
+
+function highlightContentMatches(root, tokens) {
+  if (!tokens.length) return;
+  const pattern = new RegExp(
+    `(${tokens
+      .slice()
+      .sort((left, right) => right.length - left.length)
+      .map(escapeRegExp)
+      .join("|")})`,
+    "gi"
+  );
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      const parent = node.parentElement;
+      if (!parent || parent.closest("script, style, pre, code, .mermaid, svg, mark")) {
+        return NodeFilter.FILTER_REJECT;
+      }
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue;
+    pattern.lastIndex = 0;
+    if (!pattern.test(text)) return;
+    pattern.lastIndex = 0;
+    const fragment = document.createDocumentFragment();
+    let last = 0;
+    let match = pattern.exec(text);
+    while (match) {
+      if (match.index > last) fragment.appendChild(document.createTextNode(text.slice(last, match.index)));
+      const mark = document.createElement("mark");
+      mark.className = "search-hit";
+      mark.textContent = match[0];
+      fragment.appendChild(mark);
+      last = match.index + match[0].length;
+      if (!match[0]) pattern.lastIndex += 1;
+      match = pattern.exec(text);
+    }
+    if (last < text.length) fragment.appendChild(document.createTextNode(text.slice(last)));
+    node.parentNode.replaceChild(fragment, node);
+  });
+}
+
+function fetchDocumentMarkdown(path) {
+  if (markdownRequests.has(path)) return markdownRequests.get(path);
+
+  const request = (async () => {
+    try {
+      const response = await fetch(documentFileUrl(path));
+      if (!response.ok) {
+        throw new Error(`Unable to load ${path}`);
+      }
+      const markdown = await response.text();
+      const documentMeta = findDocument(path);
+      if (documentMeta) {
+        documentMeta.markdown = markdown;
+        documentMeta.plainText = plainTextFromMarkdown(markdown);
+      }
+      return markdown;
+    } catch (error) {
+      markdownRequests.delete(path);
+      throw error;
+    }
+  })();
+
+  markdownRequests.set(path, request);
+  return request;
+}
+
+async function indexDocuments() {
+  await Promise.all(
+    state.documents.map(async (documentMeta) => {
+      try {
+        await fetchDocumentMarkdown(documentMeta.path);
+      } catch (error) {
+        documentMeta.plainText = documentMeta.plainText || "";
+        console.warn("Could not index document", documentMeta.path, error);
+      }
+    })
+  );
+  state.contentIndexReady = true;
+  if (state.searchText.trim()) {
+    renderNavigation();
+    renderSearchResults();
+  }
+}
+
+function hideSearchResults() {
+  searchResults.hidden = true;
+  searchInput.setAttribute("aria-expanded", "false");
+  state.searchActiveIndex = -1;
+}
+
+function setActiveSearchResult(options) {
+  options.forEach((option, index) => {
+    const selected = index === state.searchActiveIndex;
+    option.classList.toggle("is-active", selected);
+    option.setAttribute("aria-selected", String(selected));
+    if (selected) {
+      searchInput.setAttribute("aria-activedescendant", option.id);
+      option.scrollIntoView({ block: "nearest" });
+    }
+  });
+  if (state.searchActiveIndex < 0) {
+    searchInput.removeAttribute("aria-activedescendant");
+  }
+}
+
+function openSearchResult(path) {
+  hideSearchResults();
+  loadDocument(path, true, { scrollToMatch: true });
+  setNavOpen(false);
+}
+
+function renderSearchResults() {
+  const tokens = searchTokens(state.searchText);
+  searchClear.hidden = !state.searchText;
+  if (!state.searchText.trim()) {
+    hideSearchResults();
+    searchStatus.textContent = "";
+    return;
+  }
+
+  if (!tokens.length) {
+    searchResults.hidden = false;
+    searchInput.setAttribute("aria-expanded", "true");
+    searchResults.innerHTML = `<p class="search-results-note">Type at least two letters or numbers to search.</p>`;
+    searchStatus.textContent = "Type at least two letters or numbers to search.";
+    return;
+  }
+
+  const matches = matchingDocuments(tokens);
+  const visible = matches.slice(0, 8);
+  const indexingNote = state.contentIndexReady ? "" : `<p class="search-results-note">Still reading document text. Results will update when that finishes.</p>`;
+  const extraNote =
+    matches.length > visible.length
+      ? `<p class="search-results-note">Showing ${visible.length} of ${matches.length}. Every match stays listed in the library.</p>`
+      : "";
+
+  searchResults.innerHTML = visible.length
+    ? `${visible
+        .map((documentMeta, index) => {
+          const snippet = snippetFor(documentMeta, tokens);
+          return `
+            <button class="search-result" id="search-option-${index}" type="button" role="option" aria-selected="false" data-doc-path="${escapeHtml(documentMeta.path)}">
+              <span class="search-result-meta">${escapeHtml(documentMeta.sectionLabel)}</span>
+              <span class="search-result-title">${highlightText(documentMeta.title, tokens)}</span>
+              ${snippet ? `<span class="search-result-snippet">${highlightText(snippet, tokens)}</span>` : ""}
+            </button>`;
+        })
+        .join("")}${extraNote}${indexingNote}`
+    : `<p class="search-results-note">${
+        state.contentIndexReady
+          ? "No documents contain all of these words."
+          : "No titles match yet. Still reading document text."
+      }</p>`;
+
+  searchResults.hidden = false;
+  searchInput.setAttribute("aria-expanded", "true");
+  const status = matches.length === 1 ? "1 document matches." : `${matches.length} documents match.`;
+  searchStatus.textContent = state.contentIndexReady ? status : `${status} Still reading document text.`;
+
+  const options = [...searchResults.querySelectorAll(".search-result")];
+  if (state.searchActiveIndex >= options.length) state.searchActiveIndex = options.length - 1;
+  setActiveSearchResult(options);
+  options.forEach((option) => {
+    option.addEventListener("click", () => openSearchResult(option.dataset.docPath));
+  });
+}
+
 function renderNavigation() {
-  const query = state.searchText.toLowerCase();
+  const tokens = searchTokens(state.searchText);
   let visibleSections = 0;
 
   sectionNav.querySelectorAll(".nav-group").forEach((group) => {
@@ -508,7 +766,8 @@ function renderNavigation() {
     let hasActive = false;
 
     group.querySelectorAll(".doc-link").forEach((link) => {
-      const matches = link.textContent.toLowerCase().includes(query);
+      const documentMeta = findDocument(link.dataset.docPath);
+      const matches = !tokens.length || (documentMeta && matchesTokens(documentMeta, tokens));
       const isActive = link.dataset.docPath === state.activePath;
       link.hidden = !matches;
       link.classList.toggle("active", isActive);
@@ -529,9 +788,13 @@ function renderNavigation() {
     group.hidden = visibleDocuments === 0;
     group.classList.toggle("has-active", hasActive);
 
-    if (hasActive) {
+    const toggle = group.querySelector(".nav-group-toggle");
+    if (tokens.length) {
+      group.classList.toggle("is-open", visibleDocuments > 0);
+      toggle?.setAttribute("aria-expanded", String(visibleDocuments > 0));
+    } else if (hasActive) {
       group.classList.add("is-open");
-      group.querySelector(".nav-group-toggle")?.setAttribute("aria-expanded", "true");
+      toggle?.setAttribute("aria-expanded", "true");
     }
 
     if (visibleDocuments > 0) {
@@ -543,14 +806,14 @@ function renderNavigation() {
   if (!emptyState) {
     emptyState = document.createElement("div");
     emptyState.className = "empty-state nav-empty-state";
-    emptyState.textContent = "No document titles match this search.";
+    emptyState.textContent = "No documents match these words.";
     sectionNav.appendChild(emptyState);
   }
 
   emptyState.hidden = visibleSections > 0;
 }
 
-async function loadDocument(path, updateHash = true) {
+async function loadDocument(path, updateHash = true, options = {}) {
   const documentMeta = findDocument(path) || state.documents[0];
   state.activePath = documentMeta.path;
   renderNavigation();
@@ -565,16 +828,16 @@ async function loadDocument(path, updateHash = true) {
   }
 
   try {
-    const response = await fetch(documentFileUrl(documentMeta.path));
-    if (!response.ok) {
-      throw new Error(`Unable to load ${documentMeta.path}`);
-    }
-
-    const markdown = await response.text();
+    const markdown = documentMeta.markdown || (await fetchDocumentMarkdown(documentMeta.path));
     content.innerHTML = renderMarkdown(markdown, documentMeta.path);
     wireDocumentLinks();
-    renderDiagrams();
-    content.focus();
+    await renderDiagrams();
+    const tokens = searchTokens(state.searchText);
+    if (tokens.length) highlightContentMatches(content, tokens);
+    content.focus({ preventScroll: true });
+    if (options.scrollToMatch) {
+      content.querySelector(".search-hit")?.scrollIntoView({ block: "center" });
+    }
   } catch (error) {
     content.innerHTML = `<div class="error-state"><strong>Could not load document.</strong><br>${escapeHtml(error.message)}</div>`;
   }
@@ -617,6 +880,56 @@ function configureTheme() {
   });
 }
 
+function configureSearch() {
+  if (!searchForm || !searchInput) return;
+
+  const applyQuery = () => {
+    state.searchText = searchInput.value;
+    state.searchActiveIndex = -1;
+    renderNavigation();
+    renderSearchResults();
+  };
+
+  searchInput.addEventListener("input", applyQuery);
+  searchInput.addEventListener("focus", () => {
+    if (state.searchText.trim()) renderSearchResults();
+  });
+
+  searchInput.addEventListener("keydown", (event) => {
+    const options = [...searchResults.querySelectorAll(".search-result")];
+    if (event.key === "ArrowDown" && options.length) {
+      event.preventDefault();
+      state.searchActiveIndex = Math.min(state.searchActiveIndex + 1, options.length - 1);
+      if (state.searchActiveIndex < 0) state.searchActiveIndex = 0;
+      setActiveSearchResult(options);
+    } else if (event.key === "ArrowUp" && options.length) {
+      event.preventDefault();
+      state.searchActiveIndex = Math.max(state.searchActiveIndex - 1, 0);
+      setActiveSearchResult(options);
+    } else if (event.key === "Enter") {
+      event.preventDefault();
+      const chosen = options[state.searchActiveIndex] || options[0];
+      if (chosen) openSearchResult(chosen.dataset.docPath);
+    }
+  });
+
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const chosen = searchResults.querySelector(".search-result.is-active") || searchResults.querySelector(".search-result");
+    if (chosen) openSearchResult(chosen.dataset.docPath);
+  });
+
+  searchClear.addEventListener("click", () => {
+    searchInput.value = "";
+    applyQuery();
+    searchInput.focus();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!searchForm.contains(event.target)) hideSearchResults();
+  });
+}
+
 function configureChrome() {
   navToggle.addEventListener("click", () => {
     setNavOpen(!document.body.classList.contains("nav-open"));
@@ -625,9 +938,12 @@ function configureChrome() {
   navBackdrop.addEventListener("click", () => setNavOpen(false));
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      setNavOpen(false);
+    if (event.key !== "Escape") return;
+    if (searchResults && !searchResults.hidden) {
+      hideSearchResults();
+      return;
     }
+    setNavOpen(false);
   });
 
   homeLink.addEventListener("click", (event) => {
@@ -652,6 +968,8 @@ if (!state.documents.length) {
   buildNavigation();
   renderNavigation();
   configureTheme();
+  configureSearch();
   configureChrome();
   loadInitialDocument();
+  indexDocuments();
 }
