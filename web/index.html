@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=30" />
+    <link rel="stylesheet" href="styles.css?v=31" />
   </head>
   <body>
     <div class="app">
@@ -59,6 +59,34 @@
             <h1 id="document-title">ROC Employee Document Portal</h1>
           </div>
 
+          <form id="site-search-form" class="site-search" role="search">
+            <label class="visually-hidden" for="site-search">Search all documents</label>
+            <span class="site-search-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="6.25" stroke="currentColor" stroke-width="1.8" />
+                <path d="M16 16.5 20 20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </span>
+            <input
+              id="site-search"
+              type="search"
+              placeholder="Search all documents"
+              autocomplete="off"
+              spellcheck="false"
+              enterkeyhint="search"
+              aria-autocomplete="list"
+              aria-controls="search-results"
+              aria-expanded="false"
+            />
+            <button id="search-clear" class="search-clear" type="button" hidden aria-label="Clear search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 7l10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </button>
+            <div id="search-results" class="search-results" role="listbox" aria-label="Search results" hidden></div>
+            <p id="search-status" class="visually-hidden" aria-live="polite"></p>
+          </form>
+
           <div class="actions">
             <span class="env-pill">Internal</span>
             <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to night mode" aria-pressed="false"></button>
@@ -78,7 +106,7 @@
     <div class="nav-backdrop" id="nav-backdrop" hidden></div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script src="documents.js?v=30"></script>
-    <script src="app.js?v=30"></script>
+    <script src="documents.js?v=31"></script>
+    <script src="app.js?v=31"></script>
   </body>
 </html>
